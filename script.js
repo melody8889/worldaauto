@@ -62,6 +62,19 @@
           transmission: "10AT / E-CVT",
           color: "Black / Gray / Ivory",
           stock: "Order Available / Fast Allocation"
+        },
+        {
+          slug: "mercedes-s450",
+          name: "Mercedes-Benz S450",
+          subtitle: "New generation executive sedan with advanced technology and premium comfort",
+          year: "2026",
+          engine: "3.0T",
+          fuel: "Gasoline",
+          drive: "AWD",
+          transmission: "9AT",
+          color: "Black / White / Gray",
+          stock: "Q3 2026 Allocation Available",
+          image: "assets/mercedes-s450-main.jpg"
         }
       ]
     },
@@ -332,7 +345,7 @@
       listNode.innerHTML = category.products.map(function (product) {
         return [
           '<article class="list-card">',
-          '<img class="' + product.imageClass + '" src="assets/category-composite.png" alt="' + product.name + '">',
+          '<img class="' + product.imageClass + '" src="' + (product.image || 'assets/category-composite.png') + '" alt="' + product.name + '">',
           '<div class="list-card-body">',
           '<p class="list-card-meta">' + category.shortTitle + '</p>',
           '<h3><a class="card-title-link" href="product.html?category=' + category.slug + '&item=' + product.slug + '">' + product.name + '</a></h3>',
@@ -414,6 +427,9 @@
 
     if (heroImage) {
       heroImage.className = product.imageClass;
+      if (product.image) {
+        heroImage.src = product.image;
+      }
     }
 
     categoryLinks.forEach(function (link) {
