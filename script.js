@@ -345,7 +345,7 @@
       listNode.innerHTML = category.products.map(function (product) {
         return [
           '<article class="list-card">',
-          '<img class="' + product.imageClass + '" src="' + (product.image || 'assets/category-composite.png') + '" alt="' + product.name + '">',
+          '<img class="' + (product.image ? 'product-img' : product.imageClass) + '" src="' + (product.image || 'assets/category-composite.png') + '" alt="' + product.name + '">',
           '<div class="list-card-body">',
           '<p class="list-card-meta">' + category.shortTitle + '</p>',
           '<h3><a class="card-title-link" href="product.html?category=' + category.slug + '&item=' + product.slug + '">' + product.name + '</a></h3>',
@@ -426,9 +426,11 @@
     }
 
     if (heroImage) {
-      heroImage.className = product.imageClass;
       if (product.image) {
+        heroImage.className = 'product-img';
         heroImage.src = product.image;
+      } else {
+        heroImage.className = product.imageClass;
       }
     }
 

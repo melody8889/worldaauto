@@ -422,6 +422,12 @@ h3 {
   object-position: 92% center;
 }
 
+.product-card .product-img,
+.list-card .product-img,
+.product-gallery .product-img {
+  object-position: center;
+}
+
 .product-card div {
   display: flex;
   height: 100%;
