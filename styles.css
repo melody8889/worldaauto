@@ -1074,3 +1074,19 @@ h3 {
     padding: 0 14px;
   }
 }
+
+/* WeChat WebView compatibility */
+.hero-image {
+  -webkit-object-fit: cover;
+  width: 100%;
+  min-height: 100%;
+}
+
+.brand-logo {
+  -webkit-object-fit: contain;
+}
+
+.product-gallery img,
+.list-card img {
+  -webkit-object-fit: cover;
+}
