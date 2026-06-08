@@ -30,7 +30,7 @@ This project is now a pure static website package for GitHub + Vercel deployment
 
 Inquiry forms currently open the visitor's email client and prepare a message to:
 
-- `melodyzhang0716@gmail.com`
+- `sales01@worldaauto.com`
 
 For a production form workflow, replace this with a server-side form service or email API later.
 

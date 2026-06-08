@@ -457,7 +457,7 @@
         "Message: " + (formData.get("message") || ""),
         "Page: " + window.location.href
       ];
-      const href = "mailto:melodyzhang0716@gmail.com?subject=" +
+      const href = "mailto:sales01@worldaauto.com?subject=" +
         encodeURIComponent(subject) +
         "&body=" +
         encodeURIComponent(lines.join("\n"));
