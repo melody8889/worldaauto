@@ -88,7 +88,8 @@
           transmission: "Automatic",
           color: "Black / White / Gray",
           stock: "Q3 2026",
-          image: "assets/products/Mercedes- GLS450/main.png"
+          image: "assets/products/Mercedes- GLS450/main.png",
+          gallery: ["assets/products/Mercedes- GLS450/1.png", "assets/products/Mercedes- GLS450/2.png", "assets/products/Mercedes- GLS450/3.png", "assets/products/Mercedes- GLS450/main.png"]
         }
       ]
     },
@@ -147,7 +148,8 @@
           transmission: "Automatic",
           color: "Optional",
           stock: "In Stock",
-          image: "assets/products/Volkswagen Tiguan L Pro/main.png"
+          image: "assets/products/Volkswagen Tiguan L Pro/main.png",
+          gallery: ["assets/products/Volkswagen Tiguan L Pro/1.jpg", "assets/products/Volkswagen Tiguan L Pro/2.png", "assets/products/Volkswagen Tiguan L Pro/3.png", "assets/products/Volkswagen Tiguan L Pro/main.png"]
         }
       ]
     },
@@ -492,4 +494,5 @@
     });
   });
 })();
+
 
