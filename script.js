@@ -1,4 +1,4 @@
-(function () {
+﻿(function () {
   const body = document.body;
   const toggle = document.querySelector("[data-menu-toggle]");
   const nav = document.querySelector("[data-nav]");
@@ -76,6 +76,19 @@
           stock: "Q3 2026 Allocation Available",
           image: "assets/mercedes-s450-main.jpg",
           pageUrl: "mercedes-s450.html"
+        },
+        {
+          slug: "Mercedes- GLS450",
+          name: "Mercedes-Benz GLS450",
+          subtitle: "2026 GLS450: Luxurious 7-seat large SUV, stable powertrain for wholesale supply",
+          year: "2026",
+          engine: "3.0T",
+          fuel: "Gasoline",
+          drive: "RWD / AWD",
+          transmission: "Automatic",
+          color: "Black / White / Gray",
+          stock: "Q3 2026",
+          image: "assets/products/Mercedes- GLS450/main.png"
         }
       ]
     },
@@ -122,6 +135,19 @@
           transmission: "6AT / 6MT",
           color: "White / Silver / Black",
           stock: "In Stock / Ready for Shipment"
+        },
+        {
+          slug: "Volkswagen Tiguan L Pro",
+          name: "Volkswagen Tiguan L Pro",
+          subtitle: "New 2026 Volkswagen Tiguan L Pro Turbo Sport Utility",
+          year: "2026",
+          engine: "2.0T",
+          fuel: "Gasoline",
+          drive: "FWD",
+          transmission: "Automatic",
+          color: "Optional",
+          stock: "In Stock",
+          image: "assets/products/Volkswagen Tiguan L Pro/main.png"
         }
       ]
     },
@@ -466,3 +492,4 @@
     });
   });
 })();
+
