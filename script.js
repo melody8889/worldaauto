@@ -74,7 +74,8 @@
           transmission: "9AT",
           color: "Black / White / Gray",
           stock: "Q3 2026 Allocation Available",
-          image: "assets/mercedes-s450-main.jpg"
+          image: "assets/mercedes-s450-main.jpg",
+          pageUrl: "mercedes-s450.html"
         }
       ]
     },
@@ -348,14 +349,14 @@
           '<img class="' + (product.image ? 'product-img' : product.imageClass) + '" src="' + (product.image || 'assets/category-composite.png') + '" alt="' + product.name + '">',
           '<div class="list-card-body">',
           '<p class="list-card-meta">' + category.shortTitle + '</p>',
-          '<h3><a class="card-title-link" href="product.html?category=' + category.slug + '&item=' + product.slug + '">' + product.name + '</a></h3>',
+          '<h3><a class="card-title-link" href="' + (product.pageUrl || ('product.html?category=' + category.slug + '&item=' + product.slug)) + '">' + product.name + '</a></h3>',
           '<p>' + product.subtitle + '</p>',
           '<div class="list-card-specs">',
           '<span>' + product.year + '</span>',
           '<span>' + product.fuel + '</span>',
           '<span>' + product.transmission + '</span>',
           '</div>',
-          '<a class="card-action-link" href="product.html?category=' + category.slug + '&item=' + product.slug + '">VIEW DETAILS | SEND INQUIRY</a>',
+          '<a class="card-action-link" href="' + (product.pageUrl || ('product.html?category=' + category.slug + '&item=' + product.slug)) + '">VIEW DETAILS | SEND INQUIRY</a>',
           '</div>',
           '</article>'
         ].join("");
