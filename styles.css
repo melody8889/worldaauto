@@ -1153,3 +1153,28 @@ h3 {
   }
 }
 
+
+/* Force contact strip into three equal columns */
+.contact-strip {
+  display: grid !important;
+  grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+  width: 100% !important;
+}
+
+.contact-strip > a {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  min-height: 110px !important;
+  padding: 24px !important;
+  text-align: center !important;
+  font-weight: 800 !important;
+  color: #1f2933 !important;
+  text-decoration: none !important;
+  border-right: 1px solid #d9e1ea !important;
+}
+
+.contact-strip > a:last-child {
+  border-right: 0 !important;
+}
+
