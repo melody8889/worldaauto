@@ -1099,3 +1099,10 @@ h3 {
   display: block;
 }
 
+
+.category-card img[src="assets/categories/luxury-vehicle.png"] {
+  object-fit: contain;
+  object-position: center center;
+  background: #05080c;
+}
+
