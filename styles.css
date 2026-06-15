@@ -1109,3 +1109,47 @@ h3 {
 
 
 
+
+.contact-strip {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  border-top: 1px solid #d9e1ea;
+  border-bottom: 1px solid #d9e1ea;
+}
+
+.contact-strip-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 110px;
+  padding: 24px;
+  text-align: center;
+  font-weight: 800;
+  color: #1f2933;
+  text-decoration: none;
+  border-right: 1px solid #d9e1ea;
+}
+
+.contact-strip-item:last-child {
+  border-right: 0;
+}
+
+.contact-strip-item:hover {
+  color: #a47b4f;
+}
+
+@media (max-width: 800px) {
+  .contact-strip {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-strip-item {
+    border-right: 0;
+    border-bottom: 1px solid #d9e1ea;
+  }
+
+  .contact-strip-item:last-child {
+    border-bottom: 0;
+  }
+}
+
