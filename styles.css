@@ -1,4 +1,4 @@
-:root {
+﻿:root {
   --white: #ffffff;
   --panel: #f5f7fa;
   --footer: #eceff3;
@@ -1090,3 +1090,12 @@ h3 {
 .list-card img {
   -webkit-object-fit: cover;
 }
+
+.category-card img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  object-position: center center;
+  display: block;
+}
+
