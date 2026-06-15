@@ -28,42 +28,6 @@
       intro: "Premium sedans and executive models selected for dealership procurement, VIP fleet supply and image-led resale channels.",
       products: [
         {
-          slug: "mercedes-s-class",
-          name: "Mercedes-Benz S-Class",
-          subtitle: "Executive flagship sedan for premium wholesale orders",
-          year: "2024",
-          engine: "3.0T",
-          fuel: "Gasoline / Mild Hybrid",
-          drive: "AWD",
-          transmission: "9AT",
-          color: "Black / Beige / Silver",
-          stock: "In Stock / Ready for Shipment"
-        },
-        {
-          slug: "bmw-7-series",
-          name: "BMW 7 Series",
-          subtitle: "Luxury long-wheelbase sedan with dealer-ready configurations",
-          year: "2024",
-          engine: "3.0T",
-          fuel: "Gasoline / Hybrid",
-          drive: "RWD / AWD",
-          transmission: "8AT",
-          color: "Black / White / Cognac",
-          stock: "In Stock / Ready for Shipment"
-        },
-        {
-          slug: "lexus-ls",
-          name: "Lexus LS",
-          subtitle: "Stable luxury sedan for wholesale fleet and showroom supply",
-          year: "2024",
-          engine: "3.5L",
-          fuel: "Gasoline / Hybrid",
-          drive: "RWD / AWD",
-          transmission: "10AT / E-CVT",
-          color: "Black / Gray / Ivory",
-          stock: "Order Available / Fast Allocation"
-        },
-        {
           slug: "mercedes-s450",
           name: "Mercedes-Benz S450",
           subtitle: "New generation executive sedan with advanced technology and premium comfort",
@@ -102,42 +66,6 @@
       intro: "High-demand SUVs and pickup trucks for family use, project fleets, utility channels and regional bulk dealership supply.",
       products: [
         {
-          slug: "toyota-land-cruiser",
-          name: "Toyota Land Cruiser",
-          subtitle: "High-demand off-road SUV for government and dealer channels",
-          year: "2024",
-          engine: "3.5T",
-          fuel: "Gasoline",
-          drive: "4WD",
-          transmission: "10AT",
-          color: "White / Black / Sand",
-          stock: "In Stock / Ready for Shipment"
-        },
-        {
-          slug: "ford-ranger",
-          name: "Ford Ranger",
-          subtitle: "Mid-size pickup truck for utility and resale markets",
-          year: "2024",
-          engine: "2.3T",
-          fuel: "Gasoline / Diesel",
-          drive: "4WD / RWD",
-          transmission: "10AT / 6MT",
-          color: "White / Gray / Blue",
-          stock: "Bulk Order Available"
-        },
-        {
-          slug: "toyota-hilux",
-          name: "Toyota Hilux",
-          subtitle: "Reliable pickup model for Africa and Middle East distribution",
-          year: "2024",
-          engine: "2.7L / 2.8T",
-          fuel: "Gasoline / Diesel",
-          drive: "4WD / RWD",
-          transmission: "6AT / 6MT",
-          color: "White / Silver / Black",
-          stock: "In Stock / Ready for Shipment"
-        },
-        {
           slug: "Volkswagen Tiguan L Pro",
           name: "Volkswagen Tiguan L Pro",
           subtitle: "New 2026 Volkswagen Tiguan L Pro Turbo Sport Utility",
@@ -161,42 +89,6 @@
       page: "chinese-brand-new-cars.html",
       intro: "Fast-moving new Chinese passenger vehicles including EV, hybrid and fuel models sourced for international resale programs.",
       products: [
-        {
-          slug: "byd-song-plus",
-          name: "BYD Song Plus",
-          subtitle: "Popular new energy SUV for high-volume overseas demand",
-          year: "2025",
-          engine: "EV / DM-i",
-          fuel: "Electric / Plug-in Hybrid",
-          drive: "FWD",
-          transmission: "Single-Speed / E-CVT",
-          color: "White / Gray / Blue",
-          stock: "In Stock / Ready for Shipment"
-        },
-        {
-          slug: "geely-monjaro",
-          name: "Geely Monjaro",
-          subtitle: "Premium Chinese SUV with export-friendly configuration range",
-          year: "2025",
-          engine: "2.0T",
-          fuel: "Gasoline",
-          drive: "AWD / FWD",
-          transmission: "8AT",
-          color: "Black / Silver / Green",
-          stock: "Bulk Order Available"
-        },
-        {
-          slug: "chery-tiggo-8-pro",
-          name: "Chery Tiggo 8 Pro",
-          subtitle: "Family SUV for dealership supply and regional wholesale",
-          year: "2025",
-          engine: "1.6T / 2.0T",
-          fuel: "Gasoline",
-          drive: "FWD",
-          transmission: "7DCT",
-          color: "White / Black / Gray",
-          stock: "In Stock / Ready for Shipment"
-        }
       ]
     },
     "skd-car-kits": {
@@ -207,42 +99,6 @@
       page: "skd-car-kits.html",
       intro: "Semi-knocked-down vehicle kits for overseas assembly partners with export document coordination and configuration support.",
       products: [
-        {
-          slug: "compact-suv-skd-kit",
-          name: "Compact SUV SKD Kit",
-          subtitle: "Assembly-ready compact SUV package for local plant integration",
-          year: "2025",
-          engine: "1.5T / EV",
-          fuel: "Gasoline / Electric",
-          drive: "FWD",
-          transmission: "CVT / DCT / Single-Speed",
-          color: "Paint plan on request",
-          stock: "Production Slot Available"
-        },
-        {
-          slug: "pickup-skd-kit",
-          name: "Pickup Truck SKD Kit",
-          subtitle: "Utility pickup kit with body, chassis and assembly support files",
-          year: "2025",
-          engine: "2.0T / 2.4L",
-          fuel: "Gasoline / Diesel",
-          drive: "4WD / RWD",
-          transmission: "6MT / 8AT",
-          color: "Paint plan on request",
-          stock: "Order Available"
-        },
-        {
-          slug: "city-ev-skd-kit",
-          name: "City EV SKD Kit",
-          subtitle: "Urban electric car kit for clean mobility assembly programs",
-          year: "2025",
-          engine: "EV Motor",
-          fuel: "Electric",
-          drive: "FWD",
-          transmission: "Single-Speed",
-          color: "Paint plan on request",
-          stock: "Production Slot Available"
-        }
       ]
     },
     "auto-spare-parts": {
@@ -253,42 +109,6 @@
       page: "auto-spare-parts.html",
       intro: "Wholesale spare parts supply for service networks, workshops, rebuild channels and mixed-container export programs.",
       products: [
-        {
-          slug: "engine-maintenance-kit",
-          name: "Engine Maintenance Kit",
-          subtitle: "Filters, belts and service parts for scheduled workshop supply",
-          year: "Latest Production",
-          engine: "Multi-platform",
-          fuel: "Gasoline / Diesel",
-          drive: "Applicable by model",
-          transmission: "Applicable by model",
-          color: "Standard packaging",
-          stock: "In Stock / Ready for Shipment"
-        },
-        {
-          slug: "brake-system-parts",
-          name: "Brake System Parts",
-          subtitle: "Pads, discs and related brake components for volume buyers",
-          year: "Latest Production",
-          engine: "Multi-platform",
-          fuel: "Universal",
-          drive: "Applicable by model",
-          transmission: "Applicable by model",
-          color: "Standard packaging",
-          stock: "Bulk Order Available"
-        },
-        {
-          slug: "suspension-parts-set",
-          name: "Suspension Parts Set",
-          subtitle: "Shock absorbers, arms and bushings for repair distribution",
-          year: "Latest Production",
-          engine: "Multi-platform",
-          fuel: "Universal",
-          drive: "Applicable by model",
-          transmission: "Applicable by model",
-          color: "Standard packaging",
-          stock: "In Stock / Ready for Shipment"
-        }
       ]
     }
   };
@@ -494,5 +314,6 @@
     });
   });
 })();
+
 
 
