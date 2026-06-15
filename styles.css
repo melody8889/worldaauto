@@ -1178,3 +1178,43 @@ h3 {
   border-right: 0 !important;
 }
 
+
+/* Social icons inside contact strip */
+.contact-strip > a {
+  gap: 12px;
+}
+
+.social-icon {
+  width: 34px;
+  height: 34px;
+  min-width: 34px;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-size: 12px;
+  font-weight: 900;
+  letter-spacing: 0;
+  line-height: 1;
+}
+
+.social-whatsapp {
+  background: #25D366;
+}
+
+.social-tiktok {
+  background: #111111;
+  box-shadow: inset 3px 0 0 #25F4EE, inset -3px 0 0 #FE2C55;
+}
+
+.social-instagram {
+  background: linear-gradient(135deg, #F58529, #DD2A7B, #8134AF, #515BD4);
+}
+
+@media (max-width: 800px) {
+  .contact-strip > a {
+    justify-content: flex-start;
+  }
+}
+
