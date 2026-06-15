@@ -1107,28 +1107,4 @@ h3 {
 }
 
 
-/* Force full luxury vehicle image inside homepage card */
-.category-card img[src$="luxury-vehicle.png"],
-.category-card .crop-left[src$="luxury-vehicle.png"] {
-  width: 100% !important;
-  height: 220px !important;
-  object-fit: contain !important;
-  object-position: center center !important;
-  background: #05080c !important;
-  padding: 8px !important;
-  box-sizing: border-box !important;
-}
-
-
-/* Keep full luxury vehicle visible in homepage category card */
-.category-img-contain {
-  width: 100% !important;
-  height: 220px !important;
-  object-fit: contain !important;
-  object-position: center center !important;
-  background: #05080c !important;
-  display: block !important;
-  padding: 10px !important;
-  box-sizing: border-box !important;
-}
 
