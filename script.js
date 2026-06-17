@@ -368,6 +368,7 @@
     const specStock = document.querySelector("[data-spec='stock']");
     const categoryLinks = document.querySelectorAll("[data-category-link]");
     const heroImage = document.querySelector("[data-product-image]");
+    const galleryNode = document.querySelector("[data-product-gallery]");
 
     if (!productTitle || !category) {
       return;
@@ -418,9 +419,28 @@
       if (product.image) {
         heroImage.className = 'product-img';
         heroImage.src = product.image;
+        heroImage.alt = product.name;
       } else {
         heroImage.className = product.imageClass;
       }
+    }
+
+    if (galleryNode) {
+      const galleryImages = (product.gallery && product.gallery.length ? product.gallery : [product.image]).filter(Boolean);
+      galleryNode.innerHTML = galleryImages.slice(0, 4).map(function (src, index) {
+        return '<button class="thumb-button" type="button" data-gallery-src="' + src + '" aria-label="View image ' + (index + 1) + ' for ' + product.name + '">' +
+          '<img src="' + src + '" alt="' + product.name + ' detail image ' + (index + 1) + '">' +
+        '</button>';
+      }).join("");
+
+      galleryNode.querySelectorAll("[data-gallery-src]").forEach(function (button) {
+        button.addEventListener("click", function () {
+          if (heroImage) {
+            heroImage.src = button.getAttribute("data-gallery-src");
+            heroImage.alt = product.name;
+          }
+        });
+      });
     }
 
     categoryLinks.forEach(function (link) {
