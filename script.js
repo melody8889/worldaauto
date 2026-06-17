@@ -54,6 +54,20 @@
           stock: "Q3 2026",
           image: "assets/products/Mercedes- GLS450/main.png",
           gallery: ["assets/products/Mercedes- GLS450/1.png", "assets/products/Mercedes- GLS450/2.png", "assets/products/Mercedes- GLS450/3.png", "assets/products/Mercedes- GLS450/main.png"]
+        },
+        {
+          slug: "lexus-gx-550",
+          name: "Lexus GX 550",
+          subtitle: "Premium luxury off-road SUV with exceptional comfort and capability for high-end market",
+          year: "2026",
+          engine: "3.4L Twin-Turbo V6",
+          fuel: "Gasoline",
+          drive: "Full-Time Four-Wheel Drive (4WD)",
+          transmission: "10-Speed Automatic Transmission",
+          color: "Black / White / Gray / Silver",
+          stock: "Available",
+          image: "assets/products/lexus-gx-550/main.jpg",
+          gallery: ["assets/products/lexus-gx-550/1.jpg", "assets/products/lexus-gx-550/2.jpg", "assets/products/lexus-gx-550/3.jpg", "assets/products/lexus-gx-550/main.jpg"]
         }
       ]
     },
@@ -78,6 +92,20 @@
           stock: "In Stock",
           image: "assets/products/Volkswagen Tiguan L Pro/main.png",
           gallery: ["assets/products/Volkswagen Tiguan L Pro/1.jpg", "assets/products/Volkswagen Tiguan L Pro/2.png", "assets/products/Volkswagen Tiguan L Pro/3.png", "assets/products/Volkswagen Tiguan L Pro/main.png"]
+        },
+        {
+          slug: "mazda-cx-5",
+          name: "Mazda CX-5",
+          subtitle: "Sporty and stylish compact SUV with premium driving dynamics for global market",
+          year: "2026",
+          engine: "2.0L Naturally Aspirated / 2.5L Naturally Aspirated / 2.5L Turbo",
+          fuel: "Gasoline",
+          drive: "Front-Wheel Drive (FWD) / All-Wheel Drive (AWD)",
+          transmission: "6-Speed Automatic Transmission",
+          color: "Black / White / Gray / Red",
+          stock: "Available",
+          image: "assets/products/mazda-cx-5/main.jpg",
+          gallery: ["assets/products/mazda-cx-5/1.jpg", "assets/products/mazda-cx-5/2.jpg", "assets/products/mazda-cx-5/3.jpg", "assets/products/mazda-cx-5/main.jpg"]
         }
       ]
     },
@@ -89,6 +117,118 @@
       page: "chinese-brand-new-cars.html",
       intro: "Fast-moving new Chinese passenger vehicles including EV, hybrid and fuel models sourced for international resale programs.",
       products: [
+        {
+          slug: "jetour-traveller-t2",
+          name: "Jetour Traveller (Jetour T2)",
+          subtitle: "Rugged compact SUV with versatile performance for urban commuting and light off-road adventures",
+          year: "2026",
+          engine: "1.5T Turbo / 2.0T Turbo",
+          fuel: "Gasoline",
+          drive: "Front-Wheel Drive (FWD) / Four-Wheel Drive (4WD)",
+          transmission: "Automatic Transmission",
+          color: "Black / White / Gray / Military Green",
+          stock: "Available",
+          image: "assets/products/jetour-traveller-t2/main.jpg",
+          gallery: ["assets/products/jetour-traveller-t2/1.jpg", "assets/products/jetour-traveller-t2/2.jpg", "assets/products/jetour-traveller-t2/3.jpg", "assets/products/jetour-traveller-t2/main.jpg"]
+        },
+        {
+          slug: "toyota-corolla",
+          name: "Toyota Corolla",
+          subtitle: "Reliable and fuel-efficient compact sedan for global daily commuting and fleet use",
+          year: "2026",
+          engine: "1.2T Turbo / 1.5L Naturally Aspirated / 1.8L Hybrid",
+          fuel: "Gasoline / Hybrid",
+          drive: "Front-Wheel Drive (FWD)",
+          transmission: "Automatic Transmission / Manual Transmission",
+          color: "Black / White / Silver / Gray",
+          stock: "Available",
+          image: "assets/products/toyota-corolla/main.jpg",
+          gallery: ["assets/products/toyota-corolla/1.jpg", "assets/products/toyota-corolla/2.jpg", "assets/products/toyota-corolla/3.jpg", "assets/products/toyota-corolla/main.jpg"]
+        },
+        {
+          slug: "hyundai-elantra",
+          name: "Hyundai Elantra",
+          subtitle: "Stylish and economical compact sedan with advanced tech features for global market",
+          year: "2026",
+          engine: "1.4T Turbo / 1.5L Naturally Aspirated / 1.6L Hybrid",
+          fuel: "Gasoline / Hybrid",
+          drive: "Front-Wheel Drive (FWD)",
+          transmission: "Automatic Transmission / Manual Transmission",
+          color: "Black / White / Gray / Blue",
+          stock: "Available",
+          image: "assets/products/hyundai-elantra/main.jpg",
+          gallery: ["assets/products/hyundai-elantra/1.jpg", "assets/products/hyundai-elantra/2.jpg", "assets/products/hyundai-elantra/3.jpg", "assets/products/hyundai-elantra/main.jpg"]
+        },
+        {
+          slug: "geely-coolray-binyue",
+          name: "Geely Coolray (Binyue)",
+          subtitle: "Sporty and affordable compact SUV with advanced tech for young global buyers",
+          year: "2026",
+          engine: "1.4T Turbo / 1.5T Turbo",
+          fuel: "Gasoline",
+          drive: "Front-Wheel Drive (FWD)",
+          transmission: "Automatic Transmission",
+          color: "Black / White / Gray / Blue",
+          stock: "Available",
+          image: "assets/products/geely-coolray-binyue/main.jpg",
+          gallery: ["assets/products/geely-coolray-binyue/1.jpg", "assets/products/geely-coolray-binyue/2.jpg", "assets/products/geely-coolray-binyue/3.jpg", "assets/products/geely-coolray-binyue/main.jpg"]
+        },
+        {
+          slug: "mg5",
+          name: "MG5",
+          subtitle: "Stylish and affordable compact sedan with sporty design for global young market",
+          year: "2026",
+          engine: "1.5L Naturally Aspirated / 1.5T Turbo",
+          fuel: "Gasoline",
+          drive: "Front-Wheel Drive (FWD)",
+          transmission: "Automatic Transmission / Manual Transmission",
+          color: "Black / White / Gray / Red",
+          stock: "Available",
+          image: "assets/products/mg5/main.jpg",
+          gallery: ["assets/products/mg5/1.jpg", "assets/products/mg5/2.jpg", "assets/products/mg5/3.jpg", "assets/products/mg5/main.jpg"]
+        },
+        {
+          slug: "aion-i60-reev",
+          name: "AION i60 REEV",
+          subtitle: "High-efficiency range-extended electric sedan with long range for global new energy market",
+          year: "2026",
+          engine: "Range Extender + Permanent Magnet Synchronous Motor",
+          fuel: "Electric / Gasoline (Range Extender)",
+          drive: "Front-Wheel Drive (FWD)",
+          transmission: "Single-Speed Automatic Transmission",
+          color: "Black / White / Gray / Blue",
+          stock: "Available",
+          image: "assets/products/aion-i60-reev/main.jpg",
+          gallery: ["assets/products/aion-i60-reev/1.jpg", "assets/products/aion-i60-reev/2.jpg", "assets/products/aion-i60-reev/3.jpg", "assets/products/aion-i60-reev/main.jpg"]
+        },
+        {
+          slug: "leapmotor-t03",
+          name: "Leapmotor T03",
+          subtitle: "Affordable and compact pure electric city car for urban commuting and global micro EV market",
+          year: "2026",
+          engine: "Permanent Magnet Synchronous Motor",
+          fuel: "Pure Electric",
+          drive: "Front-Wheel Drive (FWD)",
+          transmission: "Single-Speed Automatic Transmission",
+          color: "Black / White / Gray / Pink",
+          stock: "Available",
+          image: "assets/products/leapmotor-t03/main.jpg",
+          gallery: ["assets/products/leapmotor-t03/1.jpg", "assets/products/leapmotor-t03/2.jpg", "assets/products/leapmotor-t03/3.jpg", "assets/products/leapmotor-t03/main.jpg"]
+        },
+        {
+          slug: "livan",
+          name: "Livan",
+          subtitle: "Reliable and affordable new energy vehicles for global market with versatile model options",
+          year: "2026",
+          engine: "Electric / Hybrid",
+          fuel: "Electric / Hybrid",
+          drive: "Front-Wheel Drive (FWD)",
+          transmission: "Automatic Transmission",
+          color: "Black / White / Gray",
+          stock: "Available",
+          image: "assets/products/livan/main.jpg",
+          gallery: ["assets/products/livan/1.jpg", "assets/products/livan/2.jpg", "assets/products/livan/3.jpg", "assets/products/livan/main.jpg"]
+        }
       ]
     },
     "skd-car-kits": {
