@@ -106,30 +106,6 @@
           stock: "Available",
           image: "assets/products/mazda-cx-5/main.jpg",
           gallery: ["assets/products/mazda-cx-5/1.jpg", "assets/products/mazda-cx-5/2.jpg", "assets/products/mazda-cx-5/3.jpg", "assets/products/mazda-cx-5/main.jpg"]
-        }
-      ]
-    },
-    "chinese-brand-new-cars": {
-      slug: "chinese-brand-new-cars",
-      title: "Chinese Brand New Cars",
-      shortTitle: "Chinese Brand New Cars",
-      type: "Brand new complete vehicle",
-      page: "chinese-brand-new-cars.html",
-      intro: "Fast-moving new Chinese passenger vehicles including EV, hybrid and fuel models sourced for international resale programs.",
-      products: [
-        {
-          slug: "jetour-traveller-t2",
-          name: "Jetour Traveller (Jetour T2)",
-          subtitle: "Rugged compact SUV with versatile performance for urban commuting and light off-road adventures",
-          year: "2026",
-          engine: "1.5T Turbo / 2.0T Turbo",
-          fuel: "Gasoline",
-          drive: "Front-Wheel Drive (FWD) / Four-Wheel Drive (4WD)",
-          transmission: "Automatic Transmission",
-          color: "Black / White / Gray / Military Green",
-          stock: "Available",
-          image: "assets/products/jetour-traveller-t2/main.jpg",
-          gallery: ["assets/products/jetour-traveller-t2/1.jpg", "assets/products/jetour-traveller-t2/2.jpg", "assets/products/jetour-traveller-t2/3.jpg", "assets/products/jetour-traveller-t2/main.jpg"]
         },
         {
           slug: "toyota-corolla",
@@ -160,20 +136,6 @@
           gallery: ["assets/products/hyundai-elantra/1.jpg", "assets/products/hyundai-elantra/2.jpg", "assets/products/hyundai-elantra/3.jpg", "assets/products/hyundai-elantra/main.jpg"]
         },
         {
-          slug: "geely-coolray-binyue",
-          name: "Geely Coolray (Binyue)",
-          subtitle: "Sporty and affordable compact SUV with advanced tech for young global buyers",
-          year: "2026",
-          engine: "1.4T Turbo / 1.5T Turbo",
-          fuel: "Gasoline",
-          drive: "Front-Wheel Drive (FWD)",
-          transmission: "Automatic Transmission",
-          color: "Black / White / Gray / Blue",
-          stock: "Available",
-          image: "assets/products/geely-coolray-binyue/main.jpg",
-          gallery: ["assets/products/geely-coolray-binyue/1.jpg", "assets/products/geely-coolray-binyue/2.jpg", "assets/products/geely-coolray-binyue/3.jpg", "assets/products/geely-coolray-binyue/main.jpg"]
-        },
-        {
           slug: "mg5",
           name: "MG5",
           subtitle: "Stylish and affordable compact sedan with sporty design for global young market",
@@ -186,6 +148,44 @@
           stock: "Available",
           image: "assets/products/mg5/main.jpg",
           gallery: ["assets/products/mg5/1.jpg", "assets/products/mg5/2.jpg", "assets/products/mg5/3.jpg", "assets/products/mg5/main.jpg"]
+        }
+      ]
+    },
+    "chinese-brand-new-cars": {
+      slug: "chinese-brand-new-cars",
+      title: "Chinese Brand New Cars",
+      shortTitle: "Chinese Brand New Cars",
+      type: "Brand new complete vehicle",
+      page: "chinese-brand-new-cars.html",
+      intro: "Fast-moving new Chinese passenger vehicles including EV, hybrid and fuel models sourced for international resale programs.",
+      products: [
+        {
+          slug: "jetour-traveller-t2",
+          name: "Jetour Traveller (Jetour T2)",
+          subtitle: "Rugged compact SUV with versatile performance for urban commuting and light off-road adventures",
+          year: "2026",
+          engine: "1.5T Turbo / 2.0T Turbo",
+          fuel: "Gasoline",
+          drive: "Front-Wheel Drive (FWD) / Four-Wheel Drive (4WD)",
+          transmission: "Automatic Transmission",
+          color: "Black / White / Gray / Military Green",
+          stock: "Available",
+          image: "assets/products/jetour-traveller-t2/main.jpg",
+          gallery: ["assets/products/jetour-traveller-t2/1.jpg", "assets/products/jetour-traveller-t2/2.jpg", "assets/products/jetour-traveller-t2/3.jpg", "assets/products/jetour-traveller-t2/main.jpg"]
+        },
+        {
+          slug: "geely-coolray-binyue",
+          name: "Geely Coolray (Binyue)",
+          subtitle: "Sporty and affordable compact SUV with advanced tech for young global buyers",
+          year: "2026",
+          engine: "1.4T Turbo / 1.5T Turbo",
+          fuel: "Gasoline",
+          drive: "Front-Wheel Drive (FWD)",
+          transmission: "Automatic Transmission",
+          color: "Black / White / Gray / Blue",
+          stock: "Available",
+          image: "assets/products/geely-coolray-binyue/main.jpg",
+          gallery: ["assets/products/geely-coolray-binyue/1.jpg", "assets/products/geely-coolray-binyue/2.jpg", "assets/products/geely-coolray-binyue/3.jpg", "assets/products/geely-coolray-binyue/main.jpg"]
         },
         {
           slug: "aion-i60-reev",
@@ -454,6 +454,7 @@
     });
   });
 })();
+
 
 
 
