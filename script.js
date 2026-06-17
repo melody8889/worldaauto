@@ -73,8 +73,8 @@
     },
     "suv-pickup": {
       slug: "suv-pickup",
-      title: "SUV & Pickup Trucks",
-      shortTitle: "SUV & Pickup Trucks",
+      title: "International Brand New Cars",
+      shortTitle: "International Brand New Cars",
       type: "SUV / pickup truck",
       page: "suv-pickup.html",
       intro: "High-demand SUVs and pickup trucks for family use, project fleets, utility channels and regional bulk dealership supply.",
