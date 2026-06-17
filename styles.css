@@ -703,7 +703,8 @@ h3 {
 .product-gallery img {
   width: 100%;
   aspect-ratio: 4 / 3;
-  object-fit: cover;
+  object-fit: contain;
+  background: #f4f7fa;
 }
 
 .thumb-row {
@@ -713,10 +714,22 @@ h3 {
   padding: 14px;
 }
 
-.thumb-row span {
-  height: 54px;
-  background: #d8e0e9;
+.thumb-button {
+  height: 72px;
+  padding: 0;
+  overflow: hidden;
+  border: 1px solid var(--line);
   border-radius: 4px;
+  background: #f4f7fa;
+  cursor: pointer;
+}
+
+.thumb-button img {
+  width: 100%;
+  height: 100%;
+  aspect-ratio: auto;
+  object-fit: contain;
+  background: #f4f7fa;
 }
 
 .product-summary h1 {
@@ -1088,6 +1101,11 @@ h3 {
 
 .product-gallery img,
 .list-card img {
+  -webkit-object-fit: contain;
+}
+
+.list-card img {
+  object-fit: cover;
   -webkit-object-fit: cover;
 }
 
