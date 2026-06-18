@@ -399,7 +399,11 @@ h3 {
 .product-card img {
   width: 100%;
   height: 150px;
-  object-fit: cover;
+  padding: 16px;
+  object-fit: contain;
+  background:
+    radial-gradient(circle at 50% 84%, rgba(255, 255, 255, 0.16), transparent 34%),
+    linear-gradient(180deg, #161a1d 0%, #2c2723 54%, #171717 100%);
 }
 
 .product-card .crop-left {
@@ -788,7 +792,12 @@ h3 {
 .list-card img {
   width: 100%;
   height: 210px;
-  object-fit: cover;
+  padding: 18px 24px;
+  object-fit: contain;
+  object-position: center;
+  background:
+    radial-gradient(circle at 50% 84%, rgba(255, 255, 255, 0.18), transparent 34%),
+    linear-gradient(180deg, #161a1d 0%, #2c2723 54%, #171717 100%);
 }
 
 .list-card-body {
@@ -1076,6 +1085,11 @@ h3 {
     height: 190px;
   }
 
+  .list-card img {
+    height: 190px;
+    padding: 16px;
+  }
+
   .inquiry-form {
     padding: 20px;
   }
@@ -1105,8 +1119,8 @@ h3 {
 }
 
 .list-card img {
-  object-fit: cover;
-  -webkit-object-fit: cover;
+  object-fit: contain;
+  -webkit-object-fit: contain;
 }
 
 .category-card img {
