@@ -28,6 +28,48 @@
       intro: "Premium sedans and executive models selected for dealership procurement, VIP fleet supply and image-led resale channels.",
       products: [
         {
+          slug: "mercedes-s450",
+          name: "Mercedes-Benz S450",
+          subtitle: "New generation executive sedan with advanced technology and premium comfort",
+          year: "2026",
+          engine: "3.0T",
+          fuel: "Gasoline",
+          drive: "AWD",
+          transmission: "9AT",
+          color: "Black / White / Gray",
+          stock: "Q3 2026 Allocation Available",
+          image: "assets/mercedes-s450-main.jpg",
+          pageUrl: "mercedes-s450.html"
+        },
+        {
+          slug: "Mercedes- GLS450",
+          name: "Mercedes-Benz GLS450",
+          subtitle: "2026 GLS450: Luxurious 7-seat large SUV, stable powertrain for wholesale supply",
+          year: "2026",
+          engine: "3.0T",
+          fuel: "Gasoline",
+          drive: "RWD / AWD",
+          transmission: "Automatic",
+          color: "Black / White / Gray",
+          stock: "Q3 2026",
+          image: "assets/products/Mercedes- GLS450/main.png",
+          gallery: ["assets/products/Mercedes- GLS450/1.png", "assets/products/Mercedes- GLS450/2.png", "assets/products/Mercedes- GLS450/3.png", "assets/products/Mercedes- GLS450/main.png"]
+        },
+        {
+          slug: "lexus-gx-550",
+          name: "Lexus GX 550",
+          subtitle: "Premium luxury off-road SUV with exceptional comfort and capability for high-end market",
+          year: "2026",
+          engine: "3.4L Twin-Turbo V6",
+          fuel: "Gasoline",
+          drive: "Full-Time Four-Wheel Drive (4WD)",
+          transmission: "10-Speed Automatic Transmission",
+          color: "Black / White / Gray / Silver",
+          stock: "Available",
+          image: "assets/products/lexus-gx-550/main.png",
+          gallery: ["assets/products/lexus-gx-550/1.png", "assets/products/lexus-gx-550/2.png", "assets/products/lexus-gx-550/3.png", "assets/products/lexus-gx-550/4.png", "assets/products/lexus-gx-550/main.png"]
+        },
+        {
           slug: "porsche-cayenne",
           name: "Porsche Cayenne",
           subtitle: "Premium luxury performance SUV for high-end dealerships and VIP client procurement",
@@ -110,49 +152,6 @@
           stock: "Available",
           image: "assets/products/lexus-lx600/main.jpg",
           gallery: ["assets/products/lexus-lx600/1.jpg", "assets/products/lexus-lx600/2.jpg", "assets/products/lexus-lx600/3.jpg", "assets/products/lexus-lx600/main.jpg"]
-        },
-
-        {
-          slug: "mercedes-s450",
-          name: "Mercedes-Benz S450",
-          subtitle: "New generation executive sedan with advanced technology and premium comfort",
-          year: "2026",
-          engine: "3.0T",
-          fuel: "Gasoline",
-          drive: "AWD",
-          transmission: "9AT",
-          color: "Black / White / Gray",
-          stock: "Q3 2026 Allocation Available",
-          image: "assets/mercedes-s450-main.jpg",
-          pageUrl: "mercedes-s450.html"
-        },
-        {
-          slug: "Mercedes- GLS450",
-          name: "Mercedes-Benz GLS450",
-          subtitle: "2026 GLS450: Luxurious 7-seat large SUV, stable powertrain for wholesale supply",
-          year: "2026",
-          engine: "3.0T",
-          fuel: "Gasoline",
-          drive: "RWD / AWD",
-          transmission: "Automatic",
-          color: "Black / White / Gray",
-          stock: "Q3 2026",
-          image: "assets/products/Mercedes- GLS450/main.png",
-          gallery: ["assets/products/Mercedes- GLS450/1.png", "assets/products/Mercedes- GLS450/2.png", "assets/products/Mercedes- GLS450/3.png", "assets/products/Mercedes- GLS450/main.png"]
-        },
-        {
-          slug: "lexus-gx-550",
-          name: "Lexus GX 550",
-          subtitle: "Premium luxury off-road SUV with exceptional comfort and capability for high-end market",
-          year: "2026",
-          engine: "3.4L Twin-Turbo V6",
-          fuel: "Gasoline",
-          drive: "Full-Time Four-Wheel Drive (4WD)",
-          transmission: "10-Speed Automatic Transmission",
-          color: "Black / White / Gray / Silver",
-          stock: "Available",
-          image: "assets/products/lexus-gx-550/main.png",
-          gallery: ["assets/products/lexus-gx-550/1.png", "assets/products/lexus-gx-550/2.png", "assets/products/lexus-gx-550/3.png", "assets/products/lexus-gx-550/4.png", "assets/products/lexus-gx-550/main.png"]
         }
       ]
     },
