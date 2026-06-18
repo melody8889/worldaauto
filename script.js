@@ -66,8 +66,8 @@
           transmission: "10-Speed Automatic Transmission",
           color: "Black / White / Gray / Silver",
           stock: "Available",
-          image: "assets/products/lexus-gx-550/main.jpg",
-          gallery: ["assets/products/lexus-gx-550/1.jpg", "assets/products/lexus-gx-550/2.jpg", "assets/products/lexus-gx-550/3.jpg", "assets/products/lexus-gx-550/main.jpg"]
+          image: "assets/products/lexus-gx-550/main.png",
+          gallery: ["assets/products/lexus-gx-550/1.png", "assets/products/lexus-gx-550/2.png", "assets/products/lexus-gx-550/3.png", "assets/products/lexus-gx-550/4.png", "assets/products/lexus-gx-550/main.png"]
         }
       ]
     },
