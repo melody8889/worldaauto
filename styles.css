@@ -387,7 +387,7 @@ h3 {
 
 .product-card {
   display: flex;
-  min-height: 390px;
+  min-height: 410px;
   overflow: hidden;
   flex-direction: column;
   background: var(--white);
@@ -398,10 +398,11 @@ h3 {
 
 .product-card img {
   width: 100%;
-  height: 150px;
-  object-fit: contain;
+  height: 230px;
+  object-fit: cover;
   object-position: center;
-  background: var(--white);
+  display: block;
+  flex: 0 0 230px;
 }
 
 .product-card .crop-left {
@@ -705,8 +706,9 @@ h3 {
 .product-gallery img {
   width: 100%;
   aspect-ratio: 4 / 3;
-  object-fit: contain;
-  background: #f4f7fa;
+  object-fit: cover;
+  object-position: center;
+  display: block;
 }
 
 .thumb-row {
@@ -730,8 +732,9 @@ h3 {
   width: 100%;
   height: 100%;
   aspect-ratio: auto;
-  object-fit: contain;
-  background: #f4f7fa;
+  object-fit: cover;
+  object-position: center;
+  display: block;
 }
 
 .product-summary h1 {
@@ -790,9 +793,9 @@ h3 {
 .list-card img {
   width: 100%;
   height: 210px;
-  object-fit: contain;
+  object-fit: cover;
   object-position: center;
-  background: var(--white);
+  display: block;
 }
 
 .list-card-body {
@@ -1077,7 +1080,8 @@ h3 {
   }
 
   .product-card img {
-    height: 190px;
+    height: 220px;
+    flex-basis: 220px;
   }
 
   .list-card img {
@@ -1109,12 +1113,15 @@ h3 {
 
 .product-gallery img,
 .list-card img {
-  -webkit-object-fit: contain;
+  -webkit-object-fit: cover;
 }
 
 .list-card img {
-  object-fit: contain;
-  -webkit-object-fit: contain;
+  object-fit: cover;
+  -webkit-object-fit: cover;
+  width: 100%;
+  height: 210px;
+  display: block;
 }
 
 .category-card img {
@@ -1241,6 +1248,28 @@ h3 {
 @media (max-width: 800px) {
   .contact-strip > a {
     justify-content: flex-start;
+  }
+}
+
+/* Homepage category cards: remove contain-mode letterboxing. */
+.product-card > img {
+  width: 100% !important;
+  height: 230px !important;
+  min-height: 230px !important;
+  flex: 0 0 230px !important;
+  object-fit: cover !important;
+  object-position: center center !important;
+  display: block !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  background: transparent !important;
+}
+
+@media (max-width: 800px) {
+  .product-card > img {
+    height: 220px !important;
+    min-height: 220px !important;
+    flex-basis: 220px !important;
   }
 }
 
