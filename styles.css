@@ -1325,3 +1325,14 @@ h3 {
     aspect-ratio: 1.9 / 1 !important;
   }
 }
+
+/* Match SKD and spare parts images to their original ratio to remove side bars */
+.product-card > img[src*="skd-car-kits"],
+.product-card > img[src*="auto-spare-parts"] {
+  aspect-ratio: 16 / 9 !important;
+  width: 100% !important;
+  height: auto !important;
+  object-fit: contain !important;
+  object-position: center center !important;
+  background: #05080c !important;
+}
