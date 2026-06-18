@@ -28,6 +28,91 @@
       intro: "Premium sedans and executive models selected for dealership procurement, VIP fleet supply and image-led resale channels.",
       products: [
         {
+          slug: "porsche-cayenne",
+          name: "Porsche Cayenne",
+          subtitle: "Premium luxury performance SUV for high-end dealerships and VIP client procurement",
+          year: "2026",
+          engine: "3.0T V6 / 4.0T V8",
+          fuel: "Gasoline",
+          drive: "AWD",
+          transmission: "Automatic",
+          color: "Black / White / Gray / Silver",
+          stock: "Available",
+          image: "assets/products/porsche-cayenne/main.jpg",
+          gallery: ["assets/products/porsche-cayenne/1.jpg", "assets/products/porsche-cayenne/2.jpg", "assets/products/porsche-cayenne/3.jpg", "assets/products/porsche-cayenne/main.jpg"]
+        },
+        {
+          slug: "land-rover-range-rover",
+          name: "Land Rover Range Rover",
+          subtitle: "Flagship luxury off-road SUV for premium showrooms and high-end clientele",
+          year: "2026",
+          engine: "3.0T L6 / 4.4T V8",
+          fuel: "Gasoline",
+          drive: "AWD",
+          transmission: "Automatic",
+          color: "Black / White / Gray / Silver",
+          stock: "Available",
+          image: "assets/products/land-rover-range-rover/main.jpg",
+          gallery: ["assets/products/land-rover-range-rover/1.jpg", "assets/products/land-rover-range-rover/2.jpg", "assets/products/land-rover-range-rover/3.jpg", "assets/products/land-rover-range-rover/main.jpg"]
+        },
+        {
+          slug: "land-rover-defender-110",
+          name: "Land Rover Defender 110",
+          subtitle: "Iconic luxury off-road SUV for adventure enthusiasts and premium dealerships",
+          year: "2026",
+          engine: "2.0T L4 / 3.0T L6",
+          fuel: "Gasoline",
+          drive: "AWD",
+          transmission: "Automatic",
+          color: "Black / White / Gray / Silver",
+          stock: "Available",
+          image: "assets/products/land-rover-defender-110/main.jpg",
+          gallery: ["assets/products/land-rover-defender-110/1.jpg", "assets/products/land-rover-defender-110/2.jpg", "assets/products/land-rover-defender-110/3.jpg", "assets/products/land-rover-defender-110/main.jpg"]
+        },
+        {
+          slug: "audi-a8l-horch",
+          name: "Audi A8L Horch",
+          subtitle: "Ultra-luxury executive sedan for VIP clients and high-end showroom procurement",
+          year: "2026",
+          engine: "3.0T V6 / 4.0T V8",
+          fuel: "Gasoline",
+          drive: "RWD / AWD",
+          transmission: "Automatic",
+          color: "Black / White / Gray / Silver",
+          stock: "Available",
+          image: "assets/products/audi-a8l-horch/main.jpg",
+          gallery: ["assets/products/audi-a8l-horch/1.jpg", "assets/products/audi-a8l-horch/2.jpg", "assets/products/audi-a8l-horch/3.jpg", "assets/products/audi-a8l-horch/main.jpg"]
+        },
+        {
+          slug: "mercedes-benz-gle",
+          name: "Mercedes-Benz GLE",
+          subtitle: "Premium luxury mid-size SUV for global dealerships and family client procurement",
+          year: "2026",
+          engine: "2.0T L4 / 3.0T L6",
+          fuel: "Gasoline",
+          drive: "RWD / AWD",
+          transmission: "Automatic",
+          color: "Black / White / Gray / Silver",
+          stock: "Available",
+          image: "assets/products/mercedes-benz-gle/main.jpg",
+          gallery: ["assets/products/mercedes-benz-gle/1.jpg", "assets/products/mercedes-benz-gle/2.jpg", "assets/products/mercedes-benz-gle/3.jpg", "assets/products/mercedes-benz-gle/main.jpg"]
+        },
+        {
+          slug: "lexus-lx600",
+          name: "Lexus LX600",
+          subtitle: "Flagship luxury full-size SUV for high-end dealerships and VIP clientele",
+          year: "2026",
+          engine: "5.7L V8",
+          fuel: "Gasoline",
+          drive: "AWD",
+          transmission: "Automatic",
+          color: "Black / White / Gray / Silver",
+          stock: "Available",
+          image: "assets/products/lexus-lx600/main.jpg",
+          gallery: ["assets/products/lexus-lx600/1.jpg", "assets/products/lexus-lx600/2.jpg", "assets/products/lexus-lx600/3.jpg", "assets/products/lexus-lx600/main.jpg"]
+        },
+
+        {
           slug: "mercedes-s450",
           name: "Mercedes-Benz S450",
           subtitle: "New generation executive sedan with advanced technology and premium comfort",
@@ -474,6 +559,7 @@
     });
   });
 })();
+
 
 
 
