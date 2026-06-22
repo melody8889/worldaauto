@@ -244,6 +244,103 @@
       intro: "Fast-moving new Chinese passenger vehicles including EV, hybrid and fuel models sourced for international resale programs.",
       products: [
         {
+          slug: "mg-zs",
+          name: "MG ZS",
+          subtitle: "Fashion compact family SUV with complete configuration for global buyers",
+          year: "2026",
+          engine: "1.5L / 1.5T Turbo",
+          fuel: "Petrol",
+          drive: "FWD",
+          transmission: "CVT",
+          color: "White, Black, Silver, Gray",
+          stock: "In Stock",
+          image: "assets/products/mg-zs/main.png",
+          gallery: ["assets/products/mg-zs/1.png", "assets/products/mg-zs/2.webp", "assets/products/mg-zs/3.jpg", "assets/products/mg-zs/main.png"]
+        },
+        {
+          slug: "tank-700",
+          name: "TANK 700",
+          subtitle: "Flagship luxury hardcore off-road hybrid SUV with premium capability",
+          year: "2026",
+          engine: "3.0T V6 Twin-Turbo Hi4-T Hybrid",
+          fuel: "Hybrid",
+          drive: "Full-time 4WD",
+          transmission: "9AT",
+          color: "Black, White, Gray, Green",
+          stock: "In Stock",
+          image: "assets/products/tank-700/main.jpg",
+          gallery: ["assets/products/tank-700/1.png", "assets/products/tank-700/2.jpg", "assets/products/tank-700/3.jpg", "assets/products/tank-700/main.jpg"]
+        },
+        {
+          slug: "haval-m6",
+          name: "Haval M6",
+          subtitle: "Affordable practical family petrol SUV with spacious interior",
+          year: "2026",
+          engine: "1.5T Turbo",
+          fuel: "Petrol",
+          drive: "FWD",
+          transmission: "6MT / 7DCT",
+          color: "White, Black, Gray, Blue",
+          stock: "In Stock",
+          image: "assets/products/haval-m6/main.jpg",
+          gallery: ["assets/products/haval-m6/1.jpg", "assets/products/haval-m6/2.jpg", "assets/products/haval-m6/3.jpg", "assets/products/haval-m6/main.jpg"]
+        },
+        {
+          slug: "byd-seagull",
+          name: "BYD Seagull",
+          subtitle: "World's top-selling entry-level pure electric city car with fast charging",
+          year: "2026",
+          engine: "Permanent Magnet Synchronous Motor",
+          fuel: "Pure Electric",
+          drive: "FWD",
+          transmission: "Single-speed Reduction",
+          color: "White, Pink, Blue, Green",
+          stock: "In Stock",
+          image: "assets/products/byd-seagull/main.jpg",
+          gallery: ["assets/products/byd-seagull/1.jpg", "assets/products/byd-seagull/2.jpg", "assets/products/byd-seagull/3.jpg", "assets/products/byd-seagull/main.jpg"]
+        },
+        {
+          slug: "byd-song-plus-dmi",
+          name: "BYD Song PLUS DM-i",
+          subtitle: "Global best-selling plug-in hybrid family SUV with long range and low fuel consumption",
+          year: "2026",
+          engine: "1.5L DM-i Super Hybrid System",
+          fuel: "Plug-in Hybrid",
+          drive: "FWD",
+          transmission: "E-CVT",
+          color: "White, Black, Gray, Blue",
+          stock: "In Stock",
+          image: "assets/products/byd-song-plus-dmi/main.png",
+          gallery: ["assets/products/byd-song-plus-dmi/1.png", "assets/products/byd-song-plus-dmi/2.png", "", "assets/products/byd-song-plus-dmi/main.png"]
+        },
+        {
+          slug: "zeekr-009",
+          name: "ZEEKR 009",
+          subtitle: "Flagship ultra-luxury pure electric large MPV with premium comfort",
+          year: "2026",
+          engine: "Dual Permanent Magnet Synchronous Motors",
+          fuel: "Pure Electric",
+          drive: "AWD",
+          transmission: "Single-speed Reduction",
+          color: "Black, White, Gray, Blue",
+          stock: "In Stock",
+          image: "",
+          gallery: ["", "", "", ""]
+        },
+        {
+          slug: "byd-yuan-up",
+          name: "BYD Yuan Up",
+          subtitle: "Compact urban pure electric SUV for young buyers with reliable battery performance",
+          year: "2026",
+          engine: "Permanent Magnet Synchronous Motor",
+          fuel: "Pure Electric",
+          drive: "FWD",
+          transmission: "Single-speed Reduction",
+          color: "White, Black, Gray, Pink",
+          stock: "In Stock",
+          image: "",
+          gallery: ["", "", "", ""]
+        },        {
           slug: "jetour-traveller-t2",
           name: "Jetour Traveller (Jetour T2)",
           subtitle: "Rugged compact SUV with versatile performance for urban commuting and light off-road adventures",
@@ -558,6 +655,7 @@
     });
   });
 })();
+
 
 
 
