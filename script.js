@@ -351,8 +351,8 @@
           transmission: "Automatic Transmission",
           color: "Black / White / Gray / Military Green",
           stock: "Available",
-          image: "assets/products/jetour-traveller-t2/main.jpg",
-          gallery: ["assets/products/jetour-traveller-t2/1.jpg", "assets/products/jetour-traveller-t2/2.jpg", "assets/products/jetour-traveller-t2/3.jpg", "assets/products/jetour-traveller-t2/main.jpg"]
+          image: "assets/products/byd-yuan-up/main.png",
+          gallery: [""assets/products/byd-yuan-up/1.png", "assets/products/byd-yuan-up/2.png", "assets/products/byd-yuan-up/3.png", "assets/products/byd-yuan-up/main.png"]
         },
         {
           slug: "geely-coolray-binyue",
@@ -655,6 +655,7 @@
     });
   });
 })();
+
 
 
 
