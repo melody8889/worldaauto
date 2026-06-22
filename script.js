@@ -242,7 +242,7 @@
       type: "Brand new complete vehicle",
       page: "chinese-brand-new-cars.html",
       intro: "Fast-moving new Chinese passenger vehicles including EV, hybrid and fuel models sourced for international resale programs.",
-      products: [
+      products: [        {
         {
           slug: "mg-zs",
           name: "MG ZS",
@@ -255,7 +255,7 @@
           color: "White, Black, Silver, Gray",
           stock: "In Stock",
           image: "assets/products/mg-zs/main.png",
-          gallery: ["assets/products/mg-zs/1.png", "assets/products/mg-zs/2.webp", "assets/products/mg-zs/3.jpg", "assets/products/mg-zs/main.png"]
+          gallery: ["assets/products/mg-zs/1.png","assets/products/mg-zs/2.webp","assets/products/mg-zs/3.jpg","assets/products/mg-zs/main.png"]
         },
         {
           slug: "tank-700",
@@ -269,7 +269,7 @@
           color: "Black, White, Gray, Green",
           stock: "In Stock",
           image: "assets/products/tank-700/main.jpg",
-          gallery: ["assets/products/tank-700/1.png", "assets/products/tank-700/2.jpg", "assets/products/tank-700/3.jpg", "assets/products/tank-700/main.jpg"]
+          gallery: ["assets/products/tank-700/1.png","assets/products/tank-700/2.jpg","assets/products/tank-700/3.jpg","assets/products/tank-700/main.jpg"]
         },
         {
           slug: "haval-m6",
@@ -283,7 +283,7 @@
           color: "White, Black, Gray, Blue",
           stock: "In Stock",
           image: "assets/products/haval-m6/main.jpg",
-          gallery: ["assets/products/haval-m6/1.jpg", "assets/products/haval-m6/2.jpg", "assets/products/haval-m6/3.jpg", "assets/products/haval-m6/main.jpg"]
+          gallery: ["assets/products/haval-m6/1.jpg","assets/products/haval-m6/2.jpg","assets/products/haval-m6/3.jpg","assets/products/haval-m6/main.jpg"]
         },
         {
           slug: "byd-seagull",
@@ -297,7 +297,7 @@
           color: "White, Pink, Blue, Green",
           stock: "In Stock",
           image: "assets/products/byd-seagull/main.jpg",
-          gallery: ["assets/products/byd-seagull/1.jpg", "assets/products/byd-seagull/2.jpg", "assets/products/byd-seagull/3.jpg", "assets/products/byd-seagull/main.jpg"]
+          gallery: ["assets/products/byd-seagull/1.jpg","assets/products/byd-seagull/2.jpg","assets/products/byd-seagull/3.jpg","assets/products/byd-seagull/main.jpg"]
         },
         {
           slug: "byd-song-plus-dmi",
@@ -311,7 +311,7 @@
           color: "White, Black, Gray, Blue",
           stock: "In Stock",
           image: "assets/products/byd-song-plus-dmi/main.png",
-          gallery: ["assets/products/byd-song-plus-dmi/1.png", "assets/products/byd-song-plus-dmi/2.png", "", "assets/products/byd-song-plus-dmi/main.png"]
+          gallery: ["assets/products/byd-song-plus-dmi/1.png","assets/products/byd-song-plus-dmi/2.png","assets/products/byd-song-plus-dmi/3.png","assets/products/byd-song-plus-dmi/main.png"]
         },
         {
           slug: "zeekr-009",
@@ -324,8 +324,8 @@
           transmission: "Single-speed Reduction",
           color: "Black, White, Gray, Blue",
           stock: "In Stock",
-          image: "",
-          gallery: ["", "", "", ""]
+          image: "assets/products/zeekr-009/main.jpg",
+          gallery: ["assets/products/zeekr-009/1.jpg","assets/products/zeekr-009/2.jpg","assets/products/zeekr-009/3.jpg","assets/products/zeekr-009/main.jpg"]
         },
         {
           slug: "byd-yuan-up",
@@ -338,9 +338,9 @@
           transmission: "Single-speed Reduction",
           color: "White, Black, Gray, Pink",
           stock: "In Stock",
-          image: "",
-          gallery: ["", "", "", ""]
-        },        {
+          image: "assets/products/byd-yuan-up/main.png",
+          gallery: ["assets/products/byd-yuan-up/1.png","assets/products/byd-yuan-up/2.png","assets/products/byd-yuan-up/3.png","assets/products/byd-yuan-up/main.png"]
+        },
           slug: "jetour-traveller-t2",
           name: "Jetour Traveller (Jetour T2)",
           subtitle: "Rugged compact SUV with versatile performance for urban commuting and light off-road adventures",
