@@ -324,8 +324,8 @@
           transmission: "Single-speed Reduction",
           color: "Black, White, Gray, Blue",
           stock: "In Stock",
-          image: "",
-          gallery: ["", "", "", ""]
+          image: "assets/products/zeekr-009/main.jpg",
+          gallery: [""assets/products/zeekr-009/1.jpg", "", "", "assets/products/zeekr-009/main.jpg"]
         },
         {
           slug: "byd-yuan-up",
@@ -351,8 +351,8 @@
           transmission: "Automatic Transmission",
           color: "Black / White / Gray / Military Green",
           stock: "Available",
-          image: "assets/products/jetour-traveller-t2/main.jpg",
-          gallery: ["assets/products/jetour-traveller-t2/1.jpg", "assets/products/jetour-traveller-t2/2.jpg", "assets/products/jetour-traveller-t2/3.jpg", "assets/products/jetour-traveller-t2/main.jpg"]
+          image: "",
+          gallery: [""", "", "", ""]
         },
         {
           slug: "geely-coolray-binyue",
@@ -655,6 +655,9 @@
     });
   });
 })();
+
+
+
 
 
 
