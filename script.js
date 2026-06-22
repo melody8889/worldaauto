@@ -163,6 +163,21 @@
       page: "suv-pickup.html",
       intro: "High-demand SUVs and pickup trucks for family use, project fleets, utility channels and regional bulk dealership supply.",
       products: [
+
+        {
+          slug: "mg-zs",
+          name: "MG ZS",
+          subtitle: "Fashion compact family SUV with complete configuration for global buyers",
+          year: "2026",
+          engine: "1.5L / 1.5T Turbo",
+          fuel: "Petrol",
+          drive: "FWD",
+          transmission: "CVT",
+          color: "White, Black, Silver, Gray",
+          stock: "In Stock",
+          image: "assets/products/mg-zs/main.png",
+          gallery: ["assets/products/mg-zs/1.png","assets/products/mg-zs/2.webp","assets/products/mg-zs/3.jpg","assets/products/mg-zs/main.png"]
+        },
         {
           slug: "Volkswagen Tiguan L Pro",
           name: "Volkswagen Tiguan L Pro",
@@ -243,20 +258,6 @@
       page: "chinese-brand-new-cars.html",
       intro: "Fast-moving new Chinese passenger vehicles including EV, hybrid and fuel models sourced for international resale programs.",
       products: [
-        {
-          slug: "mg-zs",
-          name: "MG ZS",
-          subtitle: "Fashion compact family SUV with complete configuration for global buyers",
-          year: "2026",
-          engine: "1.5L / 1.5T Turbo",
-          fuel: "Petrol",
-          drive: "FWD",
-          transmission: "CVT",
-          color: "White, Black, Silver, Gray",
-          stock: "In Stock",
-          image: "assets/products/mg-zs/main.png",
-          gallery: ["assets/products/mg-zs/1.png","assets/products/mg-zs/2.webp","assets/products/mg-zs/3.jpg","assets/products/mg-zs/main.png"]
-        },
         {
           slug: "tank-700",
           name: "TANK 700",
