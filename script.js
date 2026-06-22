@@ -325,7 +325,7 @@
           color: "Black, White, Gray, Blue",
           stock: "In Stock",
           image: "assets/products/zeekr-009/main.jpg",
-          gallery: [""assets/products/zeekr-009/1.jpg", "assets/products/zeekr-009/2.jpg", "assets/products/zeekr-009/3.jpg", "assets/products/zeekr-009/main.jpg"]
+          gallery: ["assets/products/zeekr-009/1.jpg","assets/products/zeekr-009/2.jpg","assets/products/zeekr-009/3.jpg","assets/products/zeekr-009/main.jpg"]
         },
         {
           slug: "byd-yuan-up",
@@ -339,7 +339,7 @@
           color: "White, Black, Gray, Pink",
           stock: "In Stock",
           image: "assets/products/byd-yuan-up/main.png",
-          gallery: [""assets/products/byd-yuan-up/1.png", "assets/products/byd-yuan-up/2.png", "assets/products/byd-yuan-up/3.png", "assets/products/byd-yuan-up/main.png"]
+          gallery: ["assets/products/byd-yuan-up/1.png","assets/products/byd-yuan-up/2.png","assets/products/byd-yuan-up/3.png","assets/products/byd-yuan-up/main.png"]
         },
           slug: "jetour-traveller-t2",
           name: "Jetour Traveller (Jetour T2)",
@@ -655,7 +655,6 @@
     });
   });
 })();
-
 
 
 
