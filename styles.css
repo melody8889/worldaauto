@@ -1336,3 +1336,10 @@ h3 {
   object-position: center center !important;
   background: #05080c !important;
 }
+
+/* Keep vehicle product images fully visible in category cards */
+.list-card img.product-img {
+  object-fit: contain;
+  object-position: center center;
+  background: #000;
+}
