@@ -937,6 +937,11 @@ h3 {
   display: block;
 }
 
+.list-card img.product-img-contain {
+  object-fit: contain;
+  background: #ffffff;
+}
+
 .list-card-body {
   display: flex;
   min-height: 250px;
@@ -1277,6 +1282,12 @@ h3 {
   width: 100%;
   height: 210px;
   display: block;
+}
+
+.list-card img.product-img-contain {
+  object-fit: contain;
+  -webkit-object-fit: contain;
+  background: #ffffff;
 }
 
 .category-card img {
