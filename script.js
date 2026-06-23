@@ -424,13 +424,13 @@
       products: [
       ]
     },
-    "auto-spare-parts": {
-      slug: "auto-spare-parts",
-      title: "Auto Spare Parts",
-      shortTitle: "Auto Spare Parts",
-      type: "Export-ready auto spare part",
-      page: "auto-spare-parts.html",
-      intro: "Wholesale spare parts supply for service networks, workshops, rebuild channels and mixed-container export programs.",
+    "used-cars": {
+      slug: "used-cars",
+      title: "Used Cars",
+      shortTitle: "Used Cars",
+      type: "Inspected used vehicle",
+      page: "used-cars.html",
+      intro: "Inspected pre-owned sedans, SUVs and commercial units for overseas dealers, fleet buyers and resale channels.",
       products: [
       ]
     }
@@ -440,8 +440,8 @@
     categoryMap["luxury-vehicle"],
     categoryMap["suv-pickup"],
     categoryMap["chinese-brand-new-cars"],
-    categoryMap["skd-car-kits"],
-    categoryMap["auto-spare-parts"]
+    categoryMap["used-cars"],
+    categoryMap["skd-car-kits"]
   ];
 
   categoryList.forEach(function (category) {
@@ -457,8 +457,8 @@
       "luxury-vehicle": "crop-left",
       "suv-pickup": "crop-mid-left",
       "chinese-brand-new-cars": "crop-center",
-      "skd-car-kits": "crop-mid-right",
-      "auto-spare-parts": "crop-right"
+      "used-cars": "crop-center",
+      "skd-car-kits": "crop-mid-right"
     };
     return imageClassMap[categorySlug] || "crop-center";
   }
