@@ -2,6 +2,49 @@
   const body = document.body;
   const toggle = document.querySelector("[data-menu-toggle]");
   const nav = document.querySelector("[data-nav]");
+  const protectedMediaSelector = [
+    "img",
+    ".product-gallery",
+    ".thumb-row",
+    ".video-thumb",
+    ".hero"
+  ].join(",");
+
+  function isEditableTarget(target) {
+    return Boolean(target && target.closest && target.closest("input, textarea, select, [contenteditable='true']"));
+  }
+
+  function isProtectedMediaTarget(target) {
+    return Boolean(target && target.closest && target.closest(protectedMediaSelector));
+  }
+
+  function preventMediaSave(event) {
+    if (isProtectedMediaTarget(event.target)) {
+      event.preventDefault();
+    }
+  }
+
+  function lockImages() {
+    document.querySelectorAll("img").forEach(function (image) {
+      image.setAttribute("draggable", "false");
+      image.classList.add("protected-image");
+      image.addEventListener("dragstart", preventMediaSave);
+    });
+  }
+
+  document.addEventListener("contextmenu", preventMediaSave);
+  document.addEventListener("dragstart", preventMediaSave);
+
+  document.addEventListener("keydown", function (event) {
+    if (isEditableTarget(event.target)) {
+      return;
+    }
+
+    const key = event.key.toLowerCase();
+    if ((event.ctrlKey || event.metaKey) && (key === "s" || key === "u")) {
+      event.preventDefault();
+    }
+  });
 
   if (toggle && nav) {
     toggle.addEventListener("click", function () {
@@ -645,6 +688,7 @@
 
   renderCategoryPage();
   renderProductPage();
+  lockImages();
 
   document.querySelectorAll("[data-inquiry-form]").forEach(function (form) {
     form.addEventListener("submit", function (event) {
