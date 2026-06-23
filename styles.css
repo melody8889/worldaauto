@@ -189,6 +189,13 @@ textarea {
   font-size: clamp(17px, 2.2vw, 24px);
 }
 
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+}
+
 .eyebrow {
   margin: 0 0 14px;
   color: var(--blue);
@@ -226,6 +233,20 @@ textarea {
 
 .button-primary {
   box-shadow: 0 12px 28px rgba(154, 116, 71, 0.18);
+}
+
+.button-secondary {
+  color: var(--blue-dark);
+  background: rgba(255, 255, 255, 0.82);
+  border-color: rgba(125, 91, 52, 0.46);
+  box-shadow: 0 12px 28px rgba(33, 33, 33, 0.08);
+}
+
+.button-secondary:hover,
+.button-secondary:focus-visible {
+  color: var(--white);
+  background: var(--text);
+  border-color: var(--text);
 }
 
 .contact-strip {
