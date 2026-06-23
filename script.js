@@ -358,6 +358,8 @@
           color: "Black / White / Gray / Military Green",
           stock: "Available",
           image: "assets/products/jetour-traveller-t2/main.jpg",
+          listImageClass: "product-img product-img-contain",
+          detailImageClass: "product-img product-img-contain",
           gallery: ["assets/products/jetour-traveller-t2/1.jpg", "assets/products/jetour-traveller-t2/2.jpg", "assets/products/jetour-traveller-t2/3.jpg", "assets/products/jetour-traveller-t2/main.jpg"]
         },
         {
@@ -372,6 +374,8 @@
           color: "Black / White / Gray / Blue",
           stock: "Available",
           image: "assets/products/geely-coolray-binyue/main.jpg",
+          listImageClass: "product-img product-img-contain",
+          detailImageClass: "product-img product-img-contain",
           gallery: ["assets/products/geely-coolray-binyue/1.jpg", "assets/products/geely-coolray-binyue/2.jpg", "assets/products/geely-coolray-binyue/3.jpg", "assets/products/geely-coolray-binyue/main.jpg"]
         },
         {
