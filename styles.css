@@ -845,6 +845,11 @@ h3 {
   display: block;
 }
 
+.product-gallery img.product-img-contain {
+  object-fit: contain;
+  background: #ffffff;
+}
+
 .thumb-row {
   display: grid;
   grid-template-columns: repeat(3, 1fr);

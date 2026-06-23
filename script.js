@@ -67,6 +67,7 @@
           color: "Black / White / Gray / Silver",
           stock: "Available",
           image: "assets/products/lexus-gx-550/main.png",
+          detailImageClass: "product-img product-img-contain",
           gallery: ["assets/products/lexus-gx-550/1.png", "assets/products/lexus-gx-550/2.png", "assets/products/lexus-gx-550/3.png", "assets/products/lexus-gx-550/4.png", "assets/products/lexus-gx-550/main.png"]
         },
         {
@@ -600,7 +601,7 @@
 
     if (heroImage) {
       if (product.image) {
-        heroImage.className = 'product-img';
+        heroImage.className = product.detailImageClass || 'product-img';
         heroImage.src = product.image;
         heroImage.alt = product.name;
       } else {
