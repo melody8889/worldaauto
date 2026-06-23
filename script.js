@@ -153,6 +153,8 @@
           color: "Black / White / Gray / Silver",
           stock: "Available",
           image: "assets/products/lexus-lx600/main.jpg",
+          listImageClass: "product-img product-img-contain",
+          detailImageClass: "product-img product-img-contain",
           gallery: ["assets/products/lexus-lx600/1.jpg", "assets/products/lexus-lx600/2.jpg", "assets/products/lexus-lx600/3.jpg", "assets/products/lexus-lx600/main.jpg"]
         }
       ]
