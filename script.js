@@ -417,8 +417,10 @@
           transmission: "Automatic Transmission",
           color: "Black / White / Gray",
           stock: "Available",
-          image: "assets/products/livan/main.jpg",
-          gallery: ["assets/products/livan/1.jpg", "assets/products/livan/2.jpg", "assets/products/livan/3.jpg", "assets/products/livan/main.jpg"]
+          image: "assets/products/livan/main.png",
+          listImageClass: "product-img product-img-contain",
+          detailImageClass: "product-img product-img-contain",
+          gallery: ["assets/products/livan/1.png", "assets/products/livan/2.png", "assets/products/livan/3.png", "assets/products/livan/4.png", "assets/products/livan/main.png"]
         }
       ]
     },
