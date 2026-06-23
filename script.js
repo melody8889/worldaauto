@@ -418,8 +418,6 @@
           color: "Black / White / Gray",
           stock: "Available",
           image: "assets/products/livan/main.png",
-          listImageClass: "product-img product-img-contain",
-          detailImageClass: "product-img product-img-contain",
           gallery: ["assets/products/livan/1.png", "assets/products/livan/2.png", "assets/products/livan/3.png", "assets/products/livan/4.png", "assets/products/livan/main.png"]
         }
       ]
