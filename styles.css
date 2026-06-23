@@ -386,7 +386,7 @@ h3 {
 }
 
 .product-section > * {
-  max-width: var(--max);
+  max-width: 1500px;
   margin-right: auto;
   margin-left: auto;
 }
