@@ -67,6 +67,7 @@
           color: "Black / White / Gray / Silver",
           stock: "Available",
           image: "assets/products/lexus-gx-550/main.png",
+          listImageClass: "product-img product-img-contain",
           detailImageClass: "product-img product-img-contain",
           gallery: ["assets/products/lexus-gx-550/1.png", "assets/products/lexus-gx-550/2.png", "assets/products/lexus-gx-550/3.png", "assets/products/lexus-gx-550/4.png", "assets/products/lexus-gx-550/main.png"]
         },
@@ -516,9 +517,10 @@
 
     if (listNode) {
       listNode.innerHTML = category.products.map(function (product) {
+        const listImageClass = product.listImageClass || (product.image ? 'product-img' : product.imageClass);
         return [
           '<article class="list-card">',
-          '<img class="' + (product.image ? 'product-img' : product.imageClass) + '" src="' + (product.image || 'assets/category-composite.png') + '" alt="' + product.name + '">',
+          '<img class="' + listImageClass + '" src="' + (product.image || 'assets/category-composite.png') + '" alt="' + product.name + '">',
           '<div class="list-card-body">',
           '<p class="list-card-meta">' + category.shortTitle + '</p>',
           '<h3><a class="card-title-link" href="' + (product.pageUrl || ('product.html?category=' + category.slug + '&item=' + product.slug)) + '">' + product.name + '</a></h3>',
