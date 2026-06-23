@@ -40,6 +40,20 @@ a {
 img {
   display: block;
   max-width: 100%;
+  -webkit-touch-callout: none;
+  -webkit-user-drag: none;
+  user-select: none;
+}
+
+.protected-image,
+.product-gallery,
+.product-card,
+.list-card,
+.category-card,
+.video-thumb,
+.hero {
+  -webkit-touch-callout: none;
+  user-select: none;
 }
 
 button,
