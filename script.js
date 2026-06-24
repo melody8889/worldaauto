@@ -446,8 +446,8 @@
           transmission: "Single-Speed Automatic Transmission",
           color: "Black / White / Gray / Pink",
           stock: "Available",
-          image: "assets/products/leapmotor-t03/main.jpg",
-          gallery: ["assets/products/leapmotor-t03/1.jpg", "assets/products/leapmotor-t03/2.jpg", "assets/products/leapmotor-t03/3.jpg", "assets/products/leapmotor-t03/main.jpg"]
+          image: "assets/products/leapmotor-t03/main.png",
+          gallery: ["assets/products/leapmotor-t03/1.png", "assets/products/leapmotor-t03/2.png", "assets/products/leapmotor-t03/main.png"]
         },
         {
           slug: "livan",
