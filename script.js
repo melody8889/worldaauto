@@ -447,6 +447,7 @@
           color: "Black / White / Gray / Pink",
           stock: "Available",
           image: "assets/products/leapmotor-t03/main.png",
+          detailImageClass: "product-img product-img-contain product-img-t03-detail",
           gallery: ["assets/products/leapmotor-t03/1.png", "assets/products/leapmotor-t03/2.png", "assets/products/leapmotor-t03/main.png"]
         },
         {
