@@ -463,6 +463,62 @@
           stock: "Available",
           image: "assets/products/livan/main.png",
           gallery: ["assets/products/livan/1.png", "assets/products/livan/2.png", "assets/products/livan/3.png", "assets/products/livan/4.png", "assets/products/livan/main.png"]
+        },
+        {
+          slug: "deepal-s07",
+          name: "Deepal S07",
+          subtitle: "Premium mid-size electric SUV with long range, advanced intelligent driving, and luxury interior for global new energy vehicle buyers.",
+          year: "2026",
+          engine: "Electric Motor",
+          fuel: "Electric",
+          drive: "RWD / AWD",
+          transmission: "Single Speed Reduction Gear",
+          color: "White, Black, Gray, Blue",
+          stock: "In Stock",
+          image: "assets/products/deepal-s07/main.png",
+          gallery: ["assets/products/deepal-s07/1.png", "assets/products/deepal-s07/2.png", "assets/products/deepal-s07/3.png", "assets/products/deepal-s07/main.png"]
+        },
+        {
+          slug: "deepal-s05",
+          name: "Deepal S05",
+          subtitle: "Compact intelligent electric SUV with impressive performance, trendy design, and rich intelligent features for young global new energy consumers.",
+          year: "2026",
+          engine: "Electric Motor",
+          fuel: "Electric",
+          drive: "FWD / AWD",
+          transmission: "Single Speed Reduction Gear",
+          color: "White, Black, Gray, Green",
+          stock: "In Stock",
+          image: "assets/products/deepal-s05/main.png",
+          gallery: ["assets/products/deepal-s05/1.png", "assets/products/deepal-s05/2.png", "assets/products/deepal-s05/3.png", "assets/products/deepal-s05/4.png", "assets/products/deepal-s05/main.png"]
+        },
+        {
+          slug: "deepal-sl03",
+          name: "Deepal SL03",
+          subtitle: "Sporty electric sedan with sleek coupe design, long range, and excellent driving performance for global electric sedan enthusiasts.",
+          year: "2026",
+          engine: "Electric Motor",
+          fuel: "Electric",
+          drive: "RWD",
+          transmission: "Single Speed Reduction Gear",
+          color: "White, Black, Gray, Blue",
+          stock: "In Stock",
+          image: "assets/products/deepal-sl03/main.png",
+          gallery: ["assets/products/deepal-sl03/1.png", "assets/products/deepal-sl03/2.png", "assets/products/deepal-sl03/3.png", "assets/products/deepal-sl03/main.png"]
+        },
+        {
+          slug: "rox-adamas",
+          name: "ROX ADAMAS",
+          subtitle: "Rugged hardcore off-road electric SUV with exceptional off-road capability, long range, and premium luxury interior for global off-road and adventure vehicle markets.",
+          year: "2026",
+          engine: "Dual Electric Motors",
+          fuel: "Electric",
+          drive: "4WD / AWD",
+          transmission: "Single Speed Reduction Gear",
+          color: "Black, White, Gray, Green",
+          stock: "In Stock",
+          image: "assets/products/rox-adamas/main.png",
+          gallery: ["assets/products/rox-adamas/1.png", "assets/products/rox-adamas/2.png", "assets/products/rox-adamas/3.jpg", "assets/products/rox-adamas/main.png"]
         }
       ]
     },
