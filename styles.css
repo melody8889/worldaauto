@@ -864,6 +864,12 @@ h3 {
   background: #ffffff;
 }
 
+.product-gallery > img.product-img-t03-detail {
+  object-fit: contain;
+  object-position: center;
+  background: #ffffff;
+}
+
 .thumb-row {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
