@@ -749,6 +749,15 @@
   renderProductPage();
   lockImages();
 
+  const heroVideoSection = document.querySelector("[data-hero-video-section]");
+  const heroVideo = document.querySelector("[data-hero-video]");
+  if (heroVideoSection && heroVideo) {
+    heroVideo.addEventListener("ended", function () {
+      heroVideoSection.classList.remove("hero-video-playing");
+      heroVideoSection.classList.add("hero-video-ended");
+    });
+  }
+
   document.querySelectorAll("[data-inquiry-form]").forEach(function (form) {
     form.addEventListener("submit", function (event) {
       event.preventDefault();
