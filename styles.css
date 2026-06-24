@@ -861,6 +861,7 @@ h3 {
 
 .product-gallery img.product-img-contain {
   object-fit: contain;
+  -webkit-object-fit: contain;
   background: #ffffff;
 }
 

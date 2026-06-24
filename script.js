@@ -504,6 +504,7 @@
           color: "White, Black, Gray, Blue",
           stock: "In Stock",
           image: "assets/products/deepal-sl03/main.png",
+          detailImageClass: "product-img product-img-contain",
           gallery: ["assets/products/deepal-sl03/1.png", "assets/products/deepal-sl03/2.png", "assets/products/deepal-sl03/3.png", "assets/products/deepal-sl03/main.png"]
         },
         {
@@ -518,6 +519,7 @@
           color: "Black, White, Gray, Green",
           stock: "In Stock",
           image: "assets/products/rox-adamas/main.png",
+          detailImageClass: "product-img product-img-contain",
           gallery: ["assets/products/rox-adamas/1.png", "assets/products/rox-adamas/2.png", "assets/products/rox-adamas/3.jpg", "assets/products/rox-adamas/main.png"]
         }
       ]
