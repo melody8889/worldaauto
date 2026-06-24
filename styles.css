@@ -1293,6 +1293,14 @@ h3 {
     height: 190px;
   }
 
+  .hero-image,
+  .hero-poster {
+    object-fit: contain;
+    -webkit-object-fit: contain;
+    object-position: center center;
+    background: #f7f5f0;
+  }
+
   .inquiry-form {
     padding: 20px;
   }
