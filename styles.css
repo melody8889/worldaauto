@@ -160,7 +160,8 @@ textarea {
   isolation: isolate;
 }
 
-.hero-image {
+.hero-image,
+.hero-poster {
   position: absolute;
   inset: 0;
   width: 100%;
@@ -169,10 +170,31 @@ textarea {
   display: block;
 }
 
+.hero-poster {
+  opacity: 0;
+}
+
+.hero-video-playing .hero-overlay,
+.hero-video-playing .hero-content {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.hero-video-ended .hero-image {
+  opacity: 0;
+}
+
+.hero-video-ended .hero-poster,
+.hero-video-ended .hero-overlay,
+.hero-video-ended .hero-content {
+  opacity: 1;
+}
+
 .hero-overlay {
   position: absolute;
   inset: 0;
   background: linear-gradient(180deg, rgba(255,255,255,0.16), rgba(248,244,238,0.56) 64%, rgba(255,255,255,0.92));
+  transition: opacity 280ms ease;
 }
 
 .hero-content {
@@ -182,6 +204,7 @@ textarea {
   min-height: calc(100vh - 74px);
   max-width: 960px;
   margin: 0 auto;
+  transition: opacity 280ms ease;
   padding: 20vh 24px 18vh;
   flex-direction: column;
   align-items: center;
