@@ -547,11 +547,20 @@ h3 {
   aspect-ratio: 16 / 9;
 }
 
-.video-thumb img {
+.video-thumb img,
+.video-player {
   width: 100%;
   height: 100%;
   object-fit: cover;
+}
+
+.video-thumb img {
   transition: transform 0.25s ease;
+}
+
+.video-player {
+  display: block;
+  background: #000000;
 }
 
 .video-card:hover .video-thumb img,
