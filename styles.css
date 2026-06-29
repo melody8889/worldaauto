@@ -818,6 +818,122 @@ h3 {
   font-size: 12px;
 }
 
+.inquiry-form-highlight {
+  background: #ffffff;
+  border-color: rgba(154, 116, 71, 0.38);
+  box-shadow: 0 18px 44px rgba(33, 33, 33, 0.12);
+}
+
+.ad-hero {
+  position: relative;
+  display: grid;
+  min-height: 640px;
+  overflow: hidden;
+  align-items: center;
+}
+
+.ad-hero-bg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.ad-hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg, rgba(18, 18, 18, 0.78), rgba(18, 18, 18, 0.42), rgba(18, 18, 18, 0.18));
+}
+
+.ad-hero-content {
+  position: relative;
+  z-index: 1;
+  max-width: 760px;
+  padding: 120px clamp(24px, 6vw, 90px);
+  color: var(--white);
+}
+
+.ad-hero-content h1 {
+  max-width: 760px;
+  margin: 0 0 20px;
+  color: var(--white);
+  font-size: clamp(42px, 6vw, 72px);
+  line-height: 0.98;
+}
+
+.ad-hero-content p:not(.eyebrow) {
+  max-width: 660px;
+  margin: 0 0 28px;
+  color: rgba(255, 255, 255, 0.88);
+  font-size: 20px;
+}
+
+.ad-category-section {
+  background: var(--white);
+}
+
+.ad-category-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.ad-category-grid article {
+  overflow: hidden;
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: 6px;
+}
+
+.ad-category-grid img {
+  width: 100%;
+  height: 190px;
+  object-fit: cover;
+}
+
+.ad-category-grid h3 {
+  margin: 18px 18px 8px;
+  font-size: 20px;
+  line-height: 1.2;
+}
+
+.ad-category-grid p {
+  margin: 0 18px 22px;
+  color: var(--muted);
+  font-size: 14px;
+}
+
+.ad-process-section {
+  background: var(--panel);
+}
+
+.ad-quote-section {
+  align-items: start;
+}
+
+.thank-you-section {
+  display: grid;
+  min-height: calc(100vh - 90px);
+  align-content: center;
+  max-width: 860px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.thank-you-section h1 {
+  margin: 0 0 18px;
+  font-size: clamp(42px, 6vw, 66px);
+  line-height: 1;
+}
+
+.thank-you-section p:not(.eyebrow) {
+  max-width: 680px;
+  margin: 0 0 28px;
+  color: var(--muted);
+  font-size: 20px;
+}
+
 .floating-quote {
   position: fixed;
   right: 16px;
@@ -1144,6 +1260,7 @@ h3 {
   }
 
   .service-grid,
+  .ad-category-grid,
   .spec-grid,
   .benefit-list {
     grid-template-columns: repeat(2, 1fr);
@@ -1214,6 +1331,18 @@ h3 {
     padding: 15vh 18px 16vh;
   }
 
+  .ad-hero {
+    min-height: 620px;
+  }
+
+  .ad-hero-overlay {
+    background: linear-gradient(180deg, rgba(18, 18, 18, 0.82), rgba(18, 18, 18, 0.52));
+  }
+
+  .ad-hero-content {
+    padding: 110px 24px 80px;
+  }
+
   .contact-strip,
   .section-intro,
   .split-section,
@@ -1281,10 +1410,27 @@ h3 {
   .why-grid,
   .list-grid,
   .service-grid,
+  .ad-category-grid,
   .spec-grid,
   .benefit-list,
   .category-lines {
     grid-template-columns: 1fr;
+  }
+
+  .ad-hero {
+    min-height: 590px;
+  }
+
+  .ad-hero-content h1 {
+    font-size: 38px;
+  }
+
+  .ad-hero-content p:not(.eyebrow) {
+    font-size: 17px;
+  }
+
+  .ad-category-grid img {
+    height: 210px;
   }
 
   .product-card {

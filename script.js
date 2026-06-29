@@ -759,23 +759,10 @@
   }
 
   document.querySelectorAll("[data-inquiry-form]").forEach(function (form) {
-    form.addEventListener("submit", function (event) {
-      event.preventDefault();
-      const formData = new FormData(form);
-      const subject = "Worlda Global Auto Inquiry";
-      const lines = [
-        "Name: " + (formData.get("name") || ""),
-        "Email: " + (formData.get("email") || ""),
-        "Quantity: " + (formData.get("quantity") || ""),
-        "Message: " + (formData.get("message") || ""),
-        "Page: " + window.location.href
-      ];
-      const href = "mailto:sales01@worldaauto.com?subject=" +
-        encodeURIComponent(subject) +
-        "&body=" +
-        encodeURIComponent(lines.join("\n"));
-      window.location.href = href;
-    });
+    const pageInput = form.querySelector("[data-form-page]");
+    if (pageInput) {
+      pageInput.value = window.location.href;
+    }
   });
 })();
 

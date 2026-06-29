@@ -17,7 +17,7 @@
     <link rel="shortcut icon" href="assets/logo.png">
     <link rel="apple-touch-icon" href="assets/logo.png">
     <link rel="preload" href="assets/hero-export.png" as="image">
-    <link rel="stylesheet" href="styles.css?v=20260623-wide-products">
+    <link rel="stylesheet" href="styles.css?v=20260629-ads-form">
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-29R2Z1YX71"></script>
     <script>
@@ -300,7 +300,12 @@
             <li>Official Email: <a href="mailto:sales01@worldaauto.com">sales01@worldaauto.com</a></li>
           </ul>
         </div>
-        <form class="inquiry-form" data-inquiry-form>
+        <form class="inquiry-form" action="https://formsubmit.co/sales01@worldaauto.com" method="POST" data-inquiry-form>
+          <input type="hidden" name="_subject" value="Worlda Global Auto - Homepage Inquiry">
+          <input type="hidden" name="_next" value="https://worldaauto.com/thank-you.html">
+          <input type="hidden" name="_captcha" value="false">
+          <input type="hidden" name="_template" value="table">
+          <input type="hidden" name="source_page" value="" data-form-page>
           <label>
             Name
             <input name="name" autocomplete="name" required>
@@ -308,6 +313,14 @@
           <label>
             Email
             <input name="email" type="email" autocomplete="email" required>
+          </label>
+          <label>
+            WhatsApp
+            <input name="whatsapp" autocomplete="tel" placeholder="+ country code / WhatsApp number">
+          </label>
+          <label>
+            Destination Country
+            <input name="destination_country" autocomplete="country-name" placeholder="Where will the vehicles be shipped?">
           </label>
           <label>
             Quantity
@@ -318,7 +331,7 @@
             <textarea name="message" rows="5" required></textarea>
           </label>
           <button class="button button-primary" type="submit">SUBMIT</button>
-          <p class="form-note">Inquiry will be prepared for: sales01@worldaauto.com</p>
+          <p class="form-note">Your inquiry will be sent directly to sales01@worldaauto.com</p>
         </form>
       </section>
     </main>
@@ -349,7 +362,7 @@
         </nav>
       </div>
     </footer>
-    <script src="script.js?v=20260623-used-cars"></script>
+    <script src="script.js?v=20260629-ads-form"></script>
   </body>
 </html>
 
