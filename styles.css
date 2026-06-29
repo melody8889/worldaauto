@@ -516,8 +516,10 @@ h3 {
 
 .video-grid {
   display: grid;
-  grid-template-columns: minmax(0, 1.25fr) repeat(2, minmax(0, 1fr));
-  gap: 18px;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  max-width: 1180px;
+  margin: 0 auto;
+  gap: 24px;
 }
 
 .video-card {
@@ -538,13 +540,9 @@ h3 {
 .video-thumb {
   position: relative;
   display: block;
-  aspect-ratio: 16 / 10;
+  aspect-ratio: 16 / 9;
   overflow: hidden;
   background: var(--line);
-}
-
-.video-card-featured .video-thumb {
-  aspect-ratio: 16 / 9;
 }
 
 .video-thumb img,
@@ -594,10 +592,11 @@ h3 {
 
 .video-card-body {
   display: flex;
-  padding: 20px;
+  min-height: 220px;
+  padding: 28px;
   flex: 1;
   flex-direction: column;
-  gap: 8px;
+  gap: 12px;
 }
 
 .video-label {
@@ -610,19 +609,19 @@ h3 {
 
 .video-title {
   color: var(--text);
-  font-size: 19px;
+  font-size: 28px;
   font-weight: 800;
   line-height: 1.25;
 }
 
 .video-card-featured .video-title {
-  font-size: 24px;
+  font-size: 28px;
 }
 
 .video-meta {
   margin-top: auto;
   color: var(--muted);
-  font-size: 14px;
+  font-size: 16px;
   font-weight: 700;
 }
 
@@ -1139,7 +1138,6 @@ h3 {
 
 @media (max-width: 1100px) {
   .product-grid,
-  .video-grid,
   .why-grid,
   .list-grid {
     grid-template-columns: repeat(2, 1fr);
@@ -1153,6 +1151,20 @@ h3 {
 
   .category-lines {
     grid-template-columns: repeat(3, 1fr);
+  }
+
+  .video-grid {
+    gap: 20px;
+  }
+
+  .video-card-body {
+    min-height: 210px;
+    padding: 24px;
+  }
+
+  .video-card-featured .video-title,
+  .video-title {
+    font-size: 24px;
   }
 }
 
@@ -1281,10 +1293,11 @@ h3 {
 
   .video-card-featured .video-title,
   .video-title {
-    font-size: 18px;
+    font-size: 22px;
   }
 
   .video-card-body {
+    min-height: 190px;
     padding: 18px;
   }
 
