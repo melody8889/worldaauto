@@ -557,16 +557,18 @@ h3 {
 }
 
 .document-grid {
-  display: flex;
-  justify-content: center;
+  display: grid;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  gap: 14px;
+  align-items: stretch;
 }
 
 .document-grid img {
   display: block;
-  width: min(100%, 760px);
+  width: 100%;
   height: auto;
   border-radius: 8px;
-  box-shadow: 0 14px 35px rgba(33, 33, 33, 0.08);
+  box-shadow: 0 10px 24px rgba(33, 33, 33, 0.08);
 }
 
 .case-section {
