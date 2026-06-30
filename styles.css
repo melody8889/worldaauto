@@ -593,6 +593,23 @@ h3 {
   border-top: 4px solid var(--blue);
 }
 
+.case-video-card {
+  overflow: hidden;
+  padding: 0;
+}
+
+.case-video-card video {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  background: #111820;
+  object-fit: cover;
+}
+
+.case-video-card div {
+  padding: 24px;
+}
+
 .export-info-grid {
   grid-template-columns: repeat(4, minmax(0, 1fr));
 }
