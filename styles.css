@@ -557,45 +557,16 @@ h3 {
 }
 
 .document-grid {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 12px;
-}
-
-.document-grid article {
-  min-height: 78px;
-  padding: 18px 20px;
   display: flex;
-  gap: 14px;
-  align-items: center;
-  background: var(--panel);
-  border: 1px solid var(--line);
-  border-left: 4px solid var(--blue);
-  border-radius: 6px;
-  color: var(--text);
-  font-size: 15px;
-  font-weight: 800;
-}
-
-.document-icon {
-  display: inline-flex;
-  width: 46px;
-  height: 46px;
-  flex: 0 0 46px;
-  align-items: center;
   justify-content: center;
-  color: var(--blue-dark);
-  background: rgba(154, 116, 71, 0.08);
-  border: 1px solid rgba(154, 116, 71, 0.32);
-  border-radius: 50%;
-  font-size: 11px;
-  font-weight: 900;
-  letter-spacing: 0;
 }
 
-.document-grid strong {
+.document-grid img {
   display: block;
-  line-height: 1.25;
+  width: min(100%, 760px);
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 14px 35px rgba(33, 33, 33, 0.08);
 }
 
 .case-section {
