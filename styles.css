@@ -566,7 +566,9 @@ h3 {
 .document-grid img {
   display: block;
   width: 100%;
-  height: auto;
+  aspect-ratio: 1 / 1;
+  height: 100%;
+  object-fit: contain;
   border-radius: 8px;
   box-shadow: 0 10px 24px rgba(33, 33, 33, 0.08);
 }
