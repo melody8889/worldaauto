@@ -508,15 +508,32 @@ h3 {
 }
 
 .process-steps article {
+  overflow: hidden;
   min-height: 190px;
-  padding: 20px 18px;
+  padding: 0;
   background: var(--white);
+}
+
+.process-steps img {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  object-position: center;
+  border-bottom: 1px solid var(--line);
+}
+
+.process-steps article > span,
+.process-steps article > h3,
+.process-steps article > p {
+  margin-right: 18px;
+  margin-left: 18px;
 }
 
 .process-steps span {
   display: inline-flex;
   width: 34px;
   height: 34px;
+  margin-top: 18px;
   margin-bottom: 18px;
   align-items: center;
   justify-content: center;
