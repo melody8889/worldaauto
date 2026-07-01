@@ -909,16 +909,20 @@ h3 {
 .about-section {
   max-width: none;
   background: var(--panel);
+  display: grid;
+  grid-template-columns: 0.9fr 1.1fr;
+  align-items: center;
+  gap: 42px;
 }
 
 .about-copy {
-  max-width: 980px;
-  margin: 0 auto;
+  max-width: 760px;
+  margin: 0;
   text-align: left;
 }
 
 .about-copy p {
-  max-width: 980px;
+  max-width: 720px;
   margin: 0 0 18px;
 }
 
@@ -926,6 +930,39 @@ h3 {
   max-width: none;
   margin-right: 0;
   margin-left: 0;
+}
+
+.proof-points {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 26px 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.proof-points li {
+  padding: 10px 14px;
+  border: 1px solid rgba(160, 122, 74, 0.34);
+  background: rgba(255, 255, 255, 0.72);
+  color: var(--text);
+  font-size: 13px;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.about-video-wrap {
+  overflow: hidden;
+  border: 1px solid rgba(160, 122, 74, 0.22);
+  background: #111;
+  box-shadow: 0 18px 50px rgba(31, 35, 40, 0.12);
+}
+
+.about-proof-video {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
 }
 
 .quote-section {
@@ -1610,6 +1647,7 @@ h3 {
   .contact-strip,
   .section-intro,
   .split-section,
+  .about-section,
   .quote-section,
   .contact-section,
   .site-footer,
@@ -1624,6 +1662,10 @@ h3 {
 
   .quote-section {
     display: grid;
+  }
+
+  .about-section {
+    gap: 26px;
   }
 
   .site-footer {
