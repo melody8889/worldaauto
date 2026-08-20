@@ -524,14 +524,30 @@
         }
       ]
     },
-    "skd-car-kits": {
-      slug: "skd-car-kits",
-      title: "SKD Car Kits",
-      shortTitle: "SKD Car Kits",
-      type: "SKD assembly kit",
-      page: "skd-car-kits.html",
-      intro: "Semi-knocked-down vehicle kits for overseas assembly partners with export document coordination and configuration support.",
+    "electric-trucks": {
+      slug: "electric-trucks",
+      title: "Electric Trucks",
+      shortTitle: "Electric Trucks",
+      type: "Electric heavy truck",
+      page: "electric-trucks.html",
+      intro: "Battery-electric heavy trucks for regional haulage and clean fleet operations with export document coordination and sourcing support.",
       products: [
+        {
+          slug: "sany-electric-truck",
+          name: "SANY Electric Truck",
+          subtitle: "Battery-electric heavy truck for clean logistics, port transfer and regional freight fleets.",
+          year: "2026",
+          engine: "Electric Motor",
+          fuel: "Electric",
+          drive: "4x2",
+          transmission: "Single-Speed Electric Drive",
+          color: "Blue",
+          stock: "Stock Check Required",
+          image: "assets/categories/electric-trucks.png",
+          listImageClass: "product-img product-img-contain",
+          detailImageClass: "product-img product-img-contain",
+          gallery: ["assets/categories/electric-trucks.png"]
+        }
       ]
     },
     "used-cars": {
@@ -551,7 +567,7 @@
     categoryMap["suv-pickup"],
     categoryMap["chinese-brand-new-cars"],
     categoryMap["used-cars"],
-    categoryMap["skd-car-kits"]
+    categoryMap["electric-trucks"]
   ];
 
   categoryList.forEach(function (category) {
@@ -568,7 +584,7 @@
       "suv-pickup": "crop-mid-left",
       "chinese-brand-new-cars": "crop-center",
       "used-cars": "crop-center",
-      "skd-car-kits": "crop-mid-right"
+      "electric-trucks": "crop-mid-right"
     };
     return imageClassMap[categorySlug] || "crop-center";
   }
