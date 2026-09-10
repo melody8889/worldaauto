@@ -775,10 +775,20 @@
   }
 
   document.querySelectorAll("[data-inquiry-form]").forEach(function (form) {
+    const formStartedAt = Date.now();
     const pageInput = form.querySelector("[data-form-page]");
     if (pageInput) {
       pageInput.value = window.location.href;
     }
+
+    form.addEventListener("submit", function (event) {
+      const honeypot = form.querySelector('input[name="website"]');
+      const elapsed = Date.now() - formStartedAt;
+
+      if ((honeypot && honeypot.value.trim() !== "") || elapsed < 2500) {
+        event.preventDefault();
+      }
+    });
   });
 })();
 
