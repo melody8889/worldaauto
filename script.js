@@ -664,6 +664,50 @@
     document.title = category.title + " | Worlda Global Auto";
   }
 
+  function setMetaContent(selector, content) {
+    const node = document.querySelector(selector);
+    if (node && content) {
+      node.setAttribute("content", content);
+    }
+  }
+
+  function setProductStructuredData(product, category) {
+    let schema = document.querySelector("[data-product-schema]");
+    if (!schema) {
+      schema = document.createElement("script");
+      schema.type = "application/ld+json";
+      schema.setAttribute("data-product-schema", "");
+      document.head.appendChild(schema);
+    }
+
+    schema.textContent = JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "Product",
+      name: product.name,
+      description: product.subtitle,
+      category: category.title,
+      image: product.image ? new URL(product.image, window.location.href).href : undefined,
+      brand: {
+        "@type": "Brand",
+        name: product.name.split(" ")[0]
+      },
+      offers: {
+        "@type": "Offer",
+        url: window.location.href,
+        priceCurrency: "USD",
+        availability: product.stock && /sold|unavailable/i.test(product.stock)
+          ? "https://schema.org/OutOfStock"
+          : "https://schema.org/InStock",
+        price: "0",
+        priceSpecification: {
+          "@type": "PriceSpecification",
+          priceCurrency: "USD",
+          description: "Wholesale price available on request"
+        }
+      }
+    });
+  }
+
   function renderProductPage() {
     const category = getCategoryFromLocation();
     const productTitle = document.querySelector("[data-product-title]");
@@ -685,9 +729,23 @@
     }
 
     const product = getProductForDetail(category);
+    const productDescription = product.subtitle + " Wholesale export supply with vehicle inspection, export documents and global shipping support.";
 
     productTitle.textContent = product.name;
-    document.title = product.name + " | Worlda Global Auto";
+    document.title = product.name + " Export | Wholesale Price | Worlda Global Auto";
+    setMetaContent('meta[name="description"]', productDescription);
+
+    const canonical = document.querySelector('link[rel="canonical"]');
+    if (canonical) {
+      canonical.href = window.location.href.split("#")[0];
+    }
+
+    setMetaContent('meta[property="og:title"]', document.title);
+    setMetaContent('meta[property="og:description"]', productDescription);
+    if (product.image) {
+      setMetaContent('meta[property="og:image"]', new URL(product.image, window.location.href).href);
+    }
+    setProductStructuredData(product, category);
 
     if (productSubtitle) {
       productSubtitle.textContent = product.subtitle;
