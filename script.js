@@ -18,6 +18,30 @@
     return Boolean(target && target.closest && target.closest(protectedMediaSelector));
   }
 
+  function addMobileContactBar() {
+    if (/privacy\.html$|thank-you\.html$/.test(window.location.pathname) || document.querySelector(".mobile-contact-bar")) {
+      return;
+    }
+
+    const quoteLink = document.querySelector(".floating-quote");
+    const quoteHref = quoteLink ? quoteLink.getAttribute("href") : "index.html#contact";
+    const bar = document.createElement("nav");
+    bar.className = "mobile-contact-bar";
+    bar.setAttribute("aria-label", "Quick contact actions");
+    bar.innerHTML = [
+      '<a class="mobile-contact-bar__whatsapp" href="https://wa.me/8613810710061" target="_blank" rel="noopener">',
+      "<span aria-hidden=\"true\">WA</span>",
+      "<strong>WhatsApp Us</strong>",
+      "</a>",
+      '<a class="mobile-contact-bar__quote" href="' + quoteHref + '">',
+      "<span aria-hidden=\"true\">$</span>",
+      "<strong>Get Export Quote</strong>",
+      "</a>"
+    ].join("");
+    document.body.appendChild(bar);
+    document.body.classList.add("mobile-contact-enabled");
+  }
+
   function preventMediaSave(event) {
     if (isProtectedMediaTarget(event.target)) {
       event.preventDefault();
@@ -822,6 +846,7 @@
   renderCategoryPage();
   renderProductPage();
   lockImages();
+  addMobileContactBar();
 
   const heroVideoSection = document.querySelector("[data-hero-video-section]");
   const heroVideo = document.querySelector("[data-hero-video]");
