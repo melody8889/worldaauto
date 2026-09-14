@@ -1028,6 +1028,7 @@ h3 {
 }
 
 .inquiry-form input,
+.inquiry-form select,
 .inquiry-form textarea {
   width: 100%;
   min-height: 46px;
@@ -1036,6 +1037,10 @@ h3 {
   border-radius: 4px;
   color: var(--text);
   background: var(--white);
+}
+
+.inquiry-form select {
+  cursor: pointer;
 }
 
 .inquiry-form textarea {

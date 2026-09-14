@@ -63,6 +63,23 @@ function isLikelySpam(fields) {
     return "missing_contact";
   }
 
+  const requiredFields = [
+    "name",
+    "destination_country",
+    "target_model",
+    "model_year",
+    "quantity",
+    "purchase_timeline"
+  ];
+  if (requiredFields.some((field) => !normalize(fields[field]))) {
+    return "missing_required_field";
+  }
+
+  const modelYear = Number(fields.model_year);
+  if (!Number.isInteger(modelYear) || modelYear < 1990 || modelYear > 2100) {
+    return "bad_model_year";
+  }
+
   const quantity = normalize(fields.quantity);
   if (quantity && !/[0-9]/.test(quantity)) {
     return "bad_quantity";
