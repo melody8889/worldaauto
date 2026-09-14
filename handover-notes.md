@@ -10,7 +10,6 @@ This project is now a pure static website package for GitHub + Vercel deployment
 - `luxury-vehicle.html`: category page
 - `suv-pickup.html`: category page
 - `chinese-brand-new-cars.html`: category page
-- `skd-car-kits.html`: category page
 - `auto-spare-parts.html`: category page
 - `product.html`: unified product detail page
 - `privacy.html`: privacy policy page
