@@ -1048,6 +1048,17 @@ h3 {
   font-size: 12px;
 }
 
+.form-error {
+  margin: 0;
+  padding: 10px 12px;
+  border: 1px solid rgba(186, 55, 55, 0.24);
+  border-radius: 4px;
+  color: #9f2f2f;
+  background: #fff4f4;
+  font-size: 13px;
+  font-weight: 700;
+}
+
 .inquiry-form-highlight {
   background: #ffffff;
   border-color: rgba(154, 116, 71, 0.38);

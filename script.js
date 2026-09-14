@@ -774,20 +774,132 @@
     });
   }
 
+  const inquiryGuard = {
+    minSubmitTime: 4500,
+    maxLinks: 1,
+    blockedTerms: [
+      "casino",
+      "crypto",
+      "forex",
+      "loan",
+      "porn",
+      "seo service",
+      "telegram bot",
+      "viagra"
+    ]
+  };
+
+  function normalizeText(value) {
+    return String(value || "").replace(/\s+/g, " ").trim().toLowerCase();
+  }
+
+  function countLinks(value) {
+    const matches = String(value || "").match(/https?:\/\/|www\.|\.ru\b|\.xyz\b|\.top\b/gi);
+    return matches ? matches.length : 0;
+  }
+
+  function setFormError(form, message) {
+    let error = form.querySelector("[data-form-error]");
+    if (!error) {
+      error = document.createElement("p");
+      error.className = "form-error";
+      error.setAttribute("data-form-error", "");
+      error.setAttribute("role", "alert");
+      const button = form.querySelector('button[type="submit"]');
+      form.insertBefore(error, button || null);
+    }
+
+    error.textContent = message;
+    error.hidden = false;
+  }
+
+  function clearFormError(form) {
+    const error = form.querySelector("[data-form-error]");
+    if (error) {
+      error.hidden = true;
+      error.textContent = "";
+    }
+  }
+
+  function buildFormToken(form, startedAt) {
+    return btoa([
+      window.location.hostname,
+      form.getAttribute("action") || "",
+      String(startedAt)
+    ].join("|")).slice(0, 32);
+  }
+
+  function hasRequiredContact(form) {
+    const email = normalizeText(form.querySelector('input[name="email"]') && form.querySelector('input[name="email"]').value);
+    const whatsapp = normalizeText(form.querySelector('input[name="whatsapp"]') && form.querySelector('input[name="whatsapp"]').value);
+    return email !== "" || whatsapp !== "";
+  }
+
+  function isSpamText(form) {
+    const values = Array.prototype.slice.call(form.elements).map(function (field) {
+      if (!field.name || field.type === "hidden") {
+        return "";
+      }
+
+      return field.value;
+    }).join(" ");
+    const normalized = normalizeText(values);
+
+    return countLinks(values) > inquiryGuard.maxLinks || inquiryGuard.blockedTerms.some(function (term) {
+      return normalized.indexOf(term) !== -1;
+    });
+  }
+
   document.querySelectorAll("[data-inquiry-form]").forEach(function (form) {
     const formStartedAt = Date.now();
+    const tokenValue = buildFormToken(form, formStartedAt);
     const pageInput = form.querySelector("[data-form-page]");
     if (pageInput) {
       pageInput.value = window.location.href;
     }
 
+    const tokenInput = document.createElement("input");
+    tokenInput.type = "hidden";
+    tokenInput.name = "inquiry_token";
+    tokenInput.value = tokenValue;
+    form.appendChild(tokenInput);
+
+    const timeInput = document.createElement("input");
+    timeInput.type = "hidden";
+    timeInput.name = "time_on_form";
+    timeInput.value = "0";
+    form.appendChild(timeInput);
+
     form.addEventListener("submit", function (event) {
       const honeypot = form.querySelector('input[name="website"]');
+      const token = form.querySelector('input[name="inquiry_token"]');
       const elapsed = Date.now() - formStartedAt;
+      timeInput.value = String(Math.round(elapsed / 1000));
 
-      if ((honeypot && honeypot.value.trim() !== "") || elapsed < 2500) {
+      if (honeypot && honeypot.value.trim() !== "") {
         event.preventDefault();
+        return;
       }
+
+      if (!token || token.value !== tokenValue || elapsed < inquiryGuard.minSubmitTime) {
+        event.preventDefault();
+        setFormError(form, "Please take a moment to complete the inquiry details before submitting.");
+        return;
+      }
+
+      if (!hasRequiredContact(form)) {
+        event.preventDefault();
+        setFormError(form, "Please leave your email or WhatsApp so our sales team can reply.");
+        return;
+      }
+
+      if (isSpamText(form)) {
+        event.preventDefault();
+        setFormError(form, "Please remove promotional links or unrelated content before submitting.");
+        return;
+      }
+
+      clearFormError(form);
     });
   });
 })();
