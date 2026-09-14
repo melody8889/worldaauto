@@ -419,7 +419,8 @@ h3 {
 .trust-proof-grid,
 .case-grid,
 .export-info-grid,
-.ad-trust-strip {
+.ad-trust-strip,
+.buyer-proof-grid {
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
   gap: 18px;
@@ -462,6 +463,47 @@ h3 {
 
 .trust-proof-grid article > p {
   margin-bottom: 24px;
+}
+
+.buyer-proof-grid article {
+  display: grid;
+  grid-template-rows: auto 1fr;
+  min-height: 100%;
+  overflow: hidden;
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: 6px;
+}
+
+.buyer-proof-grid img {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  border-bottom: 1px solid var(--line);
+}
+
+.buyer-proof-grid article > div {
+  padding: 22px 24px 24px;
+}
+
+.buyer-proof-grid span {
+  display: inline-flex;
+  margin-bottom: 14px;
+  color: var(--blue);
+  font-size: 13px;
+  font-weight: 800;
+}
+
+.buyer-proof-grid h3 {
+  margin-bottom: 12px;
+  font-size: 19px;
+}
+
+.buyer-proof-grid p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 14px;
+  line-height: 1.6;
 }
 
 .trust-proof-grid span {
@@ -1556,7 +1598,8 @@ h3 {
   .benefit-list,
   .trust-proof-grid,
   .export-info-grid,
-  .process-steps {
+  .process-steps,
+  .buyer-proof-grid {
     grid-template-columns: repeat(2, 1fr);
   }
 
@@ -1724,7 +1767,8 @@ h3 {
   .document-grid,
   .case-grid,
   .export-info-grid,
-  .ad-trust-strip {
+  .ad-trust-strip,
+  .buyer-proof-grid {
     grid-template-columns: 1fr;
   }
 
@@ -1732,6 +1776,7 @@ h3 {
   .case-grid article,
   .export-info-grid article,
   .ad-trust-strip article,
+  .buyer-proof-grid article,
   .process-steps article {
     min-height: auto;
   }
