@@ -483,6 +483,10 @@ h3 {
   border-bottom: 1px solid var(--line);
 }
 
+.buyer-proof-grid .export-contract-image {
+  object-position: center top;
+}
+
 .buyer-proof-grid article > div {
   padding: 22px 24px 24px;
 }
