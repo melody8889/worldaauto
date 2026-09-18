@@ -29,7 +29,7 @@
     bar.className = "mobile-contact-bar";
     bar.setAttribute("aria-label", "Quick contact actions");
     bar.innerHTML = [
-      '<a class="mobile-contact-bar__whatsapp" href="https://wa.me/8613810710061" target="_blank" rel="noopener">',
+      '<a class="mobile-contact-bar__whatsapp" href="https://wa.me/8613832666352" target="_blank" rel="noopener">',
       "<span aria-hidden=\"true\">WA</span>",
       "<strong>WhatsApp Us</strong>",
       "</a>",
