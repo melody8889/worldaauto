@@ -2169,6 +2169,25 @@ h3 {
   gap: 12px;
 }
 
+.contact-strip__copy {
+  display: grid;
+  gap: 4px;
+  min-width: 0;
+  text-align: left;
+}
+
+.contact-strip__copy strong {
+  font-size: 16px;
+  line-height: 1.2;
+}
+
+.contact-strip__copy small {
+  font-size: 13px;
+  font-weight: 600;
+  line-height: 1.35;
+  color: #5d6875;
+}
+
 .social-icon {
   width: 34px;
   height: 34px;
@@ -2198,8 +2217,28 @@ h3 {
 }
 
 @media (max-width: 800px) {
+  .contact-strip {
+    grid-template-columns: 1fr !important;
+  }
+
   .contact-strip > a {
-    justify-content: flex-start;
+    justify-content: flex-start !important;
+    min-height: 72px !important;
+    padding: 16px 20px !important;
+    border-right: 0 !important;
+    border-bottom: 1px solid #d9e1ea !important;
+  }
+
+  .contact-strip > a:last-child {
+    border-bottom: 0 !important;
+  }
+
+  .contact-strip__copy strong {
+    font-size: 14px;
+  }
+
+  .contact-strip__copy small {
+    display: none;
   }
 }
 
