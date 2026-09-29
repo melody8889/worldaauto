@@ -1115,6 +1115,7 @@ h3 {
   margin: 30px auto 0;
   border: 1px solid rgba(160, 122, 74, 0.22);
   background: #111;
+  filter: brightness(1.08) saturate(1.08);
   box-shadow: 0 18px 50px rgba(31, 35, 40, 0.12);
 }
 
