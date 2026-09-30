@@ -121,24 +121,25 @@ function isLikelySpam(fields) {
 }
 
 async function forwardInquiry(fields, req) {
-  const payload = new FormData();
+  const payload = {};
   Object.entries(fields).forEach(([key, value]) => {
     if (key === "website" || key === "inquiry_token") {
       return;
     }
 
-    payload.append(key, normalize(value));
+    payload[key] = normalize(value);
   });
 
-  payload.append("client_ip", getClientIp(req));
-  payload.append("server_checked", "yes");
+  payload.client_ip = getClientIp(req);
+  payload.server_checked = "yes";
 
   return fetch(FORM_TARGET, {
     method: "POST",
     headers: {
-      Accept: "application/json"
+      Accept: "application/json",
+      "Content-Type": "application/json"
     },
-    body: payload
+    body: JSON.stringify(payload)
   });
 }
 
@@ -161,6 +162,8 @@ export default async function handler(req, res) {
   try {
     const response = await forwardInquiry(fields, req);
     if (!response.ok) {
+      const details = await response.text();
+      console.error("Inquiry forwarding failed:", response.status, details);
       res.status(502).send("Inquiry service unavailable.");
       return;
     }
