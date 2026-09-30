@@ -1,0 +1,196 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>UAE Export Planning Video</title>
+    <style>
+      * { box-sizing: border-box; }
+      body { margin: 0; background: #0c1118; font-family: Arial, Helvetica, sans-serif; }
+      .stage {
+        position: relative;
+        width: 1280px;
+        height: 720px;
+        overflow: hidden;
+        background: #101820;
+        color: #fff;
+      }
+      .bg {
+        position: absolute;
+        inset: -28px;
+        background: linear-gradient(90deg, rgba(7, 12, 19, 0.78), rgba(7, 12, 19, 0.26) 52%, rgba(7, 12, 19, 0.58)), url("../assets/videos/uae-export-planning-bg.png") center/cover;
+        transform: scale(1.04);
+        animation: drift 15s linear forwards;
+      }
+      .grain {
+        position: absolute;
+        inset: 0;
+        background: radial-gradient(circle at 72% 28%, rgba(194, 146, 58, 0.24), transparent 28%), linear-gradient(180deg, transparent, rgba(0, 0, 0, 0.32));
+      }
+      .logo {
+        position: absolute;
+        top: 30px;
+        right: 42px;
+        height: 54px;
+        opacity: 0.78;
+        filter: drop-shadow(0 6px 16px rgba(0, 0, 0, 0.4));
+      }
+      .route {
+        position: absolute;
+        right: 80px;
+        bottom: 92px;
+        width: 520px;
+        height: 230px;
+        opacity: 0.88;
+      }
+      .route path {
+        stroke-dasharray: 820;
+        stroke-dashoffset: 820;
+        animation: draw 4.6s ease-out 2s forwards;
+      }
+      .route circle.uae {
+        opacity: 0;
+        animation: pulse 2.3s ease-out 5.1s infinite;
+      }
+      .copy {
+        position: absolute;
+        left: 66px;
+        top: 146px;
+        width: 700px;
+      }
+      .eyebrow {
+        margin: 0 0 18px;
+        color: #d8ad57;
+        font-size: 27px;
+        font-weight: 700;
+        letter-spacing: 0;
+        text-transform: uppercase;
+        text-shadow: 0 3px 12px rgba(0, 0, 0, 0.55);
+        opacity: 0;
+        animation: fadeUp 1s ease-out 0.35s forwards;
+      }
+      h1 {
+        margin: 0;
+        font-size: 68px;
+        line-height: 0.98;
+        font-weight: 800;
+        letter-spacing: 0;
+        text-shadow: 0 6px 22px rgba(0, 0, 0, 0.58);
+        opacity: 0;
+        animation: fadeUp 1s ease-out 0.75s forwards;
+      }
+      .line {
+        position: absolute;
+        left: 70px;
+        bottom: 118px;
+        width: 720px;
+        font-size: 34px;
+        line-height: 1.18;
+        font-weight: 700;
+        text-shadow: 0 5px 18px rgba(0, 0, 0, 0.62);
+      }
+      .line span {
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        opacity: 0;
+        transform: translateY(22px);
+      }
+      .line span:nth-child(1) { animation: caption 3s ease-in-out 2.2s forwards; }
+      .line span:nth-child(2) { animation: caption 3s ease-in-out 5.2s forwards; }
+      .line span:nth-child(3) { animation: caption 3s ease-in-out 8.2s forwards; }
+      .line span:nth-child(4) { animation: captionFinal 3.6s ease-in-out 11.2s forwards; }
+      .chips {
+        position: absolute;
+        left: 70px;
+        bottom: 42px;
+        display: flex;
+        gap: 14px;
+      }
+      .chip {
+        padding: 12px 18px;
+        border: 1px solid rgba(255, 255, 255, 0.28);
+        border-radius: 999px;
+        background: rgba(255, 255, 255, 0.12);
+        backdrop-filter: blur(10px);
+        color: #fff;
+        font-size: 20px;
+        font-weight: 700;
+        opacity: 0;
+        animation: fadeUp 0.8s ease-out forwards;
+      }
+      .chip:nth-child(1) { animation-delay: 3.1s; }
+      .chip:nth-child(2) { animation-delay: 6.1s; }
+      .chip:nth-child(3) { animation-delay: 9.1s; }
+      .contact {
+        position: absolute;
+        right: 52px;
+        bottom: 34px;
+        text-align: right;
+        font-size: 25px;
+        line-height: 1.35;
+        font-weight: 700;
+        text-shadow: 0 5px 16px rgba(0, 0, 0, 0.62);
+        opacity: 0;
+        animation: fadeUp 1s ease-out 12s forwards;
+      }
+      @keyframes drift {
+        from { transform: scale(1.04) translateX(0); }
+        to { transform: scale(1.1) translateX(-18px); }
+      }
+      @keyframes fadeUp {
+        to { opacity: 1; transform: translateY(0); }
+      }
+      @keyframes caption {
+        0% { opacity: 0; transform: translateY(22px); }
+        18%, 72% { opacity: 1; transform: translateY(0); }
+        100% { opacity: 0; transform: translateY(-12px); }
+      }
+      @keyframes captionFinal {
+        0% { opacity: 0; transform: translateY(22px); }
+        18%, 100% { opacity: 1; transform: translateY(0); }
+      }
+      @keyframes draw {
+        to { stroke-dashoffset: 0; }
+      }
+      @keyframes pulse {
+        0% { opacity: 0.1; r: 7; }
+        45% { opacity: 0.95; r: 12; }
+        100% { opacity: 0.1; r: 7; }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="stage" id="stage">
+      <div class="bg"></div>
+      <div class="grain"></div>
+      <img class="logo" src="../assets/logo.png" alt="Worlda Global Auto">
+      <div class="copy">
+        <p class="eyebrow">Destination: United Arab Emirates</p>
+        <h1>Regional Export Planning for UAE Buyers</h1>
+      </div>
+      <svg class="route" viewBox="0 0 520 230" aria-hidden="true">
+        <path d="M66 158 C160 70, 260 62, 454 112" fill="none" stroke="#d9ad57" stroke-width="5" stroke-linecap="round"/>
+        <circle cx="66" cy="158" r="8" fill="#ffffff"/>
+        <circle class="uae" cx="454" cy="112" r="9" fill="#d9ad57"/>
+        <text x="40" y="196" fill="#fff" font-size="25" font-weight="700">China</text>
+        <text x="400" y="92" fill="#fff" font-size="25" font-weight="700">UAE</text>
+      </svg>
+      <div class="line">
+        <span>Route planning by destination port and delivery schedule</span>
+        <span>Export documents checked before shipment</span>
+        <span>Sea freight and land transport options coordinated</span>
+        <span>Clear plan before order execution</span>
+      </div>
+      <div class="chips">
+        <div class="chip">Port Route</div>
+        <div class="chip">Documents</div>
+        <div class="chip">Shipment Schedule</div>
+      </div>
+      <div class="contact">
+        Worlda Global Auto<br>
+        WhatsApp: +86 13810710061
+      </div>
+    </div>
+  </body>
+</html>

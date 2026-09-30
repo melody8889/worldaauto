@@ -1,0 +1,300 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Zeekr 8X Sales Material</title>
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      background: #111;
+      color: #f7f3ea;
+    }
+    .poster {
+      position: relative;
+      overflow: hidden;
+      background:
+        radial-gradient(circle at 76% 16%, rgba(214, 181, 118, .28), transparent 34%),
+        linear-gradient(135deg, #0d0f12 0%, #171819 46%, #2b241d 100%);
+    }
+    .wide { width: 1920px; height: 1080px; }
+    .vertical { width: 1080px; height: 1350px; }
+    .hero {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      opacity: .72;
+      filter: contrast(1.08) saturate(.92);
+    }
+    .wide .hero { object-position: 58% 48%; }
+    .vertical .hero {
+      inset: 136px 0 auto 0;
+      height: 430px;
+      object-fit: contain;
+      object-position: center center;
+      opacity: .9;
+    }
+    .shade {
+      position: absolute;
+      inset: 0;
+      background:
+        linear-gradient(90deg, rgba(8, 9, 11, .95) 0%, rgba(8, 9, 11, .78) 35%, rgba(8, 9, 11, .25) 65%, rgba(8, 9, 11, .58) 100%),
+        linear-gradient(0deg, rgba(8, 9, 11, .88), rgba(8, 9, 11, .08) 52%, rgba(8, 9, 11, .55));
+    }
+    .vertical .shade {
+      background:
+        linear-gradient(180deg, rgba(8, 9, 11, .04) 0%, rgba(8, 9, 11, .12) 38%, rgba(8, 9, 11, .94) 68%, #090a0c 100%);
+    }
+    .logo {
+      position: absolute;
+      z-index: 2;
+      object-fit: contain;
+      background: rgba(255,255,255,.9);
+      padding: 12px 18px;
+      border-radius: 6px;
+    }
+    .wide .logo { left: 72px; top: 54px; width: 300px; height: 98px; }
+    .vertical .logo { left: 54px; top: 46px; width: 286px; height: 92px; }
+    .content {
+      position: absolute;
+      z-index: 2;
+    }
+    .wide .content { left: 76px; top: 205px; width: 710px; }
+    .vertical .content { left: 54px; right: 54px; top: 548px; }
+    .eyebrow {
+      display: inline-block;
+      color: #d7b879;
+      font-size: 28px;
+      letter-spacing: 3px;
+      font-weight: 700;
+      text-transform: uppercase;
+      margin-bottom: 18px;
+    }
+    .vertical .eyebrow { font-size: 24px; margin-bottom: 14px; }
+    h1 {
+      margin: 0;
+      font-size: 118px;
+      line-height: .86;
+      letter-spacing: 0;
+      font-weight: 800;
+    }
+    .vertical h1 { font-size: 76px; }
+    .sub {
+      margin-top: 24px;
+      max-width: 660px;
+      color: #dfd9cd;
+      font-size: 34px;
+      line-height: 1.22;
+      font-weight: 500;
+    }
+    .vertical .sub { font-size: 25px; max-width: 900px; margin-top: 14px; }
+    .price {
+      display: inline-flex;
+      align-items: center;
+      margin-top: 34px;
+      padding: 18px 26px;
+      border: 1px solid rgba(215,184,121,.75);
+      color: #fff7e7;
+      background: rgba(215,184,121,.13);
+      font-size: 25px;
+      font-weight: 700;
+      border-radius: 6px;
+    }
+    .vertical .price { margin-top: 18px; font-size: 21px; padding: 14px 18px; }
+    .specs {
+      position: absolute;
+      z-index: 2;
+      display: grid;
+      gap: 14px;
+    }
+    .wide .specs {
+      right: 54px;
+      top: 72px;
+      width: 520px;
+      grid-template-columns: 1fr 1fr;
+    }
+    .vertical .specs {
+      left: 54px;
+      right: 54px;
+      top: 802px;
+      grid-template-columns: 1fr 1fr 1fr;
+    }
+    .spec {
+      min-height: 104px;
+      padding: 20px 22px;
+      border: 1px solid rgba(255,255,255,.14);
+      border-radius: 6px;
+      background: rgba(12,13,15,.68);
+      backdrop-filter: blur(8px);
+    }
+    .spec b {
+      display: block;
+      color: #ffffff;
+      font-size: 34px;
+      line-height: 1;
+      margin-bottom: 10px;
+    }
+    .vertical .spec { min-height: 76px; padding: 13px 16px; }
+    .vertical .spec b { font-size: 24px; margin-bottom: 7px; }
+    .spec span {
+      color: #cfc7b9;
+      font-size: 18px;
+      line-height: 1.18;
+      font-weight: 700;
+      text-transform: uppercase;
+    }
+    .vertical .spec span { font-size: 12px; }
+    .thumbs {
+      position: absolute;
+      z-index: 2;
+      display: flex;
+      gap: 18px;
+    }
+    .wide .thumbs { left: 76px; bottom: 74px; }
+    .vertical .thumbs { display: none; }
+    .thumb {
+      width: 226px;
+      height: 146px;
+      object-fit: cover;
+      border-radius: 6px;
+      border: 1px solid rgba(255,255,255,.2);
+      box-shadow: 0 18px 42px rgba(0,0,0,.38);
+    }
+    .thumb.primary { object-position: 18% 62%; }
+    .thumb.secondary { width: 300px; object-position: 54% 55%; }
+    .thumb.stock { width: 226px; filter: saturate(.88) contrast(1.02) brightness(.86); }
+    .thumb.stock-front { object-position: 62% 55%; }
+    .thumb.stock-rear { object-position: 42% 55%; }
+    .stock-strip {
+      position: absolute;
+      z-index: 2;
+      display: none;
+    }
+    .vertical .stock-strip {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px;
+      left: 54px;
+      right: 54px;
+      bottom: 170px;
+    }
+    .stock-strip img {
+      width: 100%;
+      height: 150px;
+      object-fit: contain;
+      background: rgba(255,255,255,.06);
+      border-radius: 6px;
+      border: 1px solid rgba(255,255,255,.18);
+      filter: saturate(.85) contrast(1.05) brightness(.78);
+      box-shadow: 0 14px 34px rgba(0,0,0,.34);
+    }
+    .stock-strip .front { object-position: center center; }
+    .stock-strip .rear { object-position: center center; }
+    .contact {
+      position: absolute;
+      z-index: 2;
+      right: 54px;
+      bottom: 56px;
+      width: 610px;
+      padding: 24px 28px;
+      border-left: 4px solid #d7b879;
+      background: rgba(9,10,12,.74);
+      border-radius: 6px;
+      color: #f7f3ea;
+    }
+    .vertical .contact {
+      left: 54px;
+      right: 54px;
+      bottom: 24px;
+      width: auto;
+      padding: 18px 24px;
+    }
+    .contact .title {
+      color: #d7b879;
+      font-size: 20px;
+      font-weight: 800;
+      text-transform: uppercase;
+      margin-bottom: 12px;
+    }
+    .contact .line {
+      font-size: 20px;
+      line-height: 1.42;
+      font-weight: 700;
+      color: #fff;
+    }
+    .vertical .contact .line { font-size: 18px; }
+    .fine { display: none; }
+  </style>
+</head>
+<body>
+  <section class="poster wide" id="wide">
+    <img class="hero" src="zeekr-8x-studio.png" alt="">
+    <div class="shade"></div>
+    <img class="logo" src="worlda-logo.png" alt="">
+    <main class="content">
+      <div class="eyebrow">Premium Export SUV</div>
+      <h1>ZEEKR<br>8X</h1>
+      <div class="sub">New energy flagship SUV for global buyers seeking luxury comfort, long range and fast delivery support from China.</div>
+      <div class="price">Latest Export Price Available Upon Request</div>
+    </main>
+    <div class="specs">
+      <div class="spec"><b>PHEV</b><span>New energy powertrain</span></div>
+      <div class="spec"><b>1,416 km</b><span>Max combined CLTC range</span></div>
+      <div class="spec"><b>410 km</b><span>Max pure electric CLTC range</span></div>
+      <div class="spec"><b>9 min</b><span>20-80% fast charging</span></div>
+      <div class="spec"><b>5,100 mm</b><span>Body length</span></div>
+      <div class="spec"><b>3,069 mm</b><span>Wheelbase</span></div>
+    </div>
+    <div class="thumbs">
+      <img class="thumb primary" src="zeekr-8x-front.png" alt="">
+      <img class="thumb secondary" src="zeekr-8x-coast.png" alt="">
+      <img class="thumb stock stock-front" src="zeekr-8x-stock-front.jpg" alt="">
+      <img class="thumb stock stock-rear" src="zeekr-8x-stock-rear.jpg" alt="">
+    </div>
+    <aside class="contact">
+      <div class="title">Worlda Global Auto</div>
+      <div class="line">Website: www.worldaauto.com</div>
+      <div class="line">Email: sales01@worldaauto.com</div>
+      <div class="line">WhatsApp / WeChat: +86-13832666352 / +86-13810710061</div>
+    </aside>
+  </section>
+
+  <section class="poster vertical" id="vertical">
+    <img class="hero" src="zeekr-8x-coast.png" alt="">
+    <div class="shade"></div>
+    <img class="logo" src="worlda-logo.png" alt="">
+    <main class="content">
+      <div class="eyebrow">Premium Export SUV</div>
+      <h1>ZEEKR 8X</h1>
+      <div class="sub">Luxury new energy SUV with long-range capability, fast charging and export-ready sourcing support.</div>
+      <div class="price">Latest Export Price Available Upon Request</div>
+    </main>
+    <div class="specs">
+      <div class="spec"><b>PHEV</b><span>New energy powertrain</span></div>
+      <div class="spec"><b>1,416 km</b><span>Max combined CLTC range</span></div>
+      <div class="spec"><b>410 km</b><span>Max pure electric CLTC range</span></div>
+      <div class="spec"><b>9 min</b><span>20-80% fast charging</span></div>
+      <div class="spec"><b>5,100 mm</b><span>Body length</span></div>
+      <div class="spec"><b>3,069 mm</b><span>Wheelbase</span></div>
+    </div>
+    <div class="stock-strip">
+      <img class="front" src="zeekr-8x-stock-front.jpg" alt="">
+      <img class="rear" src="zeekr-8x-stock-rear.jpg" alt="">
+    </div>
+    <div class="thumbs">
+      <img class="thumb primary" src="zeekr-8x-front.png" alt="">
+      <img class="thumb secondary" src="zeekr-8x-studio.png" alt="">
+    </div>
+    <aside class="contact">
+      <div class="title">Worlda Global Auto</div>
+      <div class="line">www.worldaauto.com</div>
+      <div class="line">sales01@worldaauto.com</div>
+      <div class="line">WhatsApp / WeChat: +86-13832666352 / +86-13810710061</div>
+    </aside>
+  </section>
+</body>
+</html>
