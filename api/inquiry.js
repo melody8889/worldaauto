@@ -1,8 +1,8 @@
-﻿const FORM_TARGET =
-  process.env.INQUIRY_FORWARD_URL ||
-  "https://formsubmit.co/ajax/sales01@worldaauto.com";
-
 const THANK_YOU_URL = "/thank-you.html";
+const INQUIRY_RECIPIENT =
+  process.env.INQUIRY_RECIPIENT || "sales01@worldaauto.com";
+const RESEND_FROM =
+  process.env.RESEND_FROM || "Worlda Global Auto <onboarding@resend.dev>";
 
 const BLOCKED_TERMS = [
   "casino",
@@ -142,29 +142,54 @@ function isLikelySpam(fields) {
 }
 
 async function forwardInquiry(fields, req) {
-  const payload = new URLSearchParams();
+  const apiKey = process.env.RESEND_API_KEY;
 
-  Object.entries(fields).forEach(([key, value]) => {
-    if (key === "website" || key === "inquiry_token") {
-      return;
-    }
+  if (!apiKey) {
+    throw new Error("Missing RESEND_API_KEY");
+  }
 
-    payload.set(key, normalize(value));
-  });
+  const subject = [
+    "New vehicle inquiry",
+    normalize(fields.target_model),
+    normalize(fields.destination_country)
+  ].filter(Boolean).join(" - ");
 
-  payload.set("client_ip", getClientIp(req));
-  payload.set("server_checked", "yes");
-  payload.set("_captcha", "false");
-  payload.set("_template", "table");
+  const rows = Object.entries({
+    ...fields,
+    client_ip: getClientIp(req),
+    server_checked: "yes"
+  })
+    .filter(([key]) => key !== "website" && key !== "inquiry_token")
+    .map(([key, value]) =>
+      `<tr><th align="left">${key}</th><td>${escapeHtml(normalize(value))}</td></tr>`
+    )
+    .join("");
 
-  return fetch(FORM_TARGET, {
+  return fetch("https://api.resend.com/emails", {
     method: "POST",
     headers: {
-      Accept: "text/html,application/json",
-      "Content-Type": "application/x-www-form-urlencoded"
+      Accept: "application/json",
+      Authorization: `Bearer ${apiKey}`,
+      "Content-Type": "application/json"
     },
-    body: payload.toString()
+    body: JSON.stringify({
+      from: RESEND_FROM,
+      to: [INQUIRY_RECIPIENT],
+      reply_to: normalize(fields.email) || undefined,
+      subject,
+      html: `<h2>${escapeHtml(subject)}</h2><table border="1" cellpadding="8" cellspacing="0">${rows}</table>`
+    })
   });
+}
+
+function escapeHtml(value) {
+  return String(value || "").replace(/[&<>"']/g, (character) => ({
+    "&": "&amp;",
+    "<": "&lt;",
+    ">": "&gt;",
+    '"': "&quot;",
+    "'": "&#39;"
+  }[character]));
 }
 
 export default async function handler(req, res) {
