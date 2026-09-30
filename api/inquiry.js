@@ -12,6 +12,21 @@ const BLOCKED_TERMS = [
   "viagra"
 ];
 
+const USER_CONTENT_FIELDS = [
+  "name",
+  "company_name",
+  "email",
+  "whatsapp",
+  "destination_country",
+  "destination_port",
+  "target_model",
+  "model_year",
+  "fuel_type",
+  "quantity",
+  "purchase_timeline",
+  "message"
+];
+
 function normalize(value) {
   return String(value || "").replace(/\s+/g, " ").trim();
 }
@@ -85,9 +100,11 @@ function isLikelySpam(fields) {
     return "bad_quantity";
   }
 
-  const combinedText = Object.entries(fields)
-    .filter(([key]) => !key.startsWith("_") && key !== "inquiry_token")
-    .map(([, value]) => value)
+  // Only inspect visitor-entered fields. Metadata such as source_page is a
+  // legitimate URL and must not count as promotional content.
+  const combinedText = USER_CONTENT_FIELDS
+    .map((key) => fields[key])
+    .filter((value) => value !== undefined && value !== null)
     .join(" ");
   const normalizedText = lower(combinedText);
 
@@ -136,6 +153,7 @@ export default async function handler(req, res) {
   const spamReason = isLikelySpam(fields);
 
   if (spamReason) {
+    console.warn("Inquiry rejected:", spamReason);
     res.status(400).send("Inquiry rejected.");
     return;
   }
