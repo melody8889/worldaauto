@@ -983,6 +983,35 @@
       }
 
       clearFormError(form);
+
+      event.preventDefault();
+      const submitButton = form.querySelector('button[type="submit"]');
+      if (submitButton) {
+        submitButton.disabled = true;
+        submitButton.textContent = "SENDING...";
+      }
+
+      fetch(form.action, {
+        method: "POST",
+        body: new FormData(form),
+        headers: {
+          Accept: "application/json"
+        }
+      })
+        .then(function (response) {
+          if (!response.ok) {
+            throw new Error("Form service returned " + response.status);
+          }
+          window.location.href = "/thank-you.html";
+        })
+        .catch(function (error) {
+          console.error("Inquiry submission failed:", error);
+          setFormError(form, "The form could not be sent. Please email sales01@worldaauto.com directly.");
+          if (submitButton) {
+            submitButton.disabled = false;
+            submitButton.textContent = "SUBMIT";
+          }
+        });
     });
   });
 })();
