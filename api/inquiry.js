@@ -1,6 +1,6 @@
 ﻿const FORM_TARGET =
   process.env.INQUIRY_FORWARD_URL ||
-  "https://formsubmit.co/sales01@worldaauto.com";
+  "https://formsubmit.co/ajax/sales01@worldaauto.com";
 
 const THANK_YOU_URL = "/thank-you.html";
 
@@ -55,7 +55,11 @@ function collectBody(req) {
     return Object.fromEntries(new URLSearchParams(req.body));
   }
 
-  return req.body;
+  if (typeof req.body === "object") {
+    return req.body;
+  }
+
+  return {};
 }
 
 function getClientIp(req) {
@@ -164,9 +168,18 @@ async function forwardInquiry(fields, req) {
 }
 
 export default async function handler(req, res) {
+  res.setHeader("X-Content-Type-Options", "nosniff");
+  res.setHeader("Cache-Control", "no-store");
+
+  if (req.method === "OPTIONS") {
+    res.setHeader("Allow", "POST, OPTIONS");
+    res.status(204).end();
+    return;
+  }
+
   if (req.method !== "POST") {
     res.setHeader("Allow", "POST");
-    res.status(405).send("Method Not Allowed");
+    res.status(405).json({ ok: false, error: "Method Not Allowed" });
     return;
   }
 
@@ -175,7 +188,11 @@ export default async function handler(req, res) {
 
   if (spamReason) {
     console.warn("Inquiry rejected:", spamReason);
-    res.status(400).send("Inquiry rejected.");
+    res.status(400).json({
+      ok: false,
+      error: "Inquiry rejected.",
+      reason: spamReason
+    });
     return;
   }
 
@@ -191,7 +208,11 @@ export default async function handler(req, res) {
         details
       );
 
-      res.status(502).send("Inquiry service unavailable.");
+      res.status(502).json({
+        ok: false,
+        error: "Inquiry service unavailable.",
+        upstreamStatus: response.status
+      });
       return;
     }
 
@@ -203,6 +224,6 @@ export default async function handler(req, res) {
   } catch (error) {
     console.error("Inquiry forwarding error:", error);
 
-    res.status(502).send("Inquiry service unavailable.");
+    res.status(502).json({ ok: false, error: "Inquiry service unavailable." });
   }
 }

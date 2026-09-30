@@ -27,11 +27,13 @@ This project is now a pure static website package for GitHub + Vercel deployment
 
 ## Current Form Behavior
 
-Inquiry forms currently open the visitor's email client and prepare a message to:
+Inquiry forms submit to the Vercel Function at `/api/inquiry`, which forwards
+the validated inquiry to `sales01@worldaauto.com` through FormSubmit's AJAX
+endpoint and redirects successful submissions to `thank-you.html`.
 
-- `sales01@worldaauto.com`
-
-For a production form workflow, replace this with a server-side form service or email API later.
+If Vercel shows its own `403 Forbidden` page before the function logs any
+request, check Vercel Deployment Protection. The production domain must be
+public, or the protection setting must allow unauthenticated visitors.
 
 ## Recommended Next Steps
 
