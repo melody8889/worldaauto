@@ -105,6 +105,12 @@ textarea {
   object-fit: contain;
 }
 
+.site-header .brand-logo,
+.footer-brand .brand-logo {
+  filter: none;
+  opacity: 1;
+}
+
 .site-nav {
   display: flex;
   align-items: center;
@@ -1192,7 +1198,7 @@ h3 {
   padding-right: 56px;
 }
 
-.brand-logo {
+.brands-section .brand-logo {
   display: block;
   width: 140px;
   height: 70px;
@@ -1202,7 +1208,7 @@ h3 {
   transition: filter 0.2s, opacity 0.2s, transform 0.2s;
 }
 
-.brand-logo:hover {
+.brands-section .brand-logo:hover {
   filter: none;
   opacity: 1;
   transform: scale(1.06);
@@ -1228,7 +1234,7 @@ h3 {
     padding-right: 28px;
   }
 
-  .brand-logo {
+  .brands-section .brand-logo {
     width: 105px;
     height: 70px;
   }
@@ -1266,34 +1272,32 @@ h3 {
 }
 
 .contact-heading {
-  max-width: 780px;
-  margin: 0 auto 44px;
-  text-align: center;
+  max-width: var(--max);
+  margin: 0 auto 26px;
+  text-align: left;
 }
 
 .contact-section > .contact-heading {
-  max-width: 780px;
-  text-align: center;
+  max-width: var(--max);
+  text-align: left;
 }
 
 .contact-heading h2 {
-  margin-bottom: 14px;
-  font-size: clamp(34px, 4.8vw, 58px);
-  line-height: 1.05;
-  letter-spacing: -.03em;
+  margin-bottom: 12px;
 }
 
 .contact-heading p:not(.eyebrow) {
-  margin-right: auto;
-  margin-left: auto;
+  max-width: 700px;
+  margin: 0;
   color: var(--muted);
-  font-size: 18px;
+  font-size: 16px;
+  line-height: 1.6;
 }
 
 .contact-layout {
   display: grid;
   grid-template-columns: minmax(260px, 0.7fr) minmax(0, 1.3fr);
-  gap: clamp(28px, 5vw, 70px);
+  gap: clamp(28px, 5vw, 54px);
   align-items: stretch;
 }
 
@@ -1410,7 +1414,7 @@ h3 {
   display: grid;
   gap: 9px;
   color: #3d3935;
-  font-size: 15px;
+  font-size: 13px;
   font-weight: 800;
 }
 
@@ -1418,13 +1422,13 @@ h3 {
 .inquiry-form select,
 .inquiry-form textarea {
   width: 100%;
-  min-height: 52px;
-  padding: 14px 15px;
-  border: 1px solid #ded8d0;
-  border-radius: 9px;
+  min-height: 46px;
+  padding: 11px 13px;
+  border: 1px solid #cfd8e3;
+  border-radius: 8px;
   color: var(--text);
   background: var(--white);
-  font-size: 16px;
+  font-size: 15px;
   font-weight: 400;
 }
 
