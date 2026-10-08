@@ -39,6 +39,21 @@
         "sameAs": []
       }
     </script>
+      <style>
+      .featured-preview-section { background:var(--surface, #f5f7fb); color:var(--ink, #111827); padding:clamp(56px,7vw,96px) clamp(22px,5vw,84px); }
+      .featured-preview-heading { max-width:1180px; margin:0 auto 30px; }
+      .featured-preview-heading .eyebrow { color:var(--blue, #9a7447); margin-bottom:10px; }
+      .featured-preview-heading h2 { margin:0; font-size:clamp(32px,4vw,52px); line-height:1.08; letter-spacing:-.035em; color:var(--ink, #111827); }
+      .featured-preview-heading > p:last-child { margin:12px 0 0; color:var(--muted, #667085); font-size:16px; }
+      .featured-preview-grid { max-width:1180px; margin:0 auto; display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:22px; }
+      .featured-preview-card { background:#fff; border:1px solid #dce3ec; border-radius:10px; overflow:hidden; box-shadow:0 8px 24px rgba(15,23,42,.06); }
+      .featured-preview-card img { display:block; width:100%; height:210px; object-fit:cover; }
+      .featured-preview-card__body { padding:20px 22px 23px; }
+      .featured-preview-card__body > span { color:var(--blue, #9a7447); font-size:12px; font-weight:700; letter-spacing:.1em; text-transform:uppercase; }
+      .featured-preview-card h3 { margin:8px 0 16px; color:var(--ink, #111827); font-size:21px; line-height:1.2; }
+      .featured-preview-card a { color:var(--blue, #9a7447); font-weight:700; font-size:13px; text-decoration:none; }
+      @media (max-width:760px) { .featured-preview-section { padding:52px 20px 60px; } .featured-preview-grid { grid-template-columns:1fr; gap:16px; } }
+    </style>
   </head>
   <body>
     <a class="skip-link" href="#main">Skip to content</a>
@@ -100,22 +115,7 @@
       </a>
     </section>
 
-      <section class="featured-preview-section" aria-labelledby="featured-title">
-        <div class="featured-preview-heading">
-          <p class="eyebrow">Featured Vehicles</p>
-          <h2 id="featured-title">Featured Vehicles</h2>
-        </div>
-        <div class="featured-preview-grid">
-          <article class="featured-preview-card"><img src="assets/products/zeekr-009/main.jpg" alt="Zeekr 009"><div class="featured-preview-card__body"><span>MPV</span><h3>Zeekr 009</h3><a href="#contact">View details →</a></div></article>
-          <article class="featured-preview-card"><img src="assets/products/Volkswagen Tiguan L Pro/main.png" alt="Volkswagen Tiguan L Pro"><div class="featured-preview-card__body"><span>SUV</span><h3>Volkswagen Tiguan L Pro</h3><a href="#contact">View details →</a></div></article>
-          <article class="featured-preview-card"><img src="assets/products/toyota-corolla/main.jpg" alt="Toyota Corolla"><div class="featured-preview-card__body"><span>Sedan</span><h3>Toyota Corolla</h3><a href="#contact">View details →</a></div></article>
-          <article class="featured-preview-card"><img src="assets/products/tank-700/main.jpg" alt="Tank 700"><div class="featured-preview-card__body"><span>Luxury SUV</span><h3>Tank 700</h3><a href="#contact">View details →</a></div></article>
-          <article class="featured-preview-card"><img src="assets/products/byd-song-plus-dmi/main.png" alt="BYD Song Plus DM-i"><div class="featured-preview-card__body"><span>New Energy</span><h3>BYD Song Plus DM-i</h3><a href="#contact">View details →</a></div></article>
-          <article class="featured-preview-card"><img src="assets/products/hyundai-elantra/main.jpg" alt="Hyundai Elantra"><div class="featured-preview-card__body"><span>Sedan</span><h3>Hyundai Elantra</h3><a href="#contact">View details →</a></div></article>
-        </div>
-      </section>
-
-      <section id="cars" class="section product-section">
+            <section class="featured-preview-section"><div class="featured-preview-heading"><p class="eyebrow">Featured Vehicles</p><h2>Featured Vehicles</h2></div><div class="featured-preview-grid"><article class="featured-preview-card"><img src="assets/products/zeekr-009/main.jpg" alt="Zeekr 009"><div class="featured-preview-card__body"><span>MPV</span><h3>Zeekr 009</h3><a href="#contact">View details →</a></div></article><article class="featured-preview-card"><img src="assets/products/Volkswagen Tiguan L Pro/main.png" alt="Volkswagen Tiguan L Pro"><div class="featured-preview-card__body"><span>SUV</span><h3>Volkswagen Tiguan L Pro</h3><a href="#contact">View details →</a></div></article><article class="featured-preview-card"><img src="assets/products/toyota-corolla/main.jpg" alt="Toyota Corolla"><div class="featured-preview-card__body"><span>Sedan</span><h3>Toyota Corolla</h3><a href="#contact">View details →</a></div></article><article class="featured-preview-card"><img src="assets/products/tank-700/main.jpg" alt="Tank 700"><div class="featured-preview-card__body"><span>Luxury SUV</span><h3>Tank 700</h3><a href="#contact">View details →</a></div></article><article class="featured-preview-card"><img src="assets/products/byd-song-plus-dmi/main.png" alt="BYD Song Plus DM-i"><div class="featured-preview-card__body"><span>New Energy</span><h3>BYD Song Plus DM-i</h3><a href="#contact">View details →</a></div></article><article class="featured-preview-card"><img src="assets/products/hyundai-elantra/main.jpg" alt="Hyundai Elantra"><div class="featured-preview-card__body"><span>Sedan</span><h3>Hyundai Elantra</h3><a href="#contact">View details →</a></div></article></div></section><section id="cars" class="section product-section">
         <div class="section-intro compact">
           <p class="eyebrow">Main Products</p>
           <h2>Wholesale Supply Categories</h2>
@@ -182,56 +182,6 @@
         </video>
       </section>
 
-      <section class="section brands-section" aria-labelledby="brands-title">
-        <div class="section-intro compact">
-          <p class="eyebrow">Our Supply Portfolio</p>
-          <h2 id="brands-title">Representative Brands in Our Supply Portfolio</h2>
-        </div>
-        <div class="brands-marquee" aria-label="Representative vehicle brands">
-          <div class="brands-track">
-            <!-- 增删品牌时，请同时修改下面两组 brands-group，保持内容和顺序完全一致。 -->
-            <div class="brands-group">
-              <img class="brand-logo" src="https://www.carlogos.org/car-logos/byd-logo.png" alt="BYD">
-              <img class="brand-logo" src="https://www.carlogos.org/car-logos/li-auto-logo.png" alt="LI AUTO">
-              <img class="brand-logo" src="https://www.carlogos.org/car-logos/zeekr-logo.png" alt="ZEEKR">
-              <img class="brand-logo" src="https://www.carlogos.org/car-logos/deepal-logo.png" alt="DEEPAL">
-              <img class="brand-logo" src="https://www.carlogos.org/car-logos/mg-logo.png" alt="MG">
-              <img class="brand-logo" src="https://www.carlogos.org/car-logos/dongfeng-logo.png" alt="DONGFENG">
-              <img class="brand-logo" src="https://www.carlogos.org/car-logos/toyota-logo.png" alt="TOYOTA">
-              <img class="brand-logo" src="https://www.carlogos.org/car-logos/volkswagen-logo.png" alt="VOLKSWAGEN">
-              <img class="brand-logo" src="https://www.carlogos.org/car-logos/audi-logo.png" alt="AUDI">
-              <img class="brand-logo" src="https://www.carlogos.org/car-logos/honda-logo.png" alt="HONDA">
-              <img class="brand-logo" src="https://www.carlogos.org/car-logos/nissan-logo.png" alt="NISSAN">
-              <img class="brand-logo" src="https://www.carlogos.org/car-logos/bmw-logo.png" alt="BMW">
-              <img class="brand-logo" src="https://www.carlogos.org/car-logos/mercedes-benz-logo.png" alt="MERCEDES-BENZ">
-              <img class="brand-logo" src="https://www.carlogos.org/car-logos/hyundai-logo.png" alt="HYUNDAI">
-              <img class="brand-logo" src="https://www.carlogos.org/car-logos/kia-logo.png" alt="KIA">
-              <img class="brand-logo" src="https://www.carlogos.org/car-logos/skoda-logo.png" alt="SKODA">
-              <img class="brand-logo" src="https://www.carlogos.org/car-logos/mazda-logo.png" alt="MAZDA">
-            </div>
-            <div class="brands-group" aria-hidden="true">
-              <img class="brand-logo" src="https://www.carlogos.org/car-logos/byd-logo.png" alt="">
-              <img class="brand-logo" src="https://www.carlogos.org/car-logos/li-auto-logo.png" alt="">
-              <img class="brand-logo" src="https://www.carlogos.org/car-logos/zeekr-logo.png" alt="">
-              <img class="brand-logo" src="https://www.carlogos.org/car-logos/deepal-logo.png" alt="">
-              <img class="brand-logo" src="https://www.carlogos.org/car-logos/mg-logo.png" alt="">
-              <img class="brand-logo" src="https://www.carlogos.org/car-logos/dongfeng-logo.png" alt="">
-              <img class="brand-logo" src="https://www.carlogos.org/car-logos/toyota-logo.png" alt="">
-              <img class="brand-logo" src="https://www.carlogos.org/car-logos/volkswagen-logo.png" alt="">
-              <img class="brand-logo" src="https://www.carlogos.org/car-logos/audi-logo.png" alt="">
-              <img class="brand-logo" src="https://www.carlogos.org/car-logos/honda-logo.png" alt="">
-              <img class="brand-logo" src="https://www.carlogos.org/car-logos/nissan-logo.png" alt="">
-              <img class="brand-logo" src="https://www.carlogos.org/car-logos/bmw-logo.png" alt="">
-              <img class="brand-logo" src="https://www.carlogos.org/car-logos/mercedes-benz-logo.png" alt="">
-              <img class="brand-logo" src="https://www.carlogos.org/car-logos/hyundai-logo.png" alt="">
-              <img class="brand-logo" src="https://www.carlogos.org/car-logos/kia-logo.png" alt="">
-              <img class="brand-logo" src="https://www.carlogos.org/car-logos/skoda-logo.png" alt="">
-              <img class="brand-logo" src="https://www.carlogos.org/car-logos/mazda-logo.png" alt="">
-            </div>
-          </div>
-        </div>
-      </section>
-
       <section id="faq" class="section faq-section">
         <div class="section-intro compact">
           <p class="eyebrow">FAQ</p>
@@ -264,77 +214,91 @@
       </section>
 
       <section id="contact" class="section contact-section">
-        <div class="contact-heading">
-          <p class="eyebrow">Contact Worlda Global Auto</p>
-          <h2>Start Your Vehicle Export Inquiry</h2>
-          <p>Tell us what you are looking for. We will check availability, export pricing and shipping options for you.</p>
+        <div>
+          <p class="eyebrow">Contact</p>
+          <h2>Request Wholesale Price</h2>
+          <p>Send your target model, destination country and expected quantity. We will reply with available stock, configuration options and shipping arrangement.</p>
+          <ul class="contact-list">
+            <li>WhatsApp: <a href="https://wa.me/8613832666352">+86-13832666352</a> &amp; <a href="https://wa.me/8613810710061">+86-13810710061</a></li>
+            <li>Official Email: <a href="mailto:sales01@worldaauto.com">sales01@worldaauto.com</a></li>
+          </ul>
         </div>
-        <div class="contact-layout">
-          <div class="contact-visual">
-            <img src="assets/contact-vehicle.jpeg" alt="Vehicle export preview" loading="lazy">
-            <div class="contact-visual-badge"><strong>WORLDWIDE</strong><span>Vehicle export support</span></div>
+        <form class="inquiry-form" action="/api/inquiry" method="POST" data-inquiry-form>
+          <input type="hidden" name="_subject" value="Worlda Global Auto - Homepage Inquiry">
+          <input type="hidden" name="_next" value="https://worldaauto.com/thank-you.html">
+          <input type="hidden" name="_captcha" value="false">
+          <input type="hidden" name="_template" value="table">
+          <input type="hidden" name="source_page" value="" data-form-page>
+          <div class="form-trap" aria-hidden="true">
+            <label for="homepage-website">Website</label>
+            <input id="homepage-website" name="website" tabindex="-1" autocomplete="off">
           </div>
-          <form class="inquiry-form" action="/api/inquiry" method="POST" data-inquiry-form>
-            <input type="hidden" name="_subject" value="Worlda Global Auto - Homepage Inquiry">
-            <input type="hidden" name="_next" value="https://worldaauto.com/thank-you.html">
-            <input type="hidden" name="_captcha" value="false">
-            <input type="hidden" name="_template" value="table">
-            <input type="hidden" name="source_page" value="" data-form-page>
-            <div class="form-trap" aria-hidden="true">
-              <label for="homepage-website">Website</label>
-              <input id="homepage-website" name="website" tabindex="-1" autocomplete="off">
-            </div>
-            <label class="field-wide">
-              Full Name
-              <input name="name" autocomplete="name" placeholder="Enter your full name" required>
-            </label>
-            <label class="field-wide">
-              Your WhatsApp Number *
-              <input name="whatsapp" autocomplete="tel" placeholder="+ country code / WhatsApp number" required>
-            </label>
-            <label>
-              Email
-              <input name="email" type="email" autocomplete="email" placeholder="e.g. name@company.com" required>
-            </label>
-            <label>
-              Model
-              <input name="target_model" placeholder="e.g. Kia KX1" required>
-            </label>
-            <label>
-              Buying for *
-              <select name="purchase_timeline" required>
-                <option value="">- Select -</option>
-                <option value="Personal use">Personal use</option>
-                <option value="Dealer / resale">Dealer / resale</option>
-                <option value="Fleet / project">Fleet / project</option>
-                <option value="Market research">Market research</option>
-              </select>
-            </label>
-            <label>
-              Quantity *
-              <select name="quantity" required>
-                <option value="">- Select -</option>
-                <option value="1">1 vehicle</option>
-                <option value="2-5">2-5 vehicles</option>
-                <option value="6+">6+ vehicles</option>
-              </select>
-            </label>
-            <label>
-              Destination Country *
-              <input name="destination_country" autocomplete="country-name" placeholder="Where will the vehicles be shipped?" required>
-            </label>
-            <label>
-              Model Year *
-              <input name="model_year" inputmode="numeric" placeholder="e.g. 2026" required>
-            </label>
-            <label class="field-wide">
-              Message / Requirements
-              <textarea name="message" rows="4" placeholder="Destination port, target price, specification, or any other requirements." required></textarea>
-            </label>
-            <button class="button button-primary" type="submit">GET QUOTE</button>
-            <p class="form-note">Your inquiry will be sent directly to sales01@worldaauto.com</p>
-          </form>
-        </div>
+          <label>
+            Name
+            <input name="name" autocomplete="name" required>
+          </label>
+          <label>
+            Company Name
+            <input name="company_name" autocomplete="organization" placeholder="Your company or dealership name">
+          </label>
+          <label>
+            Email
+            <input name="email" type="email" autocomplete="email" required>
+          </label>
+          <label>
+            WhatsApp
+            <input name="whatsapp" autocomplete="tel" placeholder="+ country code / WhatsApp number">
+          </label>
+          <label>
+            Destination Country
+            <input name="destination_country" autocomplete="country-name" placeholder="Where will the vehicles be shipped?" required>
+          </label>
+          <label>
+            Destination Port
+            <input name="destination_port" placeholder="For example: Jebel Ali, Dubai">
+          </label>
+          <label>
+            Target Model
+            <input name="target_model" placeholder="For example: BYD Song Plus, Toyota Corolla" required>
+          </label>
+          <label>
+            Model Year
+            <input name="model_year" inputmode="numeric" placeholder="For example: 2026" required>
+          </label>
+          <label>
+            Fuel Type
+            <select name="fuel_type">
+              <option value="">Select fuel type</option>
+              <option value="Gasoline">Gasoline</option>
+              <option value="Diesel">Diesel</option>
+              <option value="Hybrid">Hybrid</option>
+              <option value="Plug-in Hybrid">Plug-in Hybrid</option>
+              <option value="Electric">Electric</option>
+              <option value="Any / Not sure">Any / Not sure</option>
+            </select>
+          </label>
+          <label>
+            Quantity
+            <input name="quantity" inputmode="numeric" required>
+          </label>
+          <label>
+            Expected Purchase Time
+            <select name="purchase_timeline" required>
+              <option value="">Select purchase timeline</option>
+              <option value="Within 2 weeks">Within 2 weeks</option>
+              <option value="Within 1 month">Within 1 month</option>
+              <option value="Within 3 months">Within 3 months</option>
+              <option value="More than 3 months">More than 3 months</option>
+              <option value="Market research">Market research</option>
+            </select>
+          </label>
+          <label>
+            Message
+            <textarea name="message" rows="5" required></textarea>
+          </label>
+          <button class="button button-primary" type="submit">SUBMIT</button>
+          <p class="form-note">Your inquiry will be sent directly to sales01@worldaauto.com</p>
+        </form>
       </section>
     </main>
 
@@ -367,6 +331,9 @@
     <script src="script.js?v=20260914-spam-guard"></script>
   </body>
 </html>
+
+
+
 
 
 

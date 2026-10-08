@@ -39,7 +39,14 @@
         "sameAs": []
       }
     </script>
-  </head>
+  <style>
+/* Preview only: Catalog-inspired About Us video frame */
+.about-proof-video {
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  box-shadow: 0 8px 18px rgba(33, 33, 33, 0.04);
+}
+</style></head>
   <body>
     <a class="skip-link" href="#main">Skip to content</a>
     <header class="site-header" data-header>
@@ -264,77 +271,91 @@
       </section>
 
       <section id="contact" class="section contact-section">
-        <div class="contact-heading">
-          <p class="eyebrow">Contact Worlda Global Auto</p>
-          <h2>Start Your Vehicle Export Inquiry</h2>
-          <p>Tell us what you are looking for. We will check availability, export pricing and shipping options for you.</p>
+        <div>
+          <p class="eyebrow">Contact</p>
+          <h2>Request Wholesale Price</h2>
+          <p>Send your target model, destination country and expected quantity. We will reply with available stock, configuration options and shipping arrangement.</p>
+          <ul class="contact-list">
+            <li>WhatsApp: <a href="https://wa.me/8613832666352">+86-13832666352</a> &amp; <a href="https://wa.me/8613810710061">+86-13810710061</a></li>
+            <li>Official Email: <a href="mailto:sales01@worldaauto.com">sales01@worldaauto.com</a></li>
+          </ul>
         </div>
-        <div class="contact-layout">
-          <div class="contact-visual">
-            <img src="assets/contact-vehicle.jpeg" alt="Vehicle export preview" loading="lazy">
-            <div class="contact-visual-badge"><strong>WORLDWIDE</strong><span>Vehicle export support</span></div>
+        <form class="inquiry-form" action="/api/inquiry" method="POST" data-inquiry-form>
+          <input type="hidden" name="_subject" value="Worlda Global Auto - Homepage Inquiry">
+          <input type="hidden" name="_next" value="https://worldaauto.com/thank-you.html">
+          <input type="hidden" name="_captcha" value="false">
+          <input type="hidden" name="_template" value="table">
+          <input type="hidden" name="source_page" value="" data-form-page>
+          <div class="form-trap" aria-hidden="true">
+            <label for="homepage-website">Website</label>
+            <input id="homepage-website" name="website" tabindex="-1" autocomplete="off">
           </div>
-          <form class="inquiry-form" action="/api/inquiry" method="POST" data-inquiry-form>
-            <input type="hidden" name="_subject" value="Worlda Global Auto - Homepage Inquiry">
-            <input type="hidden" name="_next" value="https://worldaauto.com/thank-you.html">
-            <input type="hidden" name="_captcha" value="false">
-            <input type="hidden" name="_template" value="table">
-            <input type="hidden" name="source_page" value="" data-form-page>
-            <div class="form-trap" aria-hidden="true">
-              <label for="homepage-website">Website</label>
-              <input id="homepage-website" name="website" tabindex="-1" autocomplete="off">
-            </div>
-            <label class="field-wide">
-              Full Name
-              <input name="name" autocomplete="name" placeholder="Enter your full name" required>
-            </label>
-            <label class="field-wide">
-              Your WhatsApp Number *
-              <input name="whatsapp" autocomplete="tel" placeholder="+ country code / WhatsApp number" required>
-            </label>
-            <label>
-              Email
-              <input name="email" type="email" autocomplete="email" placeholder="e.g. name@company.com" required>
-            </label>
-            <label>
-              Model
-              <input name="target_model" placeholder="e.g. Kia KX1" required>
-            </label>
-            <label>
-              Buying for *
-              <select name="purchase_timeline" required>
-                <option value="">- Select -</option>
-                <option value="Personal use">Personal use</option>
-                <option value="Dealer / resale">Dealer / resale</option>
-                <option value="Fleet / project">Fleet / project</option>
-                <option value="Market research">Market research</option>
-              </select>
-            </label>
-            <label>
-              Quantity *
-              <select name="quantity" required>
-                <option value="">- Select -</option>
-                <option value="1">1 vehicle</option>
-                <option value="2-5">2-5 vehicles</option>
-                <option value="6+">6+ vehicles</option>
-              </select>
-            </label>
-            <label>
-              Destination Country *
-              <input name="destination_country" autocomplete="country-name" placeholder="Where will the vehicles be shipped?" required>
-            </label>
-            <label>
-              Model Year *
-              <input name="model_year" inputmode="numeric" placeholder="e.g. 2026" required>
-            </label>
-            <label class="field-wide">
-              Message / Requirements
-              <textarea name="message" rows="4" placeholder="Destination port, target price, specification, or any other requirements." required></textarea>
-            </label>
-            <button class="button button-primary" type="submit">GET QUOTE</button>
-            <p class="form-note">Your inquiry will be sent directly to sales01@worldaauto.com</p>
-          </form>
-        </div>
+          <label>
+            Name
+            <input name="name" autocomplete="name" required>
+          </label>
+          <label>
+            Company Name
+            <input name="company_name" autocomplete="organization" placeholder="Your company or dealership name">
+          </label>
+          <label>
+            Email
+            <input name="email" type="email" autocomplete="email" required>
+          </label>
+          <label>
+            WhatsApp
+            <input name="whatsapp" autocomplete="tel" placeholder="+ country code / WhatsApp number">
+          </label>
+          <label>
+            Destination Country
+            <input name="destination_country" autocomplete="country-name" placeholder="Where will the vehicles be shipped?" required>
+          </label>
+          <label>
+            Destination Port
+            <input name="destination_port" placeholder="For example: Jebel Ali, Dubai">
+          </label>
+          <label>
+            Target Model
+            <input name="target_model" placeholder="For example: BYD Song Plus, Toyota Corolla" required>
+          </label>
+          <label>
+            Model Year
+            <input name="model_year" inputmode="numeric" placeholder="For example: 2026" required>
+          </label>
+          <label>
+            Fuel Type
+            <select name="fuel_type">
+              <option value="">Select fuel type</option>
+              <option value="Gasoline">Gasoline</option>
+              <option value="Diesel">Diesel</option>
+              <option value="Hybrid">Hybrid</option>
+              <option value="Plug-in Hybrid">Plug-in Hybrid</option>
+              <option value="Electric">Electric</option>
+              <option value="Any / Not sure">Any / Not sure</option>
+            </select>
+          </label>
+          <label>
+            Quantity
+            <input name="quantity" inputmode="numeric" required>
+          </label>
+          <label>
+            Expected Purchase Time
+            <select name="purchase_timeline" required>
+              <option value="">Select purchase timeline</option>
+              <option value="Within 2 weeks">Within 2 weeks</option>
+              <option value="Within 1 month">Within 1 month</option>
+              <option value="Within 3 months">Within 3 months</option>
+              <option value="More than 3 months">More than 3 months</option>
+              <option value="Market research">Market research</option>
+            </select>
+          </label>
+          <label>
+            Message
+            <textarea name="message" rows="5" required></textarea>
+          </label>
+          <button class="button button-primary" type="submit">SUBMIT</button>
+          <p class="form-note">Your inquiry will be sent directly to sales01@worldaauto.com</p>
+        </form>
       </section>
     </main>
 
