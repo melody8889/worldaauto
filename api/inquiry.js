@@ -81,9 +81,14 @@ function isLikelySpam(fields) {
     return "honeypot";
   }
 
-  const elapsed = Number(fields.time_on_form || 0);
+  // The time field is only a signal. Older pages, browsers with scripts
+  // disabled, and legitimate quick submissions do not always send it.
+  // Treat an explicitly invalid value as suspicious, but do not reject a
+  // normal form post just because the client-side timer was unavailable.
+  const rawElapsed = normalize(fields.time_on_form);
+  const elapsed = Number(rawElapsed);
 
-  if (!Number.isFinite(elapsed) || elapsed < 4) {
+  if (rawElapsed && (!Number.isFinite(elapsed) || elapsed < 1)) {
     return "too_fast";
   }
 

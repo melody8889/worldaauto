@@ -858,7 +858,9 @@
   }
 
   const inquiryGuard = {
-    minSubmitTime: 4500,
+    // Keep the timer as telemetry for the server, but do not block real
+    // customers who already know what they want to ask for.
+    minSubmitTime: 0,
     maxLinks: 1,
     blockedTerms: [
       "casino",
@@ -964,7 +966,7 @@
         return;
       }
 
-      if (!token || token.value !== tokenValue || elapsed < inquiryGuard.minSubmitTime) {
+      if (!token || token.value !== tokenValue) {
         event.preventDefault();
         setFormError(form, "Please take a moment to complete the inquiry details before submitting.");
         return;
