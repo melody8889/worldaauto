@@ -170,21 +170,46 @@ async function forwardInquiry(fields, req) {
     )
     .join("");
 
-  return fetch("https://api.resend.com/emails", {
+  const payload = {
+    from: RESEND_FROM,
+    to: [INQUIRY_RECIPIENT],
+    reply_to: normalize(fields.email) || undefined,
+    subject,
+    html: `<h2>${escapeHtml(subject)}</h2><table border="1" cellpadding="8" cellspacing="0">${rows}</table>`
+  };
+
+  const response = await fetch("https://api.resend.com/emails", {
     method: "POST",
     headers: {
       Accept: "application/json",
       Authorization: `Bearer ${apiKey}`,
       "Content-Type": "application/json"
     },
-    body: JSON.stringify({
-      from: RESEND_FROM,
-      to: [INQUIRY_RECIPIENT],
-      reply_to: normalize(fields.email) || undefined,
-      subject,
-      html: `<h2>${escapeHtml(subject)}</h2><table border="1" cellpadding="8" cellspacing="0">${rows}</table>`
-    })
+    body: JSON.stringify(payload)
   });
+
+  // Resend's free/testing account can return 403 when the recipient or
+  // sender domain is not verified. Try FormSubmit as a compatibility
+  // fallback so a valid customer inquiry is still delivered.
+  if (response.status === 403) {
+    const fallback = await fetch(
+      `https://formsubmit.co/ajax/${encodeURIComponent(INQUIRY_RECIPIENT)}`,
+      {
+        method: "POST",
+        headers: { Accept: "application/json", "Content-Type": "application/json" },
+        body: JSON.stringify({
+          ...fields,
+          _subject: subject,
+          _replyto: normalize(fields.email),
+          _template: "table",
+          _captcha: "false"
+        })
+      }
+    );
+    if (fallback.ok) return fallback;
+  }
+
+  return response;
 }
 
 function escapeHtml(value) {
