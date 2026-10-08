@@ -2236,10 +2236,17 @@ h3 {
 
   .hero-image,
   .hero-poster {
-    object-fit: contain;
-    -webkit-object-fit: contain;
+    object-fit: cover;
+    -webkit-object-fit: cover;
     object-position: center center;
     background: #f7f5f0;
+  }
+
+  /* Keep the mobile banner compact. The desktop viewport height made the
+     contain-sized video leave large blank bands above and below the image. */
+  .hero,
+  .hero-content {
+    min-height: 58vh;
   }
 
   .inquiry-form {
