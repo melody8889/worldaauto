@@ -2236,8 +2236,8 @@ h3 {
 
   .hero-image,
   .hero-poster {
-    object-fit: contain;
-    -webkit-object-fit: contain;
+    object-fit: fill;
+    -webkit-object-fit: fill;
     object-position: center center;
     background: #f7f5f0;
   }
@@ -2246,8 +2246,8 @@ h3 {
      visible without the tall desktop viewport creating blank bands. */
   .hero {
     min-height: 0;
-    height: 120vw;
-    max-height: 680px;
+    height: 100vw;
+    max-height: 620px;
   }
 
   .hero-content {
