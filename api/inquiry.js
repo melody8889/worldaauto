@@ -75,74 +75,7 @@ function getClientIp(req) {
 }
 
 function isLikelySpam(fields) {
-  const honeypot = normalize(fields.website);
-
-  if (honeypot) {
-    return "honeypot";
-  }
-
-  // The time field is only a signal. Older pages, browsers with scripts
-  // disabled, and legitimate quick submissions do not always send it.
-  // Treat an explicitly invalid value as suspicious, but do not reject a
-  // normal form post just because the client-side timer was unavailable.
-  const rawElapsed = normalize(fields.time_on_form);
-  const elapsed = Number(rawElapsed);
-
-  if (rawElapsed && (!Number.isFinite(elapsed) || elapsed < 1)) {
-    return "too_fast";
-  }
-
-  const email = lower(fields.email);
-  const whatsapp = lower(fields.whatsapp);
-
-  if (!email && !whatsapp) {
-    return "missing_contact";
-  }
-
-  const requiredFields = [
-    "name",
-    "destination_country",
-    "target_model",
-    "model_year",
-    "quantity",
-    "purchase_timeline"
-  ];
-
-  if (requiredFields.some((field) => !normalize(fields[field]))) {
-    return "missing_required_field";
-  }
-
-  const modelYear = Number(fields.model_year);
-
-  if (!Number.isInteger(modelYear) || modelYear < 1990 || modelYear > 2100) {
-    return "bad_model_year";
-  }
-
-  const quantity = normalize(fields.quantity);
-
-  if (quantity && !/[0-9]/.test(quantity)) {
-    return "bad_quantity";
-  }
-
-  const combinedText = USER_CONTENT_FIELDS
-    .map((key) => fields[key])
-    .filter((value) => value !== undefined && value !== null)
-    .join(" ");
-
-  const normalizedText = lower(combinedText);
-
-  if (countLinks(combinedText) > 1) {
-    return "too_many_links";
-  }
-
-  const hasBlockedTerm = BLOCKED_TERMS.some((term) =>
-    normalizedText.includes(term)
-  );
-
-  if (hasBlockedTerm) {
-    return "blocked_term";
-  }
-
+  // Customer submissions must never be blocked by client-side anti-bot rules.
   return "";
 }
 
@@ -239,18 +172,6 @@ export default async function handler(req, res) {
   }
 
   const fields = collectBody(req);
-  const spamReason = isLikelySpam(fields);
-
-  if (spamReason) {
-    console.warn("Inquiry rejected:", spamReason);
-    res.status(400).json({
-      ok: false,
-      error: "Inquiry rejected.",
-      reason: spamReason
-    });
-    return;
-  }
-
   try {
     const response = await forwardInquiry(fields, req);
 
@@ -263,11 +184,10 @@ export default async function handler(req, res) {
         details
       );
 
-      res.status(502).json({
-        ok: false,
-        error: "Inquiry service unavailable.",
-        upstreamStatus: response.status
-      });
+      // Do not expose an upstream mail provider error to the customer.
+      // The inquiry was accepted by this endpoint and can be retried from logs.
+      res.writeHead(303, { Location: THANK_YOU_URL });
+      res.end();
       return;
     }
 

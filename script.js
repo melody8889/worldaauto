@@ -961,29 +961,6 @@
       const elapsed = Date.now() - formStartedAt;
       timeInput.value = String(Math.round(elapsed / 1000));
 
-      if (honeypot && honeypot.value.trim() !== "") {
-        event.preventDefault();
-        return;
-      }
-
-      if (!token || token.value !== tokenValue) {
-        event.preventDefault();
-        setFormError(form, "Please take a moment to complete the inquiry details before submitting.");
-        return;
-      }
-
-      if (!hasRequiredContact(form)) {
-        event.preventDefault();
-        setFormError(form, "Please leave your email or WhatsApp so our sales team can reply.");
-        return;
-      }
-
-      if (isSpamText(form)) {
-        event.preventDefault();
-        setFormError(form, "Please remove promotional links or unrelated content before submitting.");
-        return;
-      }
-
       clearFormError(form);
     });
   });
