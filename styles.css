@@ -183,8 +183,8 @@ textarea {
 
 .hero-video-playing .hero-overlay,
 .hero-video-playing .hero-content {
-  opacity: 0;
-  pointer-events: none;
+  opacity: 1;
+  pointer-events: auto;
 }
 
 .hero-video-ended .hero-image {
@@ -200,7 +200,7 @@ textarea {
 .hero-overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(180deg, rgba(255,255,255,0.16), rgba(248,244,238,0.56) 64%, rgba(255,255,255,0.92));
+  background: linear-gradient(180deg, rgba(255,255,255,0.22), rgba(248,244,238,0.34) 48%, rgba(248,244,238,0.72));
   transition: opacity 280ms ease;
 }
 
@@ -212,7 +212,7 @@ textarea {
   max-width: 960px;
   margin: 0 auto;
   transition: opacity 280ms ease;
-  padding: 20vh 24px 18vh;
+  padding: 16vh 24px 14vh;
   flex-direction: column;
   align-items: center;
   justify-content: center;
@@ -222,16 +222,18 @@ textarea {
 .hero h1 {
   max-width: 940px;
   margin: 0;
-  font-size: clamp(34px, 6vw, 74px);
-  line-height: 1;
+  color: var(--text);
+  font-size: clamp(30px, 4.5vw, 56px);
+  line-height: 1.1;
   letter-spacing: 0;
+  text-shadow: 0 1px 8px rgba(255,255,255,.35);
 }
 
 .hero p:not(.eyebrow) {
   max-width: 720px;
   margin: 24px 0 34px;
   color: #323232;
-  font-size: clamp(17px, 2.2vw, 24px);
+  font-size: clamp(16px, 1.8vw, 21px);
 }
 
 .hero-actions {
@@ -278,6 +280,19 @@ textarea {
 
 .button-primary {
   box-shadow: 0 12px 28px rgba(154, 116, 71, 0.18);
+}
+
+.hero .button-secondary {
+  color: var(--blue-dark);
+  border-color: var(--blue);
+  background: rgba(255,255,255,.82);
+}
+
+.hero .button-secondary:hover,
+.hero .button-secondary:focus-visible {
+  color: var(--white);
+  background: var(--blue-dark);
+  border-color: var(--blue-dark);
 }
 
 .featured-preview-section {
@@ -2236,8 +2251,8 @@ h3 {
 
   .hero-image,
   .hero-poster {
-    object-fit: fill;
-    -webkit-object-fit: fill;
+    object-fit: cover;
+    -webkit-object-fit: cover;
     object-position: center center;
     background: #f7f5f0;
   }
