@@ -402,6 +402,7 @@
           image: "assets/products/livis/main.jpg",
           detailImageClass: "product-img product-img-contain",
           galleryImageClass: "gallery-img-contain",
+          galleryButtonClass: "gallery-thumb-tall",
           gallery: ["assets/products/livis/1.jpg", "assets/products/livis/2.jpg", "assets/products/livis/3.jpg", "assets/products/livis/4.jpg", "assets/products/livis/5.jpg", "assets/products/livis/6.jpg", "assets/products/livis/main.jpg"]
         },
         {
@@ -889,7 +890,8 @@
       const galleryImages = (product.gallery && product.gallery.length ? product.gallery : [product.image]).filter(Boolean);
       galleryNode.innerHTML = galleryImages.slice(0, 4).map(function (src, index) {
         const thumbClass = product.galleryImageClass || "";
-        return '<button class="thumb-button" type="button" data-gallery-src="' + src + '" aria-label="View image ' + (index + 1) + ' for ' + product.name + '">' +
+        const buttonClass = product.galleryButtonClass ? " " + product.galleryButtonClass : "";
+        return '<button class="thumb-button' + buttonClass + '" type="button" data-gallery-src="' + src + '" aria-label="View image ' + (index + 1) + ' for ' + product.name + '">' +
           '<img class="' + thumbClass + '" src="' + src + '" alt="' + product.name + ' detail image ' + (index + 1) + '">' +
         '</button>';
       }).join("");
