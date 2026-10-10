@@ -2609,3 +2609,19 @@ h3 {
   object-position: center center !important;
   background: #05080c !important;
 }
+
+/* Keep vehicle cards the same size while showing the complete vehicle image. */
+.product-gallery > img.product-img,
+.list-card > img.product-img {
+  object-fit: contain !important;
+  object-position: center center !important;
+  background: #ffffff !important;
+}
+
+.product-gallery > img.product-img {
+  aspect-ratio: 4 / 3 !important;
+}
+
+.list-card > img.product-img {
+  height: 210px !important;
+}
