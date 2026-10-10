@@ -344,6 +344,20 @@
           gallery: ["assets/products/tank-700/1.png","assets/products/tank-700/2.jpg","assets/products/tank-700/3.jpg","assets/products/tank-700/main.jpg"]
         },
         {
+          slug: "zeekr-8x",
+          name: "Zeekr 8X",
+          subtitle: "Supercar acceleration, luxury hybrid flagship SUV, power and elegance redefined.",
+          year: "2026",
+          engine: "2.0T turbocharged inline 4-cylinder, DHE20-PFZ",
+          fuel: "Plug-in hybrid, 95# gasoline",
+          drive: "Front-mounted electric 4WD",
+          transmission: "1-speed dedicated hybrid DHT",
+          color: "Yunpo Red, Obsidian Black, Star Silver, Glacier Grey",
+          stock: "Available for immediate shipment",
+          image: "assets/products/8x/main.jpg",
+          gallery: ["assets/products/8x/1.jpg", "assets/products/8x/2.jpg", "assets/products/8x/3.jpg", "assets/products/8x/4.jpg", "assets/products/8x/main.jpg"]
+        },
+        {
           slug: "haval-m6",
           name: "Haval M6",
           subtitle: "Affordable practical family petrol SUV with spacious interior",
