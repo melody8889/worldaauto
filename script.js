@@ -400,6 +400,8 @@
           stock: "Available for immediate shipment",
           inquiryNotes: "72.7kWh 5C super charging battery, 0-100km/h acceleration as low as 4.9s, intelligent air suspension, Euro VI emission standard, LHD, 6-seater 2+2+2 layout, advanced autonomous driving system",
           image: "assets/products/livis/main.jpg",
+          detailImageClass: "product-img product-img-contain",
+          galleryImageClass: "gallery-img-contain",
           gallery: ["assets/products/livis/1.jpg", "assets/products/livis/2.jpg", "assets/products/livis/3.jpg", "assets/products/livis/4.jpg", "assets/products/livis/5.jpg", "assets/products/livis/6.jpg", "assets/products/livis/main.jpg"]
         },
         {
@@ -886,8 +888,9 @@
     if (galleryNode) {
       const galleryImages = (product.gallery && product.gallery.length ? product.gallery : [product.image]).filter(Boolean);
       galleryNode.innerHTML = galleryImages.slice(0, 4).map(function (src, index) {
+        const thumbClass = product.galleryImageClass || "";
         return '<button class="thumb-button" type="button" data-gallery-src="' + src + '" aria-label="View image ' + (index + 1) + ' for ' + product.name + '">' +
-          '<img src="' + src + '" alt="' + product.name + ' detail image ' + (index + 1) + '">' +
+          '<img class="' + thumbClass + '" src="' + src + '" alt="' + product.name + ' detail image ' + (index + 1) + '">' +
         '</button>';
       }).join("");
 

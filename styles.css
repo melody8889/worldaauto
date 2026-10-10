@@ -1761,6 +1761,11 @@ h3 {
   display: block;
 }
 
+.thumb-button img.gallery-img-contain {
+  object-fit: contain;
+  background: #ffffff;
+}
+
 .product-summary h1 {
   margin: 0 0 22px;
   font-size: clamp(32px, 4.2vw, 58px);
