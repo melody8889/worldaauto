@@ -292,6 +292,21 @@
           gallery: ["assets/products/toyota-corolla/1.jpg", "assets/products/toyota-corolla/2.jpg", "assets/products/toyota-corolla/3.jpg", "assets/products/toyota-corolla/main.jpg"]
         },
         {
+          slug: "toyota-corolla-cross",
+          name: "Toyota Corolla Cross",
+          subtitle: "Practical compact crossover SUV, outstanding fuel economy and reliable family mobility.",
+          year: "2026",
+          engine: "2.0L Dynamic Force inline 4-cylinder, DOHC 16-Valve, Dual VVT-i",
+          fuel: "Gasoline, 92#/95# gasoline",
+          drive: "Front-wheel drive (FWD)",
+          transmission: "CVT automatic transmission",
+          color: "Super White, Attitude Black, Celestite Gray, Dark Blue",
+          stock: "Available for immediate shipment",
+          inquiryNotes: "Spacious cabin, stable handling, Euro VI emission standard, LHD, 5-seater, advanced safety package, ideal for family travel and fleet business",
+          image: "assets/products/Corolla Cross/main.jpg",
+          gallery: ["assets/products/Corolla Cross/1.jpg", "assets/products/Corolla Cross/2.jpg", "assets/products/Corolla Cross/3.jpg", "assets/products/Corolla Cross/main.jpg"]
+        },
+        {
           slug: "hyundai-elantra",
           name: "Hyundai Elantra",
           subtitle: "Stylish and economical compact sedan with advanced tech features for global market",
@@ -356,6 +371,36 @@
           stock: "Available for immediate shipment",
           image: "assets/products/8x/main.jpg",
           gallery: ["assets/products/8x/1.jpg", "assets/products/8x/2.jpg", "assets/products/8x/3.jpg", "assets/products/8x/4.jpg", "assets/products/8x/main.jpg"]
+        },
+        {
+          slug: "zeekr-9x",
+          name: "Zeekr 9X",
+          subtitle: "Hyper hybrid flagship luxury SUV, explosive performance & premium comfort redefined.",
+          year: "2026",
+          engine: "2.0T turbocharged inline 4-cylinder, DHE20-PFZ",
+          fuel: "Plug-in hybrid, 95# gasoline",
+          drive: "Dual-motor full-time AWD",
+          transmission: "1-speed dedicated hybrid DHT",
+          color: "Crystal White, Onyx Black, Lava Grey, Glacier Grey",
+          stock: "Available for immediate shipment",
+          inquiryNotes: "900V high-voltage platform, 6C ultra-fast charging, 0-100km/h acceleration as low as 3.1s, Euro VI emission standard, LHD, 5/6 seats optional",
+          image: "assets/products/9x/main.jpg",
+          gallery: ["assets/products/9x/1.jpg", "assets/products/9x/2.jpg", "assets/products/9x/3.jpg", "assets/products/9x/4.jpg", "assets/products/9x/main.jpg"]
+        },
+        {
+          slug: "li-auto-l9-livis",
+          name: "Li Auto L9 Livis",
+          subtitle: "Full-size flagship family EREV SUV, intelligent cabin & all-terrain comfort redefined.",
+          year: "2026",
+          engine: "1.5T turbocharged inline 4-cylinder range extender, L3E15CA",
+          fuel: "Extended Range Electric Vehicle, 95# gasoline",
+          drive: "Dual-motor full-time AWD",
+          transmission: "Fixed ratio electric drive gearbox",
+          color: "Pearlescent White, Obsidian Black, Starry Purple, Metallic Grey",
+          stock: "Available for immediate shipment",
+          inquiryNotes: "72.7kWh 5C super charging battery, 0-100km/h acceleration as low as 4.9s, intelligent air suspension, Euro VI emission standard, LHD, 6-seater 2+2+2 layout, advanced autonomous driving system",
+          image: "assets/products/livis/main.jpg",
+          gallery: ["assets/products/livis/1.jpg", "assets/products/livis/2.jpg", "assets/products/livis/3.jpg", "assets/products/livis/4.jpg", "assets/products/livis/5.jpg", "assets/products/livis/6.jpg", "assets/products/livis/main.jpg"]
         },
         {
           slug: "haval-m6",
@@ -758,6 +803,7 @@
     const specTransmission = document.querySelector("[data-spec='transmission']");
     const specColor = document.querySelector("[data-spec='color']");
     const specStock = document.querySelector("[data-spec='stock']");
+    const inquiryNotesNode = document.querySelector("[data-spec='inquiry-notes']");
     const categoryLinks = document.querySelectorAll("[data-category-link]");
     const heroImage = document.querySelector("[data-product-image]");
     const galleryNode = document.querySelector("[data-product-gallery]");
@@ -819,6 +865,12 @@
 
     if (specStock) {
       specStock.textContent = product.stock;
+    }
+
+    if (inquiryNotesNode) {
+      const notes = product.inquiryNotes || "Contact us to confirm destination-specific configuration and export requirements.";
+      inquiryNotesNode.textContent = notes;
+      inquiryNotesNode.closest(".inquiry-notes")?.classList.toggle("is-hidden", !product.inquiryNotes);
     }
 
     if (heroImage) {

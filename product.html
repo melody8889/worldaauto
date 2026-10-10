@@ -106,6 +106,14 @@
         </dl>
       </section>
 
+      <section class="section inquiry-notes is-hidden" aria-labelledby="inquiry-notes-title">
+        <div class="section-intro compact">
+          <p class="eyebrow">Key Inquiry Notes</p>
+          <h2 id="inquiry-notes-title">Configuration Highlights</h2>
+        </div>
+        <p data-spec="inquiry-notes"></p>
+      </section>
+
       <section class="section product-export-section" aria-labelledby="product-export-title">
         <div class="section-intro compact">
           <p class="eyebrow">Available Stock / Export Info</p>
@@ -169,7 +177,7 @@
           <h2>Check Price and Shipment Plan</h2>
           <p>Share destination country, quantity and target delivery time. We will confirm stock status, document options and logistics route.</p>
         </div>
-        <form class="inquiry-form" action="https://formsubmit.co/sales01@worldaauto.com" method="POST" data-inquiry-form>
+        <form class="inquiry-form" action="/api/inquiry" method="POST" data-inquiry-form>
           <input type="hidden" name="_subject" value="Worlda Global Auto - Product Inquiry">
           <input type="hidden" name="_next" value="https://worldaauto.com/thank-you.html">
           <input type="hidden" name="_captcha" value="false">
@@ -277,5 +285,3 @@
     <script src="script.js?v=20260914-spam-guard"></script>
   </body>
 </html>
-
-
