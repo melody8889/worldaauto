@@ -142,6 +142,14 @@ export default async function handler(req, res) {
     return;
   }
 
+  // Forward the browser's original POST directly to FormSubmit. This avoids
+  // server-to-server delivery failures and preserves every form field.
+  res.writeHead(307, {
+    Location: `https://formsubmit.co/${INQUIRY_RECIPIENT}`
+  });
+  res.end();
+  return;
+
   const fields = collectBody(req);
   try {
     const response = await forwardInquiry(fields, req);
