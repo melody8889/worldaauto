@@ -96,11 +96,11 @@ async function forwardInquiry(fields, req) {
     .join("");
 
   return fetch(
-    `https://formsubmit.co/ajax/${encodeURIComponent(INQUIRY_RECIPIENT)}`,
+    `https://formsubmit.co/${encodeURIComponent(INQUIRY_RECIPIENT)}`,
     {
       method: "POST",
       headers: {
-        Accept: "application/json",
+        Accept: "text/html,application/json",
         "Content-Type": "application/x-www-form-urlencoded"
       },
       body: new URLSearchParams({
