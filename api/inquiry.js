@@ -99,14 +99,19 @@ async function forwardInquiry(fields, req) {
     `https://formsubmit.co/ajax/${encodeURIComponent(INQUIRY_RECIPIENT)}`,
     {
       method: "POST",
-      headers: { Accept: "application/json", "Content-Type": "application/json" },
-      body: JSON.stringify({
-        ...fields,
+      headers: {
+        Accept: "application/json",
+        "Content-Type": "application/x-www-form-urlencoded"
+      },
+      body: new URLSearchParams({
+        ...Object.fromEntries(
+          Object.entries(fields).map(([key, value]) => [key, normalize(value)])
+        ),
         _subject: subject,
         _replyto: normalize(fields.email),
         _template: "table",
         _captcha: "false"
-      })
+      }).toString()
     }
   );
 }
