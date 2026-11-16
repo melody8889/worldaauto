@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Brands Portfolio Preview</title>
+<link rel="stylesheet" href="styles.css">
+<style>
+/* Preview-only styles. Copy into the homepage after approval. */
+.brands-preview-section{max-width:none;background:var(--panel);overflow:hidden}
+.brands-preview-section .section-intro{max-width:980px;margin:0 auto 28px}
+.brands-marquee{overflow:hidden;width:100%;padding:18px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line);mask-image:linear-gradient(90deg,transparent,#000 7%,#000 93%,transparent)}
+.brands-track{display:flex;width:max-content;animation:brands-scroll 70s linear infinite}
+.brands-marquee:hover .brands-track{animation-play-state:paused}
+.brands-group{display:flex;align-items:center;gap:56px;padding-right:56px;flex:none}
+.brand-logo{height:70px;width:140px;object-fit:contain;display:block;filter:grayscale(1) contrast(.9);opacity:.78;transition:filter .2s,opacity .2s,transform .2s}
+.brand-item:hover .brand-logo{filter:none;opacity:1;transform:scale(1.06)}
+.brand-item{display:flex;align-items:center;justify-content:center;flex:none}
+.brand-item figcaption{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
+.brand-item figcaption.brand-fallback{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
+@keyframes brands-scroll{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+@media(max-width:640px){.brands-preview-section{padding-right:0;padding-left:0}.brands-preview-section .section-intro{padding:0 20px}.brands-group{gap:28px;padding-right:28px}.brand-logo{width:105px;height:70px}.brands-marquee{mask-image:linear-gradient(90deg,transparent,#000 4%,#000 96%,transparent)}}
+</style>
+</head>
+<body>
+<main>
+<section class="section brands-preview-section" id="brands-preview">
+  <div class="section-intro compact">
+    <p class="eyebrow">Our Supply Portfolio</p>
+    <h2>Representative Brands in Our Supply Portfolio</h2>
+  </div>
+  <div class="brands-marquee" aria-label="Representative vehicle brands">
+    <div class="brands-track">
+      <!-- 编辑品牌：在下面任一 brands-group 中增删 figure 即可；第二组需保持完全相同以实现无缝循环。 -->
+      <div class="brands-group">
+        <figure class="brand-item"><img class="brand-logo" src="https://www.carlogos.org/car-logos/byd-logo.png" alt="BYD"><figcaption>BYD</figcaption></figure>
+        <figure class="brand-item"><img class="brand-logo" src="https://www.carlogos.org/car-logos/li-auto-logo.png" alt="LI AUTO"><figcaption>LI AUTO</figcaption></figure>
+        <figure class="brand-item"><img class="brand-logo" src="https://www.carlogos.org/car-logos/zeekr-logo.png" alt="ZEEKR"><figcaption>ZEEKR</figcaption></figure>
+        <figure class="brand-item"><img class="brand-logo" src="https://www.carlogos.org/car-logos/deepal-logo.png" alt="DEEPAL"><figcaption>DEEPAL</figcaption></figure>
+        <figure class="brand-item"><img class="brand-logo" src="https://www.carlogos.org/car-logos/mg-logo.png" alt="MG"><figcaption>MG</figcaption></figure>
+        <figure class="brand-item"><img class="brand-logo" src="https://www.carlogos.org/car-logos/dongfeng-logo.png" alt="DONGFENG"><figcaption>DONGFENG</figcaption></figure>
+        <figure class="brand-item"><img class="brand-logo" src="https://www.carlogos.org/car-logos/toyota-logo.png" alt="TOYOTA"><figcaption>TOYOTA</figcaption></figure>
+        <figure class="brand-item"><img class="brand-logo" src="https://www.carlogos.org/car-logos/volkswagen-logo.png" alt="VOLKSWAGEN"><figcaption>VOLKSWAGEN</figcaption></figure>
+        <figure class="brand-item"><img class="brand-logo" src="https://www.carlogos.org/car-logos/audi-logo.png" alt="AUDI"><figcaption>AUDI</figcaption></figure>
+        <figure class="brand-item"><img class="brand-logo" src="https://www.carlogos.org/car-logos/honda-logo.png" alt="HONDA"><figcaption>HONDA</figcaption></figure>
+        <figure class="brand-item"><img class="brand-logo" src="https://www.carlogos.org/car-logos/nissan-logo.png" alt="NISSAN"><figcaption>NISSAN</figcaption></figure>
+        <figure class="brand-item"><img class="brand-logo" src="https://www.carlogos.org/car-logos/bmw-logo.png" alt="BMW"><figcaption>BMW</figcaption></figure>
+        <figure class="brand-item"><img class="brand-logo" src="https://www.carlogos.org/car-logos/mercedes-benz-logo.png" alt="MERCEDES-BENZ"><figcaption>MERCEDES-BENZ</figcaption></figure>
+        <figure class="brand-item"><img class="brand-logo" src="https://www.carlogos.org/car-logos/hyundai-logo.png" alt="HYUNDAI"><figcaption>HYUNDAI</figcaption></figure>
+        <figure class="brand-item"><img class="brand-logo" src="https://www.carlogos.org/car-logos/kia-logo.png" alt="KIA"><figcaption>KIA</figcaption></figure>
+        <figure class="brand-item"><img class="brand-logo" src="https://www.carlogos.org/car-logos/skoda-logo.png" alt="SKODA"><figcaption>SKODA</figcaption></figure>
+        <figure class="brand-item"><img class="brand-logo" src="https://www.carlogos.org/car-logos/mazda-logo.png" alt="MAZDA"><figcaption>MAZDA</figcaption></figure>
+      </div>
+      <div class="brands-group" aria-hidden="true">
+        <figure class="brand-item"><img class="brand-logo" src="https://www.carlogos.org/car-logos/byd-logo.png" alt=""><figcaption>BYD</figcaption></figure>
+        <figure class="brand-item"><img class="brand-logo" src="https://www.carlogos.org/car-logos/li-auto-logo.png" alt=""><figcaption>LI AUTO</figcaption></figure>
+        <figure class="brand-item"><img class="brand-logo" src="https://www.carlogos.org/car-logos/zeekr-logo.png" alt=""><figcaption>ZEEKR</figcaption></figure>
+        <figure class="brand-item"><img class="brand-logo" src="https://www.carlogos.org/car-logos/deepal-logo.png" alt=""><figcaption>DEEPAL</figcaption></figure>
+        <figure class="brand-item"><img class="brand-logo" src="https://www.carlogos.org/car-logos/mg-logo.png" alt=""><figcaption>MG</figcaption></figure>
+        <figure class="brand-item"><img class="brand-logo" src="https://www.carlogos.org/car-logos/dongfeng-logo.png" alt=""><figcaption>DONGFENG</figcaption></figure>
+        <figure class="brand-item"><img class="brand-logo" src="https://www.carlogos.org/car-logos/toyota-logo.png" alt=""><figcaption>TOYOTA</figcaption></figure>
+        <figure class="brand-item"><img class="brand-logo" src="https://www.carlogos.org/car-logos/volkswagen-logo.png" alt=""><figcaption>VOLKSWAGEN</figcaption></figure>
+        <figure class="brand-item"><img class="brand-logo" src="https://www.carlogos.org/car-logos/audi-logo.png" alt=""><figcaption>AUDI</figcaption></figure>
+        <figure class="brand-item"><img class="brand-logo" src="https://www.carlogos.org/car-logos/honda-logo.png" alt=""><figcaption>HONDA</figcaption></figure>
+        <figure class="brand-item"><img class="brand-logo" src="https://www.carlogos.org/car-logos/nissan-logo.png" alt=""><figcaption>NISSAN</figcaption></figure>
+        <figure class="brand-item"><img class="brand-logo" src="https://www.carlogos.org/car-logos/bmw-logo.png" alt=""><figcaption>BMW</figcaption></figure>
+        <figure class="brand-item"><img class="brand-logo" src="https://www.carlogos.org/car-logos/mercedes-benz-logo.png" alt=""><figcaption>MERCEDES-BENZ</figcaption></figure>
+        <figure class="brand-item"><img class="brand-logo" src="https://www.carlogos.org/car-logos/hyundai-logo.png" alt=""><figcaption>HYUNDAI</figcaption></figure>
+        <figure class="brand-item"><img class="brand-logo" src="https://www.carlogos.org/car-logos/kia-logo.png" alt=""><figcaption>KIA</figcaption></figure>
+        <figure class="brand-item"><img class="brand-logo" src="https://www.carlogos.org/car-logos/skoda-logo.png" alt=""><figcaption>SKODA</figcaption></figure>
+        <figure class="brand-item"><img class="brand-logo" src="https://www.carlogos.org/car-logos/mazda-logo.png" alt=""><figcaption>MAZDA</figcaption></figure>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+</body>
+</html>
+
