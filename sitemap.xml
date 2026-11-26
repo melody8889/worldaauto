@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://worldaauto.com/</loc>
@@ -88,4 +88,28 @@
     <loc>https://worldaauto.com/vehicles/hyundai-elantra.html</loc>
     <priority>0.8</priority>
   </url>
+  <url><loc>https://worldaauto.com/vehicles/aion-i60-reev.html</loc><priority>0.8</priority></url>
+  <url><loc>https://worldaauto.com/vehicles/audi-a8l-horch.html</loc><priority>0.8</priority></url>
+  <url><loc>https://worldaauto.com/vehicles/byd-seagull.html</loc><priority>0.8</priority></url>
+  <url><loc>https://worldaauto.com/vehicles/byd-song-plus-dmi.html</loc><priority>0.8</priority></url>
+  <url><loc>https://worldaauto.com/vehicles/byd-yuan-up.html</loc><priority>0.8</priority></url>
+  <url><loc>https://worldaauto.com/vehicles/deepal-s05.html</loc><priority>0.8</priority></url>
+  <url><loc>https://worldaauto.com/vehicles/deepal-s07.html</loc><priority>0.8</priority></url>
+  <url><loc>https://worldaauto.com/vehicles/deepal-sl03.html</loc><priority>0.8</priority></url>
+  <url><loc>https://worldaauto.com/vehicles/geely-coolray-binyue.html</loc><priority>0.8</priority></url>
+  <url><loc>https://worldaauto.com/vehicles/haval-m6.html</loc><priority>0.8</priority></url>
+  <url><loc>https://worldaauto.com/vehicles/jetour-traveller-t2.html</loc><priority>0.8</priority></url>
+  <url><loc>https://worldaauto.com/vehicles/land-rover-defender-110.html</loc><priority>0.8</priority></url>
+  <url><loc>https://worldaauto.com/vehicles/land-rover-range-rover.html</loc><priority>0.8</priority></url>
+  <url><loc>https://worldaauto.com/vehicles/leapmotor-t03.html</loc><priority>0.8</priority></url>
+  <url><loc>https://worldaauto.com/vehicles/lexus-gx-550.html</loc><priority>0.8</priority></url>
+  <url><loc>https://worldaauto.com/vehicles/lexus-lx600.html</loc><priority>0.8</priority></url>
+  <url><loc>https://worldaauto.com/vehicles/livan.html</loc><priority>0.8</priority></url>
+  <url><loc>https://worldaauto.com/vehicles/mercedes-benz-gle.html</loc><priority>0.8</priority></url>
+  <url><loc>https://worldaauto.com/vehicles/mg5.html</loc><priority>0.8</priority></url>
+  <url><loc>https://worldaauto.com/vehicles/porsche-cayenne.html</loc><priority>0.8</priority></url>
+  <url><loc>https://worldaauto.com/vehicles/rox-adamas.html</loc><priority>0.8</priority></url>
+  <url><loc>https://worldaauto.com/vehicles/toyota-corolla-cross.html</loc><priority>0.8</priority></url>
+  <url><loc>https://worldaauto.com/vehicles/zeekr-009.html</loc><priority>0.8</priority></url>
+  <url><loc>https://worldaauto.com/vehicles/zeekr-9x.html</loc><priority>0.8</priority></url>
 </urlset>
